@@ -1,18 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-
 import { useIntl, Link } from "gatsby-plugin-intl"
 
 const IndexPage = () => {
   const intl = useIntl();
 
   const indexContent = {
-    image: '',
-    title: 'Title',
     heading: 'Headeri',
     subheading: 'subheaderi',
     description: 'jotain muuta esitttelyä',
@@ -21,7 +16,7 @@ const IndexPage = () => {
     }
   };
 
-  const { image, title, heading, subheading, description, intro } = indexContent;
+  const { heading, subheading, description, intro } = indexContent;
 
   return (
     <Layout>

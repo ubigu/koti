@@ -13,7 +13,6 @@ const Language = () => {
         {({ languages, language: currentLocale }) =>
           languages.map(language => (
             <a
-              href='/'
               key={language}
               onClick={() => changeLocale(language)}
               style={{
