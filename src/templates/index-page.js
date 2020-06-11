@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
+import { useIntl, Link } from "gatsby-plugin-intl"
+
 export const IndexPageTemplate = ({
+  intl,
   image,
   title,
   heading,
@@ -47,7 +50,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {title}
+          {intl.formatMessage({ id: "title" })}
         </h1>
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
@@ -128,10 +131,12 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const intl = useIntl();
 
   return (
     <Layout>
       <IndexPageTemplate
+        intl={intl}
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
