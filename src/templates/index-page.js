@@ -17,14 +17,13 @@ const IndexPage = ({ data }) => {
     title: 'Title',
     heading: 'Headeri',
     subheading: 'subheaderi',
-    mainpitch: 'Main bitch',
-    description: 'Esittely',
+    description: 'jotain muuta esitttelyä',
     intro: {
       blurbs: []
     }
   };
 
-  const { image, title, heading, subheading, mainpitch, description, intro } = indexContent;
+  const { image, title, heading, subheading, description, intro } = indexContent;
 
   return (
     <Layout>
@@ -83,10 +82,10 @@ const IndexPage = ({ data }) => {
                   <div className="content">
                     <div className="content">
                       <div className="tile">
-                        <h1 className="title">{mainpitch.title}</h1>
+                        <h1 className="title"> {intl.formatMessage({ id: "short_description" })} </h1>
                       </div>
                       <div className="tile">
-                        <h3 className="subtitle">{mainpitch.description}</h3>
+                        <h3 className="subtitle"> {intl.formatMessage({ id: "long_description" })} </h3>
                       </div>
                     </div>
                     <div className="columns">
