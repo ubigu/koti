@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import Language from './Language'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -77,6 +78,9 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
+              <div>
+                <Language/>
+              </div>
               <a
                 className="navbar-item"
                 href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
