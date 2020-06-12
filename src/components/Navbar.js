@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 import Language from './Language'
-import { IntlContextConsumer } from 'gatsby-plugin-intl'
+import { IntlContextConsumer, navigate } from 'gatsby-plugin-intl'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -45,9 +45,15 @@ const Navbar = class extends React.Component {
           >
             <div className="container">
               <div className="navbar-brand">
-                <Link to={`/${currentLocale}`} className="navbar-item" title="Logo">
+                <a
+                  href="#"
+                  onClick={e => {
+                    e.preventDefault()
+                    navigate("/")
+                  }}
+                >
                   <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-                </Link>
+                </a>
                 {/* Hamburger menu */}
                 <div
                   className={`navbar-burger burger ${this.state.navBarActiveClass}`}
