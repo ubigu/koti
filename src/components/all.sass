@@ -1,17 +1,59 @@
 @import "~bulma/sass/utilities/initial-variables"
 
+body
+  font-family: ubuntu, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif !important
+
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
+$kaldi-red: #2aa753
+$ubigu-green: #2aa753
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #2b2523
+$black: #242943
+
+.tile
+  justify-content: center
+
+.footer-span
+  display: inline-flex
+  justify-content: flex-start
+  margin-top: 1rem
+  align-items: center
+  margin-right: 1rem
+
+.reverse
+  flex-direction: row-reverse
+
+.copyright
+  user-select: none
+  opacity: 0.5
+  margin: 0.5rem 0.5rem 0.5rem 0rem
+  font-size: 12px
+
+.copyright-icon
+  height: 0.8em
+  width: 0.8em
+
+.footer-icon
+  margin-right: 1rem
+
+.footer-link
+  color: #fff
+  &:hover
+    color: $ubigu-green
 
 .navbar .navbar-menu
-  box-shadow:none !important
+  box-shadow: none !important
+  margin-right: 0 !important
+
+.navbar .container
+  max-width: 100vw
+  margin-left: 0 !important
+.navbar > .container .navbar-brand
+  margin-left: 0 !important
 
 .content .taglist
   list-style: none
@@ -32,6 +74,7 @@ $black: #2b2523
 .full-width-image-container
   width: 100vw
   height: 400px
+  object-fit: cover
   position: relative
   left: 50%
   right: 50%
@@ -43,35 +86,35 @@ $black: #2b2523
   align-items: center
 
 .full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
+  width: 100vw
+  height: 400px
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
 
 .btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
+  display: inline-block
+  padding: 12px 16px 10px
+  font-size: 18px
+  font-size: 1rem
+  line-height: 1.25
+  background-color: #fff
+  border-radius: .25rem
+  text-decoration: none
+  font-weight: 700
+  color: $ubigu-green
+  text-align: center
+  -webkit-box-shadow: inset 0 0 0 2px $ubigu-green
+  box-shadow: inset 0 0 0 2px $ubigu-green
+  -webkit-transition: all .15s ease
+  transition: all .15s ease
 
 .margin-top-0
   margin-top: 0 !important
 
-.navbar-item .icon
+navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
@@ -80,9 +123,26 @@ $black: #2b2523
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
+
+.gradient
+  // background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.25) 86%, rgba(0,0,0,0) 100%)
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.3) 15%, rgba(255,255,255,0.4) 25%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 75%, rgba(255,255,255,0.3) 86%, rgba(255,255,225,0.2) 100%)
+
 footer.footer
-  padding: 3rem 0rem 0rem
+  position: absolute
+  bottom: 0
+  width: 100%
+  overflow: hidden
+  padding: 0rem 0rem 0rem
   background-color: transparent
+  background-image: url("./../../static/img/footer.jpg")
+  background-position: center
+  background-size: cover
+
+.contactscontainer
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -93,48 +153,128 @@ $menu-item-active-background-color:	$kaldi-red-invert
 $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
-
 .menu-label
   font-size: 1em !important
   text-align: left
 .menu-list
+  margin: 0.5rem 0rem 0.5rem 0.5rem
+  max-width: 150px
   list-style: none !important
   text-align: left
 .social
-  padding: 2em
+  margin-top: 1.5rem
+  margin-bottom: 1.25rem
+  padding: 0em
 .social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
+  padding: .5em .5em .3em .5em
+  border-radius: 1em
+  background-color: $white-ter
+  margin: .5em .75em .5em 0em
+  width: 1em
+  height: 1em
+  vertical-align: middle
+  display: inline
+  &:hover
+    background-color: $ubigu-green
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #d6400033;
+  background-color: #d6400033
 .blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
+  display: flex
+  margin-bottom: 1em
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
-
+  flex-basis: 35%
+  margin: 0 1.5em 0 0
 
 @import "~bulma"
-
 
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+    flex-basis: 50%
 
 +mobile
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+    text-align: center
+    max-width: 70%
+    margin: 0 0 1em
+
+.menu-list a
+  border-radius: 0
+
+  a.navbar-item
+    user-select: none
+  &:hover
+    background-color: rgba(255, 255, 255, 0.8)
+
+.navbar-menu
+  padding-top: 0
+
+#aboutlink
+  background-color: #ffffff
+  transition: background-color 0.75s, color 0.5s
+  &:hover
+    background-color: #00b4a2 !important
+    color: #fff
+    transition: background-color 0.75s, color 0.5s
+
+#productlink
+  background-color: #ffffff
+  transition: background-color 0.75s, color 0.5s
+  &:hover
+    background-color: #87c5a4 !important
+    color: #fff
+    transition: background-color 0.75s, color 0.5s
+
+#bloglink
+  background-color: #ffffff
+  transition: background-color 0.75s, color 0.75s
+  &:hover
+    background-color: #8ea9e8 !important
+    color: #fff
+    transition: background-color 0.75s, color 0.5s
+
+#contactlink
+  background-color: #ffffff
+  transition: background-color 0.75s, color 0.5s
+  &:hover
+    background-color: #e7b788 !important
+    color: #fff
+    transition: background-color 0.75s, color 0.5s
+
+a.navbar-item
+  user-select: none
+
+.navbar
+  position: fixed
+  top: 0
+  width: 100%
+  opacity: 0.95
+  border-bottom: 1px solid $ubigu-green
+
+video
+  max-width: 100vw !important
+
+.juicer-feed
+  overflow: hidden !important
+  width: 90% !important
+
+.juicer-feed.loaded
+  overflow: hidden !important
+
+.j-text
+  pointer-events: none
+
+.j-stacker
+  transition: margin 0.5s
+
+html
+  min-height: 100%
+  position: relative
+
+body
+  margin-bottom: 240px
+  margin-top: 52px

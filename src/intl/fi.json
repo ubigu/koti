@@ -1,5 +1,19 @@
 {
+  "ubigu": "Ubigu Oy",
   "title": "Tämä on title",
-  "short_description": "Ubi on paikkatiedon kingi",
-  "long_description": "Ubigu on paikkatietosysteemien kuningas"
+  "short_description": "Smart city. Smart rural. Smart ubiquitous.",
+  "long_description": "Ubigu on paikkatietosysteemien kunkku",
+  "motto": "Paikkatietoyhteiskunnan rakentajat",
+  "tohome:": "Alkuun",
+  "about": "Meistä",
+  "products": "Palvelut",
+  "blog": "Blogi",
+  "contact": "Ota yhteyttä",
+  "intro": "Missiomme on paikkatietoyhteiskunnan rakentaminen, välineinämme modernit teknologiat, prosessien digitalisaatio ja edistynyt analytiikka.",
+  "vat": "Y-tunnus: 2762483-3",
+  "some": "Ubigu somessa",
+  "friends": "Kumppaneitamme matkamme varrelta",
+  "team": "Tiimimme",
+  "powers": "Supervoimat",
+  "latest": "Tuoreimmat kaskut"
 }

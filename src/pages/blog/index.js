@@ -1,38 +1,44 @@
 import React from 'react'
-
+import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl' //eslint-disable-line
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 
-export default class BlogIndexPage extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <div
-          className="full-width-image-container margin-top-0"
-          style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-1"
+const BlogIndexPage = () => {
+
+  const intl = useIntl();
+
+  return (
+    <IntlContextConsumer>
+      {({ languages, language: currentLocale }) =>
+        <Layout>
+          <div
+            className="full-width-image-container margin-top-0"
             style={{
-              boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              backgroundColor: '#f40',
-              color: 'white',
-              padding: '1rem',
+              backgroundImage: `url('/img/bg1.png')`,
             }}
           >
-            Latest Stories
-          </h1>
-        </div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <BlogRoll />
-            </div>
+            <h1
+              className="has-text-weight-bold is-size-1"
+              style={{
+                color: 'white',
+                padding: '1rem',
+                userSelect: 'none'
+              }}
+            >
+              {intl.formatMessage({ id: 'latest' })}
+            </h1>
           </div>
-        </section>
-      </Layout>
-    )
-  }
+          <section className="section">
+            <div className="container">
+              <div className="content">
+                <BlogRoll />
+              </div>
+            </div>
+          </section>
+        </Layout>
+      }
+    </IntlContextConsumer>
+  )
 }
+
+export default BlogIndexPage

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Ubigu homepage - created with Gatsby + Netlify CMS',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'This repo contains Ubigu´s company homepage, created with Gatsby and Netlify.',
   },
   plugins: [
     {
@@ -71,6 +71,38 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `ubuntu`
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: 'babel-plugin-transform-imports',
+      options: {
+        '@material-ui/core': {
+          "transform": '@material-ui/core/${member}', // if your bundler does not support ES modules
+          // 'transform': '@material-ui/core/esm/${member}', // otherwise
+          'preventFullImport': true
+        },
+        '@material-ui/icons': {
+          "transform": '@material-ui/icons/${member}', // if your bundler does not support ES modules
+          // 'transform': '@material-ui/icons/esm/${member}', // otherwise
+          'preventFullImport': true
+        }
+      }
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
