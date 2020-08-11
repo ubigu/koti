@@ -16,8 +16,10 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
+              language
               tags
               templateKey
+              language
             }
           }
         }
@@ -42,6 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          language,
         },
       })
     })
