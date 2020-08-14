@@ -1,89 +1,132 @@
-import React from 'react'
+import React, { useRef, useState, Fragment } from 'react'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import Jumbotron from '../components/Jumbotron';
 import Some from '../components/Some';
 import Partners from '../components/Partners'
+import Features from '../components/Features';
+import { useIntl } from "gatsby-plugin-intl"
 
-import { useIntl, Link } from "gatsby-plugin-intl"
+import './../components/ring1.scss'
+import Ring1b from './../img/ring1b.inline.svg'
+import Ring1a from './../img/ring1a.inline.png'
+import logo from './../img/logo.svg';
 
+/** MUI */
+import { Fab, Hidden, Typography } from '@material-ui/core'
+import { ArrowDownward } from '@material-ui/icons'
+import { makeStyles } from '@material-ui/core/styles';
 
-//import mojs from '@mojs/core'
-/*
-class Heart extends mojs.CustomShape {
-  getShape() { return '<path d="M92.6 7.4c-10-9.9-26-9.9-35.9 0l-4.4 4.3a3.4 3.4 0 0 1-4.7 0l-4.3-4.3c-10-9.9-26-9.9-35.9 0a25 25 0 0 0 0 35.5l22.4 22.2 13.5 13.4a9.5 9.5 0 0 0 13.4 0L70.2 65 92.6 43a25 25 0 0 0 0-35.5z"/>'; }
-  getLength() { return 200; } // optional
+const useStyles = makeStyles(theme => {
+  return {
+    fab: {
+      color: '#FFF',
+      marginTop: theme.spacing(4)
+    },
+    fab4: {
+      color: '#FFF',
+      position: 'absolute',
+      top: 'calc(100vh - 104px)'
+    },
+    fabHolder: {
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    section: {
+      padding: '3rem 1.5rem',
+      height: '50vh'
+    },
+    jumbotron: {
+      position: 'relative',
+      display: 'flex',
+      height: 'calc(100vh - 52px)',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    ring: {
+      position: 'absolute',
+      height: 1000,
+      filter: props => props.hover ? 'grayscale(1)' : 'grayscale(0)',
+      transition: 'filter 2s',
+      maxWidth: 'none',
+      maxHeight: 'none'
+    },
+    span: {
+      position: 'absolute',
+      height: 1000,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      paddingTop: 92
+    },
+    typography: {
+      color: '#3c3c3c',
+      marginTop: 0,
+      padding: '0.25em',
+      fontFamily: "titillium web !important",
+    },
+  }
+})
+
+const scrollToRef = ref => {
+  ref.current.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  //const viewportH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  //  window.scrollBy(0, viewportH / 2);
 }
-mojs.addShape('heart', Heart); // passing name and Bubble class
-*/
+
 const IndexPage = () => {
 
-  const intl = useIntl();
-  /*
-    useEffect(() => {
-      const heart = new mojs.Shape({
-        parent: "#animation",
-        shape: 'heart', // <--- shape of heart is now available!
-        fill: 'red',
-        stroke: 'red',
-        scale: { 0: 1 },
-        strokeWidth: { 50: 0 },
-        y: -20,
-        duration: 1000,
-      })
-  
-      new mojs.Timeline({
-        repeat: 999
-      }).add(heart).play()
-  
-    }, [])
-  */
+  const intl = useIntl()
+  const featureRef = useRef(null)
+  const [hover, setHover] = useState(false)
+  const descRef = useRef(null)
+  const classes = useStyles({ hover })
+
   return (
     <Layout>
       <div>
-        <Jumbotron />
-
-        <section className="section section--gradient">
+        <div className={classes.jumbotron}>
+          <img src={Ring1a} id='countryObjects' className={classes.ring} ></img>
+          <Ring1b className={classes.ring} />
+          <span className={classes.span}>
+            <img
+              src={logo}
+              alt="Ubigu"
+              style={{ height: 100, userSelect: 'none' }}
+            />
+            <Typography variant='subtitle1' className={classes.typography} align='center'>
+              {intl.formatMessage({ id: "motto", defaultMessage: 'Builders of a spatial information society' })}
+            </Typography>
+            <Fab color='primary' className={classes.fab} onClick={() => scrollToRef(descRef)}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}>
+              <ArrowDownward />
+            </Fab>
+          </span>
+        </div>
+        <section className={classes.section} ref={descRef}>
           <div className="container">
             <div className="section">
               <div className="columns">
                 <div className="column is-10 is-offset-1">
                   <div className="content">
                     <div className="content">
-                      <div className="tile">
+                      <div className="tile" >
                         <h1 className="title"> {intl.formatMessage({ id: "short_description" })} </h1>
                       </div>
                       <div className="tile">
                         <h3 className="subtitle"> {intl.formatMessage({ id: "long_description" })} </h3>
                       </div>
                     </div>
-                    <div className="columns">
-                      <div className="column is-12">
-                        <h3 className="has-text-weight-semibold is-size-2">
-                          {intl.formatMessage({ id: "intro" })}
-                        </h3>
+                    <Hidden smDown>
+                      <div className="columns">
+                        <div className="column is-12 has-text-centered">
+                          <Fab color='primary' className={classes.fab} onClick={() => scrollToRef(featureRef)}>
+                            <ArrowDownward />
+                          </Fab>
+                        </div>
                       </div>
-                    </div>
-                    <Features gridItems={[]} />
-                    <div className="columns">
-                      <div className="column is-12 has-text-centered">
-                        <Link className="btn" to="/products">
-                          See all products
-                        </Link>
-                      </div>
-                    </div>
-                    {/*<
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        Latest stories
-                      </h3>
-                        <BlogRoll />
-                      <div className="column is-12 has-text-centered">
-                        <Link className="btn" to="/blog">
-                          Read more
-                        </Link>
-                      </div>
-                    </div>              */}
+                    </Hidden>
                   </div>
                 </div>
               </div>
@@ -91,9 +134,12 @@ const IndexPage = () => {
           </div>
         </section>
       </div>
+      <div ref={featureRef}>
+        <Features />
+      </div>
       <Some />
       <Partners />
-    </Layout>
+    </Layout >
   )
 }
 

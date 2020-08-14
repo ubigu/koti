@@ -84,7 +84,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `ubuntu`
+          `ubuntu`,
+          `antic`,
+          `titillium web`
         ],
         display: 'swap'
       }
