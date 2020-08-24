@@ -1,103 +1,228 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import facebook from '../img/social/facebook.svg'
-// import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import linkedin from '../img/social/linkedin.svg'
-import github from '../img/github-icon.svg';
-import { Copyright, Email, Place, Phone } from '@material-ui/icons'
-import { IntlContextConsumer, navigate, useIntl } from 'gatsby-plugin-intl'
-import { useMediaQuery, Hidden } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import Facebook from '../img/social/facebook.inline.svg'
+import Twitter from '../img/social/twitter.inline.svg'
+import Linkedin from '../img/social/linkedin.inline.svg'
+import Github from '../img/social/github.inline.svg';
+import { Email, Place, Phone, BusinessCenter, Copyright } from '@material-ui/icons'
+import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
+import { useMediaQuery, Hidden, List, ListItem, ListItemText, ListItemIcon, Avatar } from '@material-ui/core';
+import { useTheme, makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core'
-import logo from '../img/ubigu_logo_white.svg'
+
+import logo from '../img/ubigu_logo_gray.svg'
+import bg from '../../static/img/footer.jpg';
+
+const useStyles = makeStyles(theme => {
+  return {
+    footer: {
+      height: 300,
+      position: 'absolute',
+      bottom: 0,
+      width: '100%',
+      overflow: 'hidden',
+      padding: 0,
+      backgroundColor: 'transparent',
+      backgroundImage: `url(${bg})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      color: '#444'
+    },
+    footerIcon: {
+      marginRight: '1rem'
+    },
+    footerLink: {
+      color: '#444',
+      '&:hover': {
+        color: theme.palette.primary.main
+      }
+    },
+    footerSpan: {
+      display: 'inline-flex',
+      justifyContent: 'flex-start',
+      marginTop: theme.spacing(0.5),
+      alignItems: 'center',
+      marginRight: theme.spacing(1)
+    },
+    listitemicon: {
+      color: 'inherit'
+    },
+    small: {
+      width: theme.spacing(4),
+      height: theme.spacing(4),
+      backgroundColor: theme.palette.primary.main,
+      margin: theme.spacing(0.5),
+      '&:hover': {
+        opacity: 0.75
+      }
+    },
+    social: {
+      height: 24,
+      width: 24,
+      fill: '#FFF'
+    },
+    socialContainer: {
+      display: 'flex',
+      flexDirection: 'row',
+      [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column',
+        marginTop: theme.spacing(2),
+        marginRight: theme.spacing(1.5),
+        alignItems: 'flex-end'
+      }
+    },
+    texti: {
+      marginTop: theme.spacing(2),
+      opacity: 0.5,
+      userSelect: 'none'
+    },
+    contactscontainer: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      margin: 0,
+      [theme.breakpoints.down('sm')]: {
+        marginLeft: '1.2rem',
+        marginTop: theme.spacing(1),
+        marginBottom: '1.5rem'
+      },
+    },
+    copyright: {
+      userSelect: 'none',
+      opacity: 0.5,
+      margin: "0.5rem 0.5rem 0.5rem 0rem",
+      fontSize: 12,
+      [theme.breakpoints.down('sm')]: {
+        marginRight: '0.8rem'
+      }
+    },
+    logoHolder: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      [theme.breakpoints.down('sm')]: {
+        marginLeft: '1.2rem',
+        alignItems: 'flex-end'
+      }
+    },
+    logo: {
+      width: 150,
+      opacity: 0.5,
+      marginBottom: '1rem',
+      userSelect: 'none'
+    },
+    menuList: {
+      margin: "0.5rem 0rem 0.5rem 0.5rem",
+      maxWidth: 150,
+      listStyle: "none !important",
+      textAlign: 'left',
+      display: 'block',
+      [theme.breakpoints.down('sm')]: {
+        display: 'flex'
+      }
+    },
+    navItem: {
+      color: '#444',
+      flexGrow: 0,
+      flexShrink: 0,
+      userSelect: "none",
+      lineHeight: 1.5,
+      padding: "0.5rem 0.75rem",
+      position: "relative",
+      textDecoration: "none",
+      boxSizing: 'inherit',
+      alignItems: "center",
+      cursor: 'pointer',
+      display: "flex",
+      "&:hover": {
+        color: theme.palette.primary.main,
+        backgroundColor: 'rgba(255,255,255,0.5)'
+      }
+    },
+    flexi: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      [theme.breakpoints.down('sm')]: {
+        justifyContent: 'flex-start'
+      }
+    },
+    menu: {
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center'
+    }
+  }
+})
+
 
 const Footer = () => {
 
   const intl = useIntl();
-
+  const classes = useStyles()
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const socials = <div className="social">
+  const socials = <div className={classes.socialContainer}>
     <a title="linkedin" href="https://www.linkedin.com/company/ubigu-oy">
-      <img
-        className="fas fa-lg"
-        src={linkedin}
-        alt="linkedin"
-        style={{ width: '1em', height: '1em' }}
-      />
+      <Avatar className={classes.small}>
+        <Linkedin className={classes.social} />
+      </Avatar>
     </a>
     <a title="facebook" href="https://facebook.com/ubiguoy">
-      <img
-        src={facebook}
-        alt="Facebook"
-        style={{ width: '1em', height: '1em' }}
-      />
+      <Avatar className={classes.small}>
+        <Facebook className={classes.social} />
+      </Avatar>
     </a>
     <a title="twitter" href="https://twitter.com/ubigusto">
-      <img
-        className="fas fa-lg"
-        src={twitter}
-        alt="Twitter"
-        style={{ width: '1em', height: '1em' }}
-      />
+      <Avatar className={classes.small}>
+        <Twitter className={classes.social} />
+      </Avatar>
     </a>
     <a title="github" href="https://github.com/ubigu">
-      <img
-        className="fas fa-lg"
-        src={github}
-        alt="GitHub"
-        style={{ width: '1em', height: '1em' }}
-      />
+      <Avatar className={classes.small}>
+        <Github className={classes.social} />
+      </Avatar>
     </a>
   </div>
 
-  const logoHolder = <div style={{ display: 'flex', flexDirection: 'column', marginLeft: matches ? '1.2rem' : 0, justifyContent: 'center', alignItems: matches ? 'flex-end' : 'center', height: '100%' }}>
-    {!matches ?
-      <img src={logo} style={{ width: 150, opacity: 0.2, marginBottom: '1rem', userSelect: 'none' }}></img> :
-      socials
-    }
-    <span style={{ marginBottom: '0.5rem', opacity: 0.75, marginRight: matches ? '0.8rem' : '0' }}>
-      {intl.formatMessage({ id: "vat", defaultMessage: 'Y-tunnus: 2762483-3' })}
-    </span>
-    <span className="footer-span copyright" style={{ marginRight: matches ? '0.8rem' : '0' }}>
-      <Copyright className="footer-icon copyright-icon" />
-      {intl.formatMessage({ id: "ubigu" })} {new Date().getFullYear()}
-    </span>
+
+  const logoHolder = <div className={classes.logoHolder} >
+    <Hidden smDown={true}>
+      <img src={logo} className={classes.logo} alt='Ubigu logo' />
+    </Hidden>
+    {socials}
   </div>
 
   return (
     <IntlContextConsumer>
       {({ language: currentLocale }) =>
         <section id="contact">
-          <footer className="footer has-background-black has-text-white-ter">
-            <Grid container justify={"space-between"}>
+          <footer className={classes.footer}>
+            <Grid container justify={"space-between"} style={{ height: '100%' }}>
 
-              <Grid item xs={12} sm={12} md={4} style={{ borderBottom: matches ? '1px solid white' : 'none' }}>
-                <section className="menu">
-                  <ul className="menu-list" style={{ display: matches ? 'flex' : 'block' }}>
+              <Grid item xs={12} sm={12} md={4} style={{ borderBottom: matches ? '1px solid grey' : 'none' }}>
+                <section className={classes.menu}>
+                  <ul className={classes.menuList}>
                     <li>
-                      <a href="#" className="navbar-item" onClick={e => {
-                        e.preventDefault()
-                        navigate("/")
-                      }}>
+                      <Link className={classes.navItem} to={`/${currentLocale}/#`}>
                         {intl.formatMessage({ id: "tohome", defaultMessage: "Home" })}
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to={`/${currentLocale}/about`}>
+                      <Link className={classes.navItem} to={`/${currentLocale}/about`}>
                         {intl.formatMessage({ id: "about", defaultMessage: "About" })}
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to={`/${currentLocale}/products`}>
+                      <Link className={classes.navItem} to={`/${currentLocale}/products`}>
                         {intl.formatMessage({ id: "products", defaultMessage: "What we do" })}
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to={`/${currentLocale}/blog`}>
+                      <Link className={classes.navItem} to={`/${currentLocale}/blog`}>
                         {intl.formatMessage({ id: "blog" })}
                       </Link>
                     </li>
@@ -112,21 +237,53 @@ const Footer = () => {
                 </Grid>
               </Hidden>
 
-              <Grid item xs={6} sm={6} md={4} style={{ display: 'flex', justifyContent: matches ? 'flex-start' : 'flex-end' }}>
-                <div className="contactscontainer" style={{ marginLeft: matches ? '1.2rem' : 'auto', marginTop: matches ? '0.5rem' : 'auto', marginBottom: matches ? '1.5rem' : 'auto' }}>
-
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <a className="footer-link footer-span" rel="noopener noreferrer" href="mailto:info@ubigu.fi"><Email className="footer-icon" />info@ubigu.fi</a>
-                    <a className="footer-link footer-span" rel="noopener noreferrer" href="tel:+358504347939"><Phone className="footer-icon" />+358 50 434 7939</a>
-                    <a className="footer-link footer-span" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/aMirZy9PWFQmfeyWA"><Place className="footer-icon" />Hämeenkatu 18 A 7<br></br>FI-33200 Tampere</a>
-                  </div>
-                  {!matches && socials}
+              <Grid item xs={10} sm={8} md={4} className={classes.flexi}>
+                <div className={classes.contactscontainer}>
+                  <List dense disablePadding>
+                    <ListItem disableGutters={matches}>
+                      <a className={`${classes.footerLink} ${classes.footerSpan}`} rel="noopener noreferrer" href="mailto:info@ubigu.fi">
+                        <ListItemIcon classes={{ root: classes.listitemicon }}>
+                          <Email className={classes.footerIcon} /></ListItemIcon>
+                        <ListItemText>info@ubigu.fi</ListItemText>
+                      </a>
+                    </ListItem>
+                    <ListItem disableGutters={matches}>
+                      <a className={`${classes.footerLink} ${classes.footerSpan}`} rel="noopener noreferrer" href="tel:+358504347939">
+                        <ListItemIcon classes={{ root: classes.listitemicon }}>
+                          <Phone className={classes.footerIcon} /></ListItemIcon>
+                        <ListItemText>+358 50 434 7939</ListItemText>
+                      </a>
+                    </ListItem>
+                    <ListItem disableGutters={matches}>
+                      <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/aMirZy9PWFQmfeyWA">
+                        <ListItemIcon classes={{ root: classes.listitemicon }}>
+                          <Place className={classes.footerIcon} /></ListItemIcon>
+                        <ListItemText>
+                          Hämeenkatu 18 A 7<br></br>FI-33200 Tampere
+                      </ListItemText>
+                      </a>
+                    </ListItem>
+                    <ListItem disableGutters={matches}>
+                      <ListItemIcon classes={{ root: classes.listitemicon }}>
+                        <BusinessCenter className={classes.footerIcon} /></ListItemIcon>
+                      <ListItemText >
+                        {intl.formatMessage({ id: "vat", defaultMessage: 'Y-tunnus: 2762483-3' })}
+                      </ListItemText>
+                    </ListItem>
+                    <ListItem disableGutters={matches} style={{userSelect: 'none'}}>
+                      <ListItemIcon classes={{ root: classes.listitemicon }}>
+                        <Copyright className={classes.footerIcon} /></ListItemIcon>
+                      <ListItemText >
+                        {intl.formatMessage({ id: "ubigu" })} {new Date().getFullYear()}
+                      </ListItemText>
+                    </ListItem>
+                  </List>
                 </div>
               </Grid>
 
               <Hidden mdUp={true}>
-                <Grid item xs={6} sm={6}>
-                  {logoHolder}
+                <Grid item xs={2} sm={4}>
+                  {socials}
                 </Grid>
               </Hidden>
 
@@ -134,7 +291,7 @@ const Footer = () => {
           </footer>
         </section >
       }
-    </IntlContextConsumer>
+    </IntlContextConsumer >
   )
 }
 

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import clsx from 'clsx';
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl' //eslint-disable-line
 import {
-    useMediaQuery, //eslint-disable-line
     Grid,
     IconButton,
     Card,
@@ -20,10 +19,11 @@ import colors from './colors';
 import linkedin from '../img/social/linkedin.inline.svg'
 import { ExpandMore, Email, Phone } from '@material-ui/icons/';
 
-import ilpo from './../img/us/it_300x200.jpg';
-import jouko from './../img/us/jj_300x200.jpg';
-import marko from './../img/us/mk_300x200.jpg';
-import ossi from './../img/us/ot_300x200.jpg';
+import ilpo from './../img/us/ilpo.jpg';
+import sonja from './../img/us/sonja.jpg';
+import jouko from './../img/us/jouko.jpg';
+import marko from './../img/us/marko.jpg';
+import ossi from './../img/us/ossi.jpg';
 import incog from './../img/us/incognito.jpg';
 
 const useStyles = makeStyles(theme => ({
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
-        maxWidth: 345,
+        width: 300,
         margin: theme.spacing(2),
         minHeight: 150
     },
@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
         width: 'auto',
     },
     media: {
-        height: 200,
+        height: 300,
         maxWidth: 400
     },
     imgCropper: {
@@ -76,9 +76,45 @@ const useStyles = makeStyles(theme => ({
     expandOpen: {
         transform: 'rotate(180deg)',
     },
+    typography: {
+        margin: theme.spacing(4),
+        width: '50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '75%',
+            fontSize: 14
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '95%',
+            fontSize: 14
+        },
+        userSelect: 'none'
+    }
 }));
 
 const us = [
+    {
+        firstname: 'Sonja',
+        surname: 'Aarnio',
+        title: {
+            fi: "Liiketoimintajohtaja",
+            en: "COO",
+            sv: "COO",
+            de: "COO"
+        },
+        email: 'sonja.aarnio@ubigu.fi',
+        tel: '+358 40 1899 330',
+        linkedin: 'https://www.linkedin.com/in/sonja-aarnio-1355541b4/',
+        description: {
+            fi: `Sonja rakastaa yhteistyötä asiantuntevien ihmisten kanssa ja monitahoisten projektien luotsaamista. Vastausten löytäminen kaupunkikehityksen, maankäytön ja liikenteen ja näiden digitalisaation kysymyksiin saavat hänen suuren sydämensä sykkimään.`,
+            en: `Sonja loves working together with insightful people and steering multifaceted projects. Finding answers to questions on urban development, land use and traffic planning and their digitalization make her heart beat like no other.`,
+        },
+        powers: {
+            en: ['Land use planning', 'Traffic planning', 'Traffic systems', 'Service networks', 'Impact assessments', 'Project management', 'Geoinformatics', 'Business intelligence', 'Real estate'],
+            fi: ['Maankäytön suunnittelu', 'Liikennesuunnittelu', 'Liikennejärjestelmät', 'Palveluverkot', 'Vaikutusten arvioinnit', 'Projektinhallinta', 'Geoinformatiikka', 'Liikkeenjohdon konsultointi', 'Kiinteistösektorin tuntemus']
+        },
+        imgs: [sonja],
+        color: 'lilac violet'
+    },
     {
         firstname: 'Ilpo',
         surname: 'Tammi',
@@ -96,8 +132,8 @@ const us = [
             en: `When Ilpo is not navigating the office around swells and shoals, he immerses himself in expeditions into data, analytics, visualizations and planning thematics with awarded devotion.`,
         },
         powers: {
-            en: ['Full-stack web development: Node.js, React, OpenLayers..', 'PostgreSQL, Geoserver'],
-            fi: ['Full-stack devaus: Node.js, React, OpenLayers...', 'PostgreSQL, GeoServer']
+            en: ['Strategic land use planning', 'Digitalization of processes', 'Smart cities', 'Spatial analytics', 'Data management', 'Full-stack web development: Node.js, React, OpenLayers..', 'PostgreSQL, Geoserver', 'Cartographic design'],
+            fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikak', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers...', 'PostgreSQL, GeoServer', 'Kartografia']
         },
         imgs: [ilpo],
         color: 'lilac violet'
@@ -115,8 +151,12 @@ const us = [
         tel: '+358 503733638',
         linkedin: 'https://www.linkedin.com/in/jouko-j%C3%A4rnefelt-a67b2952',
         description: {
-            fi: `Jouko on kiipeily- ja suunnistusmiehiä. Oli edessä sitten seinämä graniittia, sateinen suo, analyysien aarniometsä taikka tiedolla johtamisen kivinen tie, Jouko löytää aina tiensä perille.`,
-            en: `Jouko is a passionate climber and orienteer. Whether he's facing a wall of granite, a misty mire, an abyss of analyses or a rocky road of business intelligence, Jouko always finds a way.`,
+            fi: `Jouko on kiipeily- ja suunnistusmiehiä. Oli edessä sitten seinämä graniittia, sateinen suo, analyysien aarniometsä taikka tiedon hallinnan ja tietojohtamisen kivinen tie, Jouko löytää aina tien perille.`,
+            en: `Jouko is a passionate climber and orienteer. Whether he's facing a wall of granite, a misty mire, an abyss of analyses or a rocky road of data management and business intelligence, Jouko will find a way.`,
+        },
+        powers: {
+            en: ['Strategic planning', 'Regional development', 'Digitalization of processes', 'Smart cities & Urban studies', 'Spatial analytics', 'Master data management', 'ETL (FME)', 'PostgreSQL', 'Data visualization'],
+            fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikak', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers...', 'PostgreSQL, GeoServer', 'Kartografia']
         },
         imgs: [jouko],
         color: 'pine green'
@@ -137,6 +177,10 @@ const us = [
             fi: `Marko on rakentajaluonne, joka ei voi vastustaa konepellin alle katsomista. Kehitettyään toista vuosikymmentä paikkatiedon kokonaisarkkitehtuuria, kenties jo järjestelmätkin tuntevat hänet.`,
             en: `Marko is characteristically a constructor, who can't resist a look under the hood. After a dozen of years developing spatial data infrastructures, even the systems seem to know him by now.`,
         },
+        powers: {
+            en: ['Enterprise architecture', 'Reference architectures', 'Spatial data infrastructures', 'ETL processes', 'Digitalization of land use and planning', 'Data management', 'Full-stack ICT', 'PostgreSQL, GeoServer'],
+            fi: ['Kokonaisarkkitehtuurit', 'Viitearkkitehtuurit', 'Paikkatietoinfrastruktuuri', 'ETL-prosessit', 'Maankäytön digitalisaatio', 'Tiedonhallinta', 'Full-stack IT', 'PostgreSQL, GeoServer']
+        },
         imgs: [marko],
         color: 'berry red'
     },
@@ -156,6 +200,10 @@ const us = [
             fi: `Ossi on kielipää - puhuu koneiden kanssa sujuvasti syntaksista riippumatta. Intohimosta halonhakkuuseen lienee tullut myös kyky kasata kaunista Full Stack -koodipinoa.`,
             en: `Ossi is a polyglot - talks fluently with machines regardless of the language. A man passionate about chopping wood - he even knows how to (com)pile code into beautiful Full Stacks.`,
         },
+        powers: {
+            en: ['Full-stack web development: Node.js, React, geospatial...', 'API development', 'Database management', 'Agile development', 'Scrum mastering', 'ICT project management'],
+            fi: ['Full-stack kehitys: Node.js, React, geospatialiset kirjastot...', 'Rajapintakehitys', 'Tietokantahallinta', 'Ketterä kehitys', 'Scrum masterointi', 'IT-projektinveto']
+        },
         imgs: [ossi],
         color: 'grey blue'
     },
@@ -165,20 +213,20 @@ const incognito = {
     firstname: '',
     surname: '',
     title: {
-        fi: "Keksi tittelisi",
-        en: "What would you like to do?",
-        sv: "Senior IT-konsult",
-        de: "Senior IT-Experte"
+        fi: "Sinä?",
+        en: "You?",
+        sv: "Du?",
+        de: "Sie?"
     },
     email: 'info@ubigu.fi',
     tel: '+358 50 4347939',
     linkedin: 'https://www.linkedin.com/company/ubigu-oy',
     description: {
-        fi: `Kyl ain porukkaan mahtuis hyvii tyypei.`,
-        en: `We are always interested in expanding our team with nice people.`,
+        fi: `Olemme aina kiinnostuneet laajentamaan joukkoamme mukavilla ja osaavilla tyypeillä, jotka eivät pelkää savea käsissään. Kenties sinä olet yksi heistä?`,
+        en: `We are always interested in expanding our team with nice, talented people, who are not afraid of getting one's hands dirty. Perhaps you are one of them?`,
     },
     imgs: [incog],
-    color: 'grey blue'
+    color: 'pink'
 };
 
 const People = () => {
@@ -206,7 +254,16 @@ const People = () => {
             <IntlContextConsumer>
                 {({ languages, language: currentLocale }) =>
                     <div className={classes.holder}>
-                        <Grid container spacing={2} justify={'center'}>
+                        <Grid container spacing={2}
+                            justify={'center'}>
+
+                            <Grid item xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Typography variant='body1' align='center' className={classes.typography}>
+                                    {intl.formatMessage({ id: 'notjust' })}
+                                    <br /><br />
+                                    {intl.formatMessage({ id: 'founded' })}
+                                </Typography>
+                            </Grid>
 
                             {persons.map(person => {
 
@@ -214,7 +271,7 @@ const People = () => {
                                 const hovering = [person.tel, person.email].includes(hover);
 
                                 return (
-                                    <Grid item xs={12} sm={6} md={4} lg={3} xl={2} style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Grid key={name} item xs={12} sm={6} md={4} lg={3} xl={3} style={{ display: 'flex', justifyContent: 'center' }}>
                                         <Card className={classes.cardRoot} style={{ maxHeight: expanded === name ? 750 : 'auto' }}>
                                             <div style={{ height: '100%' }}>
                                                 <CardHeader
@@ -287,6 +344,13 @@ const People = () => {
                                     </Grid>
                                 )
                             })}
+                            <Grid item xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Typography variant='body1' align='center' className={classes.typography}>
+                                    {intl.formatMessage({ id: 'theresmore1' })}
+                                    <br /><br />
+                                    {intl.formatMessage({ id: 'theresmore2' })}
+                                </Typography>
+                            </Grid>
                         </Grid>
                     </div>
                 }

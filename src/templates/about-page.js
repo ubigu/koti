@@ -1,11 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Content from '../components/Content'
 import People from './../components/People'
-import bg from './../../static/img/teambg.jpg'
+import bg from './../../static/img/teambg.png'
 import { Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+  jumbotron: {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'bottom',
+    objectFit: 'cover',
+    display: 'flex',
+    filter: 'hue-rotate(30deg)',
+    opacity: 0.9,
+    height: 300,
+    width: '100vw',
+    overflow: 'hidden',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    userSelect: 'none',
+    flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      height: 200
+    }
+  },
+  typography: {
+    color: '#FFF',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 36
+    }
+  }
+}));
+
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -35,34 +66,23 @@ AboutPageTemplate.propTypes = {
 }
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+
+  const intl = useIntl();
+  const classes = useStyles();
 
   return (
-    <Layout>
-      <div
-        className="full-width-image margin-top-0"
-        style={{
-          backgroundImage: `url(${bg})`,
-          display: 'flex',
-          height: 400,
-          overflow: 'hidden',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          userSelect: 'none',
-          flexDirection: 'column',
-        }}
-      >
-        <Typography variant="h5">
-          Tiimi
-        </Typography>
-      </div>
-      <People />
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
-    </Layout>
+    <IntlContextConsumer>
+      {({ language: currentLocale }) =>
+        <Layout>
+          <div className={classes.jumbotron}>
+            <Typography variant="h2" className={classes.typography}>
+              {intl.formatMessage({ id: "team", defaultMessage: "Team" })}
+            </Typography>
+          </div>
+          <People />
+        </Layout>
+      }
+    </IntlContextConsumer>
   )
 }
 
@@ -74,11 +94,11 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+          markdownRemark(id: {eq: $id }) {
+          html
       frontmatter {
-        title
-      }
+          title
+        }
     }
   }
 `

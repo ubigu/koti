@@ -23,42 +23,6 @@
   }
 }
 
-@keyframes hover {
-  0% {
-    transform: translateY(0%);  
-  }
-  50% {
-    transform: translateY(5%);  
-  } 
-  100% {
-    transform: translateY(0%);
-  }     
-}
-
-@keyframes pull {
-  0% {
-    transform: scaleY(1);
-  }
-  40% {
-    transform: scaleY(1.01);
-  }
-  60% {
-    transform: scaleY(0.99);
-  }
-  80% {
-    transform: scaleY(1.01);
-  }
-  100% {
-    transform: scaleY(0.99);
-  }       
-  80% {
-    transform: scaleY(1.01);
-  }
-  100% {
-    transform: scaleY(1);
-  }   
-}
-
 @function getSpeed($speed, $type:turtle) {
   $secs: 360;
   $divider: 1;
@@ -86,23 +50,12 @@
 }
 
 @mixin _rotate-animation($direction, $speed, $type) {
-  transform: translate3d(0, 0, 0);
+  transform: translate(0, 0);
   animation: rotate-#{$direction} getSpeed($speed, $type) linear 0s infinite;
 }
 
-@mixin _hover-animation($duration, $delay) {
-  transform: translate3d(0, 0, 0);
-  animation: hover #{$duration}s linear #{$delay}s infinite; 
-}
-
-@mixin _pull-animation($duration, $delay, $x: 1000px, $y: 1000px) {
-  transform: translate3d(0, 0, 0);
-  transform-origin: $x $y;
-  animation: pull #{$duration}s linear #{$delay}s infinite alternate; 
-}
-
 @mixin rotatesvg($type, $direction: left, $speed: slow, $x: 250px, $y: 250px) {
-  transform: translate3d(0, 0, 0);
+  transform: translate(0, 0);
   transform-origin: $x $y;
   @include _rotate-animation($direction, $speed, $type);
 }

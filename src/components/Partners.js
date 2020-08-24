@@ -1,5 +1,5 @@
 /** React */
-import React, { useState } from 'react'
+import React from 'react'
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
@@ -33,9 +33,6 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(8),
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
-        [theme.breakpoints.only('xs')]: {
-            paddingBottom: theme.spacing(8)
-        }
     },
     chunker: {
         height: 150,
@@ -50,6 +47,14 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         userSelect: 'none'
+    },
+    title: {
+        userSelect: 'none',
+        opacity: 0.8
+    },
+    friendContainer: {
+        display: 'flex',
+        justifyContent: 'center'
     }
 }));
 
@@ -288,12 +293,12 @@ const Partners = () => {
     }
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className={classes.friendContainer}>
             <IntlContextConsumer>
                 {({ languages, language: currentLocale }) =>
                     <div className={classes.holder}>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                            <Typography variant='subtitle1' style={{userSelect: 'none', opacity: 0.8, textDecoration: 'underline'}}>
+                            <Typography variant='subtitle1' className={classes.title}>
                                 {intl.formatMessage({ id: "friends", defaultMessage: "Social media" })}:
                             </Typography>
                         </div>

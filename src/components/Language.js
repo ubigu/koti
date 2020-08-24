@@ -35,6 +35,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     flexDirection: 'row'
   },
+  colorButton: {
+    color: theme.palette.primary
+  },
   flexContainer: {
     display: 'flex',
     flexDirection: 'row',
@@ -81,7 +84,7 @@ const Language = () => {
                     aria-haspopup="true"
                     onClick={() => handleClick(lang)}
                   >
-                    <img src={lang === 'fi' ? fi : lang === 'en' ? en : lang === 'de' ? de : lang === 'se' ? se : ''}
+                    <img alt='toggle language change' src={lang === 'fi' ? fi : lang === 'en' ? en : lang === 'de' ? de : lang === 'se' ? se : ''}
                       style={{ width: 16, marginRight: 8 }} />{lang}
                   </Button>
                 )}
@@ -92,7 +95,7 @@ const Language = () => {
             <Button
               variant="text"
               classes={{ root: classes.buttonRoot }}
-              color='inherit'
+              color='primary'
               aria-owns={open ? 'languageChange' : null}
               aria-haspopup="true"
               onClick={() => setOpen(prev => !prev)}

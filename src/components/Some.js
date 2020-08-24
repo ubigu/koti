@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
+import { Link } from 'gatsby'
 
-import { Collapse, Button, IconButton, useMediaQuery } from '@material-ui/core';
+import { Collapse, Button, IconButton, useMediaQuery, Typography } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { ExpandMore, ArrowBackIos, ArrowForwardIos } from '@material-ui/icons'
 
@@ -17,13 +18,15 @@ const useStyles = makeStyles(theme => ({
             backgroundColor: "#00b4a2",
             color: '#FFF',
             transition: "background-color 0.75s, color 0.5s"
-        }
+        },
+        marginBottom: theme.spacing(4)
     },
     holder: {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: theme.spacing(4)
     },
     collapseContainer: {
         opacity: 0.33,
@@ -45,20 +48,22 @@ const useStyles = makeStyles(theme => ({
     startIcon: {
         transform: props => `rotate(${props.checked ? 180 : 0}deg)`,
         transition: "transform 0.5s"
+    },
+    titteli: {
+        marginBottom: theme.spacing(2)
     }
 }));
 
 const Some = props => {
 
     const { dataPer, dataPages, dataColumns } = props;
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(true);
     const [page, setPage] = useState(0);
 
     const intl = useIntl();
     const classes = useStyles({ checked });
 
     const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
     const xs = useMediaQuery(theme.breakpoints.down('xs'));
     const sm = useMediaQuery(theme.breakpoints.only('sm'));
@@ -74,13 +79,18 @@ const Some = props => {
         if (el) {
             el.setAttribute("style", `margin-left: ${margin * page}px`);
         }
-    }, [page])
+    }, [page, margin])
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
             <IntlContextConsumer>
                 {({ languages, language: currentLocale }) =>
                     <div className={classes.holder}>
+                        <Typography variant='h5' align='center' className={classes.titteli}>
+                            {intl.formatMessage({
+                                id: "topical",
+                            })}
+                        </Typography>
                         <Button
                             variant='outlined'
                             classes={{ root: classes.buttonRoot, endIcon: classes.endIcon, startIcon: classes.startIcon }}
@@ -90,9 +100,9 @@ const Some = props => {
                         >
                             {intl.formatMessage({ id: "some", defaultMessage: "Social media" })}
                         </Button>
-                        <Collapse in={checked} collapsedHeight={matches ? 0 : 150}
+                        <Collapse in={checked} collapsedHeight={0}
                             classes={{ container: classes.collapseContainer, entered: classes.collapseEntered, wrapperInner: classes.wrapperInner }}>
-                            <IconButton style={{borderRadius: 0}}
+                            <IconButton style={{ borderRadius: 0 }}
                                 onClick={() => setPage(prev => prev !== 0 ? prev - 1 : numPages - 1)}
                             >
                                 <ArrowBackIos />
@@ -109,12 +119,20 @@ const Some = props => {
                                     <a href="https://www.juicer.io">Juicer</a>
                                 </h1>
                             </ul>
-                            <IconButton style={{borderRadius: 0}}
+                            <IconButton style={{ borderRadius: 0 }}
                                 onClick={() => setPage(prev => prev < numPages - 1 ? prev + 1 : 0)}
                             >
                                 <ArrowForwardIos />
                             </IconButton>
                         </Collapse>
+                        <Link to={`/${currentLocale}/blog`}>
+                            <Button
+                                variant='outlined'
+                                classes={{ root: classes.buttonRoot }}
+                            >
+                                {intl.formatMessage({ id: "check_blog", defaultMessage: "Newest stories" })}
+                            </Button>
+                        </Link>
                     </div>
                 }
             </IntlContextConsumer>
