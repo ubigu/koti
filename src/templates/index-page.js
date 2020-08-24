@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Layout from "../components/Layout";
 import Some from "../components/Some";
 import Partners from "../components/Partners";
@@ -146,9 +146,7 @@ const scrollToRef = (ref) => {
   ref.current.scrollIntoView({
     block: "start",
     behavior: "smooth",
-  });
-  //const viewportH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  //  window.scrollBy(0, viewportH / 2);
+  })
 };
 
 const IndexPage = () => {

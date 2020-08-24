@@ -4,12 +4,9 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
 
-import smoothscroll from 'smoothscroll-polyfill';
 import { withPrefix } from 'gatsby'
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
-
-smoothscroll.polyfill();
 
 const TemplateWrapper = ({ children }) => {
 
