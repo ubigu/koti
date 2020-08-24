@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
 
+import smoothscroll from 'smoothscroll-polyfill';
 import { withPrefix } from 'gatsby'
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
+import { useEffect } from 'react'
 
 const TemplateWrapper = ({ children }) => {
+
+  useEffect(() => {
+    smoothscroll.polyfill();
+  }, [])
 
   return (
     <ThemeProvider theme={theme}>

@@ -176,8 +176,6 @@ const IndexPage = () => {
       color="primary"
       className={classes.fab}
       onClick={() => scrollToRef(descRef)}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
     >
       <ArrowDownward />
     </Fab>
