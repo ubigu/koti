@@ -8,7 +8,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 import { withPrefix } from 'gatsby'
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
-import { useEffect } from 'react'
 
 const TemplateWrapper = ({ children }) => {
 
