@@ -57,7 +57,23 @@ const useStyles = makeStyles(theme => ({
 const Some = props => {
 
     const { dataPer, dataPages, dataColumns } = props;
+
+    const juicer = (
+        <ul className="juicer-feed"
+            data-feed-id="ubiguoy"
+            data-per={dataPer}
+            data-pages={dataPages}
+            data-overlay={"false"}
+            data-columns={dataColumns}
+        >
+            <h1 className="referral">
+                <a href="https://www.juicer.io">Juicer</a>
+            </h1>
+        </ul>
+    )
+
     const [checked, setChecked] = useState(true);
+    const [showJuicer, setShowJuicer] = useState(null)
     const [page, setPage] = useState(0);
 
     const intl = useIntl();
@@ -80,6 +96,10 @@ const Some = props => {
             el.setAttribute("style", `margin-left: ${margin * page}px`);
         }
     }, [page, margin])
+
+    useEffect(() => {
+        setShowJuicer(juicer)
+    }, [])
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -107,17 +127,7 @@ const Some = props => {
                             >
                                 <ArrowBackIos />
                             </IconButton>
-                            <ul className="juicer-feed"
-                                data-feed-id="ubiguoy"
-                                data-per={dataPer}
-                                data-pages={dataPages}
-                                data-overlay={"false"}
-                                data-columns={dataColumns}
-                            >
-                                <h1 className="referral">
-                                    <a href="https://www.juicer.io">Juicer</a>
-                                </h1>
-                            </ul>
+                            {showJuicer && juicer}
                             <IconButton style={{ borderRadius: 0 }}
                                 onClick={() => setPage(prev => prev < numPages - 1 ? prev + 1 : 0)}
                             >
