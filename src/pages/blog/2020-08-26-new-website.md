@@ -4,7 +4,7 @@ title: New website!
 date: 2020-08-26T09:49:25.013Z
 description: Our new websites are out of the oven. It was quite a journey, but
   well worth it (we hope). Find out how it was all built!
-language: en
+language: "'en'"
 featuredpost: true
 featuredimage: /img/og-image.jpg
 tags:
