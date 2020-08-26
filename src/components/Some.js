@@ -127,7 +127,7 @@ const Some = props => {
                             >
                                 <ArrowBackIos />
                             </IconButton>
-                            {showJuicer && juicer}
+                            {showJuicer !== null && showJuicer}
                             <IconButton style={{ borderRadius: 0 }}
                                 onClick={() => setPage(prev => prev < numPages - 1 ? prev + 1 : 0)}
                             >
