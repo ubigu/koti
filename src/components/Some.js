@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
-
 import { Collapse, Button, IconButton, useMediaQuery, Typography } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { ExpandMore, ArrowBackIos, ArrowForwardIos } from '@material-ui/icons'
+import './../styles/juicer.sass'
 
 const useStyles = makeStyles(theme => ({
     buttonRoot: {
