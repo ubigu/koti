@@ -10,6 +10,8 @@ featuredimage: /img/og-image.jpg
 tags:
   - website development
 ---
+![](/img/og-image.jpg)
+
 Phew! Our new website is out of the oven.<br><br>
 
 Our previous web site, built (likewise) with blood, sweat and tears, had served us until now for roughly five years, with minor updates and additions every now and then. It was built with technologies that were still back then if not state-of-the-art, at least somewhat acceptable – mainly [jQuery](https://jquery.com/) and [Bootstrap](https://getbootstrap.com/).<br><br>
