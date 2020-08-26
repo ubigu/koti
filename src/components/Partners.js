@@ -268,17 +268,20 @@ const Partners = () => {
 
         const chunkSize = matchXS ? 2 : matchSM ? 3 : 4;
 
-        const chunks = chunk(friends.map(friend => {
+        const chunks = chunk(friends.map((friend, index) => {
             const alt = Object.keys(friend.name).includes(locale) ? friend.name[locale] : friend.name[Object.keys(friend.name)[0]];
             const src = Object.keys(friend.img).includes(locale) ? friend.img[locale] : friend.img[Object.keys(friend.img)[0]];
             const href = Object.keys(friend.url).includes(locale) ? friend.url[locale] : friend.url[Object.keys(friend.url)[0]];
 
             return (
-                <div key={friend.name[locale]} className={classes.image}>
+                <div key={`${friend}_${index}`} className={classes.image}>
                     <a rel="noopener noreferrer" target='_blank'
                         href={href}>
                         <img
-                            style={{ height: friend.rows * 50, width: friend.cols * 100 }}
+                            style={{
+                                height: friend && friend.rows && friend.rows.length > 0 ? friend.rows * 50 : 50,
+                                width: friend && friend.cols && friend.cols.length > 0 ? friend.cols * friend.cols * 100 : 100
+                            }}
                             alt={alt}
                             src={src}
                         ></img>
@@ -287,7 +290,7 @@ const Partners = () => {
             )
         }), chunkSize)
 
-        const output = chunks.map(chunk => <div className={classes.chunker}>{chunk}</div>)
+        const output = chunks.map((chunk, index) => <div key={`chunk_${index}`} className={classes.chunker}>{chunk}</div>)
 
         return output
     }

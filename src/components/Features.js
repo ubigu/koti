@@ -68,7 +68,7 @@ const FeatureGrid = () => {
               })}
             </Typography>
           </Grid>
-          <Grid item xs={12} md={4} direction='column'>
+          <Grid item xs={12} md={4}>
             <div className={classes.imgContainer}>
               <img src={plan} style={{ height: 150 }} alt='planning'/>
             </div>
@@ -77,7 +77,7 @@ const FeatureGrid = () => {
             </Typography>
             <List dense classes={{ root: classes.list }}>
               {c.map(item => (
-                <ListItem classes={{ root: classes.listItem }}>
+                <ListItem key={item} classes={{ root: classes.listItem }}>
                   <ListItemText classes={{ root: classes.typography }}
                     primary={intl.formatMessage({ id: item })}
                   />
@@ -85,7 +85,7 @@ const FeatureGrid = () => {
               ))}
             </List>
           </Grid>
-          <Grid item xs={12} md={4} direction='column'>
+          <Grid item xs={12} md={4}>
             <div className={classes.imgContainer}>
               <img src={support} style={{ height: 150 }} alt='supporting'/>
             </div>
@@ -94,7 +94,7 @@ const FeatureGrid = () => {
             </Typography>
             <List dense classes={{ root: classes.list }}>
               {s.map(item => {
-                return <ListItem classes={{ root: classes.listItem }}>
+                return <ListItem key={item} classes={{ root: classes.listItem }}>
                   <ListItemText classes={{ root: classes.typography }}
                     primary={intl.formatMessage({ id: item })}
                   />
@@ -102,7 +102,7 @@ const FeatureGrid = () => {
               })}
             </List>
           </Grid>
-          <Grid item xs={12} md={4} direction='column'>
+          <Grid item xs={12} md={4}>
             <div className={classes.imgContainer}>
               <img src={design} style={{ height: 150 }} alt='developing'/>
             </div>
@@ -111,7 +111,7 @@ const FeatureGrid = () => {
             </Typography>
             <List dense classes={{ root: classes.list }}>
               {d.map(item => {
-                return <ListItem classes={{ root: classes.listItem }}>
+                return <ListItem key={item} classes={{ root: classes.listItem }}>
                   <ListItemText classes={{ root: classes.typography }}
                     primary={intl.formatMessage({ id: item })}
                   />

@@ -184,9 +184,9 @@ const ProductPage = () => {
               <Collapse in={expanded === 'planning'}>
                 <Grid container spacing={2}>
                   {Products.filter(product => product.category === 'planning')
-                    .map(product => {
+                    .map((product, index) => {
                       return (
-                        <Grid item xs={12} sm={6} md={4} className={classes.flexGrid}>
+                        <Grid key={`planning_${index}`} item xs={12} sm={6} md={4} className={classes.flexGrid}>
                           {createProduct(product, currentLocale)}
                         </Grid>
                       )
@@ -211,9 +211,9 @@ const ProductPage = () => {
               <Collapse in={expanded === 'developing'}>
                 <Grid container spacing={2}>
                   {Products.filter(product => product.category === 'developing')
-                    .map(product => {
+                    .map((product, index) => {
                       return (
-                        <Grid item xs={12} sm={6} md={4} className={classes.flexGrid}>
+                        <Grid key={`developing_${index}`} item xs={12} sm={6} md={4} className={classes.flexGrid}>
                           {createProduct(product, currentLocale)}
                         </Grid>
                       )
@@ -238,9 +238,9 @@ const ProductPage = () => {
               <Collapse in={expanded === 'supporting'}>
                 <Grid container spacing={2}>
                   {Products.filter(product => product.category === 'supporting')
-                    .map(product => {
+                    .map((product, index) => {
                       return (
-                        <Grid item xs={12} sm={6} md={4} className={classes.flexGrid}>
+                        <Grid key={`supporting_${index}`} item xs={12} sm={6} md={4} className={classes.flexGrid}>
                           {createProduct(product, currentLocale)}
                         </Grid>
                       )

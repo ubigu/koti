@@ -52,10 +52,10 @@ const BlogRoll = (props) => {
       {({ language: currentLocale }) =>
         <div className="columns is-multiline">
           {posts &&
-            posts.map(({ node: post }) => {
+            posts.map(({ node: post }, index) => {
               if ([post.frontmatter.language, `'${post.frontmatter.language}'`, `"${post.frontmatter.language}"`, `"'${post.frontmatter.language}'"`].includes(intl.locale)) {
                 return (
-                  <div className="is-parent column is-6" key={post.id}>
+                  <div className="is-parent column is-6" key={post.id + '_' + index}>
                     <article className={`${classes.tile} ${post.frontmatter.featuredpost ? 'is-featured' : ''}`}>
                       <header>
                         {post.frontmatter.featuredimage ? (
@@ -68,7 +68,7 @@ const BlogRoll = (props) => {
                             />
                           </div>
                         ) : null}
-                        <p className="post-meta">
+                        <div className="post-meta">
                           <Link to={post.fields.slug}>
                             <Typography variant='h5' className={classes.title}>
                               {post.frontmatter.title}
@@ -77,7 +77,7 @@ const BlogRoll = (props) => {
                           <Typography variant='h6' className={classes.subtitle}>
                             {post.frontmatter.date}
                           </Typography>
-                        </p>
+                        </div>
                       </header>
                       <Typography variant='body1' className={classes.excerpt}>
                         {post.excerpt}
@@ -89,7 +89,7 @@ const BlogRoll = (props) => {
                   </div>
                 )
               } else {
-                return <></>
+                return <div key={'post' + index}></div>
               }
             })}
         </div >
