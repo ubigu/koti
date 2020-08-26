@@ -113,7 +113,6 @@ const Some = props => {
                                 data-pages={dataPages}
                                 data-overlay={"false"}
                                 data-columns={dataColumns}
-                                data-after={"console.log('seppo')"}
                             >
                                 <h1 className="referral">
                                     <a href="https://www.juicer.io">Juicer</a>
