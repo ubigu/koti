@@ -39,11 +39,17 @@ Tuemme kuntaorganisaatioita tässä valtavassa haasteessa kokonaisarkkitehtuurim
 
 Iteraatioihin perustuva suunnitteluprosessi koostuu viidestä vaiheesta:<br><br>
 
-* Kokonaisarkkitehtuurin suunnittelun valmistelu
-* Arkkitehtuurivision määrittely
-* Nykytilan analysointi
-* Tavoitetilan suunnittelu
-* Toimeenpanon suunnittelu
+\- Kokonaisarkkitehtuurin suunnittelun valmistelu
+
+\- Arkkitehtuurivision määrittely
+
+\- Nykytilan analysointi
+
+\- Tavoitetilan suunnittelu
+
+\- Toimeenpanon suunnittelu
+
+<br>
 
 Kokemuksemme perusteella kokonaisarkkitehtuurimenetelmän mukaiset kuvaukset ovat auttaneet maankäytön suunnittelun ja rakentamisen kokonaisuuden hahmottamista ja ymmärtämistä paremmin toiminnan, tietojen ja tietojärjestelmien näkökulmasta yhteentoimivana kokonaisuutena. Nykytilan analysoinnilla on kuvattu kuntien nykytilaa, josta on tunnistettu mm. toimijat, tiedon rakenteet ja tallennustavat, tietojärjestelmät, tietovirtaukset organisaation sisäisten ja ulkoisten toimijoiden ja järjestelmien välillä, tietoturvan ja -suojan tilanne sekä tunnistettiin näihin liittyviä mahdollisia ongelmakohtia.<br><br>
 
