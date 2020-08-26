@@ -53,7 +53,7 @@ const BlogRoll = (props) => {
         <div className="columns is-multiline">
           {posts &&
             posts.map(({ node: post }) => {
-              if (post.frontmatter.language === intl.locale) {
+              if ([post.frontmatter.language, `'${post.frontmatter.language}'`, `"${post.frontmatter.language}"`, `"'${post.frontmatter.language}'"`].includes(intl.locale)) {
                 return (
                   <div className="is-parent column is-6" key={post.id}>
                     <article className={`${classes.tile} ${post.frontmatter.featuredpost ? 'is-featured' : ''}`}>
