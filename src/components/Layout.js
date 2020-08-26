@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import './../styles/all.sass'
+import './../styles/juicer.sass'
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 
 import smoothscroll from 'smoothscroll-polyfill';
