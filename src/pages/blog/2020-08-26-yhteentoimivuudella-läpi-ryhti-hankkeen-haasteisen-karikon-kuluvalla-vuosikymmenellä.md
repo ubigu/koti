@@ -13,7 +13,7 @@ description: Parhaillaan käynnissä oleva, Maankäyttö- ja rakennuslain
   tietojärjestelmäpalveluita.
 language: fi
 featuredpost: true
-featuredimage: /img/ka.jpg
+featuredimage: /img/image.png
 tags:
   - kokonaisarkkitehtuuri
   - ryhti
@@ -38,8 +38,6 @@ Näemme muutoksen mahdollisuutena uudenlaisten teknologioiden ja toimintaprosess
 
 Tuemme kuntaorganisaatioita tässä valtavassa haasteessa kokonaisarkkitehtuurimenetelmää hyödyntäen. Tarjoamme tukea maankäytön suunnittelun ja rakentamisen kokonaisuuden kehittämiseen, joko osa kokonaisuuksina tai koko suunnitteluprosessin suunnitteluun ja sen käyttöönottoon. Kokonaisarkkitehtuurin suunnitteluprosessi perustuu [JHS 179](http://www.jhs-suositukset.fi/suomi/jhs179) mukaiseen suunnitteluprosessiin ja siinä esitettyihin kuvauksiin, jotka jokaisen organisaation on suositeltavaa tuottaa, jopa osakseen lainsäädäntö edellyttää tätä.<br><br>![](https://lh6.googleusercontent.com/LDpjIZKL1ZSdBcYA7xKboaB2HN33JE8BnFY_gMX8WjQ5-RnQSSb_2wS2G6G4DxlWeRW_JDmS3ZvlCPylBGxwMdUrdTlhteUTlMbM-UpRASbhY8DIpA-zFDyuO0t27mBmwya5sPiW)
 
-
-
 Iteraatioihin perustuva suunnitteluprosessi koostuu viidestä vaiheesta:<br><br>
 
 * Kokonaisarkkitehtuurin suunnittelun valmistelu
@@ -47,8 +45,6 @@ Iteraatioihin perustuva suunnitteluprosessi koostuu viidestä vaiheesta:<br><br>
 * Nykytilan analysointi
 * Tavoitetilan suunnittelu
 * Toimeenpanon suunnittelu
-
-  <br>
 
 Kokemuksemme perusteella kokonaisarkkitehtuurimenetelmän mukaiset kuvaukset ovat auttaneet maankäytön suunnittelun ja rakentamisen kokonaisuuden hahmottamista ja ymmärtämistä paremmin toiminnan, tietojen ja tietojärjestelmien näkökulmasta yhteentoimivana kokonaisuutena. Nykytilan analysoinnilla on kuvattu kuntien nykytilaa, josta on tunnistettu mm. toimijat, tiedon rakenteet ja tallennustavat, tietojärjestelmät, tietovirtaukset organisaation sisäisten ja ulkoisten toimijoiden ja järjestelmien välillä, tietoturvan ja -suojan tilanne sekä tunnistettiin näihin liittyviä mahdollisia ongelmakohtia.<br><br>
 
