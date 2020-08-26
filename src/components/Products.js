@@ -69,7 +69,7 @@ const Products = [
     {
         category: 'planning',
         label: {
-            fi: "Liikenne- ja kuljetussuunnittelu",
+            fi: "Liikennesuunnittelu",
             en: "Transport & traffic planning",
         },
         description: {

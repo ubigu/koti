@@ -6,6 +6,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        disableAutoprefixing: false,
+        disableMinification: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-intl`,
       options: {
         // language JSON resource path
