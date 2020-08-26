@@ -268,7 +268,7 @@ const People = () => {
                             </Grid>
 
                             {persons.map(person => {
-                                console.log(currentLocale)
+                                
                                 const name = person.firstname !== '' ? person.firstname + ' ' + person.surname : '';
                                 const hovering = [person.tel, person.email].includes(hover);
 
