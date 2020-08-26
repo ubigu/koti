@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Ubigu homepage - created with Gatsby + Netlify CMS',
+    title: 'Ubigu',
     description:
       'This repo contains Ubigu´s company homepage, created with Gatsby and Netlify.',
   },

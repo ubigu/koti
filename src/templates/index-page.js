@@ -5,7 +5,7 @@ import Partners from "../components/Partners";
 import Features from "../components/Features";
 import { useIntl } from "gatsby-plugin-intl";
 
-import "./../components/ring1.scss";
+import "./../styles/ring1.scss";
 import Ring1b from "./../img/ring1b.inline.svg";
 import Ring1a from "./../img/ring1a.inline.png";
 
@@ -208,7 +208,7 @@ const IndexPage = () => {
             </Fab>
           )}
         </div>
-        <Divider variant="middle" className={classes.divider}/>
+        <Divider variant="middle" className={classes.divider} />
         <section className={classes.section} ref={descRef}>
           <div className="container">
             <div className="section" style={{ paddingBottom: 0 }}>
@@ -243,7 +243,7 @@ const IndexPage = () => {
       </div>
       <Divider variant="middle" className={classes.divider} />
       <Some />
-      <Divider variant="middle" className={classes.divider}/>
+      <Divider variant="middle" className={classes.divider} />
       <Partners />
     </Layout>
   );

@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl' //eslint-disable-line
-import { Grid } from '@material-ui/core';
-import { List, ListItem, ListItemText, Typography, Button } from '@material-ui/core';
+import { Grid, List, ListItem, ListItemText, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import support from "./../img/support.svg";

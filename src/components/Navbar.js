@@ -46,7 +46,7 @@ const Navbar = props => {
 
   return (
     <IntlContextConsumer>
-      {({ languages, language: currentLocale }) =>
+      {({ language: currentLocale }) =>
         <nav
           className="navbar is-transparent"
           role="navigation"
@@ -57,44 +57,44 @@ const Navbar = props => {
               <Link className={classes.homeButton} to={`/${currentLocale}/#`}>
                 <img src={logo} alt="Ubigu" style={{ height: '52px' }} />
               </Link>
-            <div
-              role="button"
-              tabIndex={0}
-              className={`navbar-burger burger ${navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => setActive(prev => !prev)}
-              onKeyDown={() => setActive(prev => !prev)}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" id="aboutlink" to={`/${currentLocale}/about`}>
-                {intl.formatMessage({ id: "about" })}
-              </Link>
-              <Link className="navbar-item" id="productlink" to={`/${currentLocale}/products`}>
-                {intl.formatMessage({ id: "products" })}
-
-              </Link>
-              <Link className="navbar-item" id="bloglink" to={`/${currentLocale}/blog`}>
-                {intl.formatMessage({ id: "blog" })}
-              </Link>
-              <a className="navbar-item" id="contactlink" href="#contact">
-                {intl.formatMessage({ id: "contact" })}
-              </a>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <div>
-                <Language />
+              <div
+                role="button"
+                tabIndex={0}
+                className={`navbar-burger burger ${navBarActiveClass}`}
+                data-target="navMenu"
+                onClick={() => setActive(prev => !prev)}
+                onKeyDown={() => setActive(prev => !prev)}
+              >
+                <span />
+                <span />
+                <span />
               </div>
             </div>
-          </div>
+            <div
+              id="navMenu"
+              className={`navbar-menu ${navBarActiveClass}`}
+            >
+              <div className="navbar-start has-text-centered">
+                <Link className="navbar-item" id="aboutlink" to={`/${currentLocale}/about`}>
+                  {intl.formatMessage({ id: "about" })}
+                </Link>
+                <Link className="navbar-item" id="productlink" to={`/${currentLocale}/products`}>
+                  {intl.formatMessage({ id: "products" })}
+
+                </Link>
+                <Link className="navbar-item" id="bloglink" to={`/${currentLocale}/blog`}>
+                  {intl.formatMessage({ id: "blog" })}
+                </Link>
+                <a className="navbar-item" id="contactlink" href="#contact">
+                  {intl.formatMessage({ id: "contact" })}
+                </a>
+              </div>
+              <div className="navbar-end has-text-centered">
+                <div>
+                  <Language />
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
       }

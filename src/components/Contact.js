@@ -1,55 +1,44 @@
 import React from 'react'
+import Layout from '../components/Layout'
+import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
+import { Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
+import bg from './../../static/img/teambg.jpg'
 
-const Contact = (props) => (
-    <section id="contact">
-        <div className="inner">
-            <section>
-                <form method="post" action="#">
-                    <div className="field half first">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" name="name" id="name" />
-                    </div>
-                    <div className="field half">
-                        <label htmlFor="email">Email</label>
-                        <input type="text" name="email" id="email" />
-                    </div>
-                    <div className="field">
-                        <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" rows="6"></textarea>
-                    </div>
-                    <ul className="actions">
-                        <li><input type="submit" value="Send Message" className="special" /></li>
-                        <li><input type="reset" value="Clear" /></li>
-                    </ul>
-                </form>
-            </section>
-            <section className="split">
-                <section>
-                    <div className="contact-method">
-                        <span className="icon alt fa-envelope"></span>
-                        <h3>Email</h3>
-                        <a href="#">information@untitled.tld</a>
-                    </div>
-                </section>
-                <section>
-                    <div className="contact-method">
-                        <span className="icon alt fa-phone"></span>
-                        <h3>Phone</h3>
-                        <span>(000) 000-0000 x12387</span>
-                    </div>
-                </section>
-                <section>
-                    <div className="contact-method">
-                        <span className="icon alt fa-home"></span>
-                        <h3>Address</h3>
-                        <span>1234 Somewhere Road #5432<br />
-                        Nashville, TN 00000<br />
-                        United States of America</span>
-                    </div>
-                </section>
-            </section>
-        </div>
-    </section>
-)
+const useStyles = makeStyles(() => ({
+  holder: {
+    width: '100%',
+    backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    height: 'calc(100vh - 354px)',
+    backgroundColor: '#d398a4',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
+  }
+}));
+
+const Contact = () => {
+
+  const intl = useIntl();
+  const classes = useStyles();
+
+  return (
+    <Layout>
+      <IntlContextConsumer>
+        {({ language: currentLocale }) =>
+          <div className={classes.holder}>
+            <Typography variant='h4' align='center' style={{ color: '#FFF', marginBottom: 16, userSelect: 'none' }}>
+              {intl.formatMessage({ id: "notfound", defaultMessage: 'Not found!' })}
+            </Typography>
+            <Typography variant='h5' align='center' style={{ color: '#FFF', userSelect: 'none'}}>
+              {intl.formatMessage({ id: "notfound_explain", defaultMessage: 'The page you were looking for does not exist.' })}
+            </Typography>
+          </div>
+        }
+      </IntlContextConsumer>
+    </Layout>
+  )
+}
 
 export default Contact

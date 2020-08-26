@@ -1,5 +1,4 @@
 import React from 'react';
-import bgVideo from "./../img/bg.mp4";
 import logo from '../img/ubigu_logo_white.svg';
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 
@@ -65,11 +64,6 @@ const Jumbotron = () => {
         <IntlContextConsumer>
             {({ languages, language: currentLocale }) =>
                 <div className={classes.container}>
-                    <div className={classes.jumbotronContainer}>
-                        <video autoPlay muted loop className={classes.video}>
-                            <source src={bgVideo} type="video/mp4"></source>
-                        </video>
-                    </div>
                     <div className={`${classes.jumbotronContainer} ${classes.jumboTwo}`}>
                         <span className={classes.span}>
                             <img

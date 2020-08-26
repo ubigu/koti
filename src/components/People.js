@@ -14,8 +14,8 @@ import {
     Avatar,
     SvgIcon,
 } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import colors from './colors';
+import { makeStyles } from '@material-ui/core/styles';
+import colors from '../styles/colors';
 import linkedin from '../img/social/linkedin.inline.svg'
 import { ExpandMore, Email, Phone } from '@material-ui/icons/';
 
@@ -37,9 +37,12 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
-        width: 300,
+        width: 250,
         margin: theme.spacing(2),
-        minHeight: 150
+        minHeight: 150,
+        [theme.breakpoints.up('md')]: {
+            width: 300
+        },
     },
     img: {
         display: 'inline',
@@ -49,7 +52,10 @@ const useStyles = makeStyles(theme => ({
     },
     media: {
         height: 300,
-        maxWidth: 400
+        maxWidth: 250,
+        [theme.breakpoints.up('md')]: {
+            maxWidth: 300
+        },
     },
     imgCropper: {
         width: 150,
@@ -106,14 +112,14 @@ const us = [
         linkedin: 'https://www.linkedin.com/in/sonja-aarnio-1355541b4/',
         description: {
             fi: `Sonja rakastaa yhteistyötä asiantuntevien ihmisten kanssa ja monitahoisten projektien luotsaamista. Vastausten löytäminen kaupunkikehityksen, maankäytön ja liikenteen ja näiden digitalisaation kysymyksiin saavat hänen suuren sydämensä sykkimään.`,
-            en: `Sonja loves working together with insightful people and steering multifaceted projects. Finding answers to questions on urban development, land use and traffic planning and their digitalization make her heart beat like no other.`,
+            en: `Sonja loves working together with insightful people and steering multifaceted projects. Finding answers to questions on urban development, land use and transport planning and their digitalization make her heart beat like no other.`,
         },
         powers: {
-            en: ['Land use planning', 'Traffic planning', 'Traffic systems', 'Service networks', 'Impact assessments', 'Project management', 'Geoinformatics', 'Business intelligence', 'Real estate'],
-            fi: ['Maankäytön suunnittelu', 'Liikennesuunnittelu', 'Liikennejärjestelmät', 'Palveluverkot', 'Vaikutusten arvioinnit', 'Projektinhallinta', 'Geoinformatiikka', 'Liikkeenjohdon konsultointi', 'Kiinteistösektorin tuntemus']
+            en: ['Traffic and land use', 'Urban and regional development', 'Personal transport', 'Service networks', 'Impact assessments', 'Project management & coordination', 'Geoinformatics', 'Business intelligence'],
+            fi: ['Liikenne ja maankäyttö', 'Kaupunki- ja aluekehitys', 'Henkilökuljetukset', 'Palveluverkot', 'Vaikutusten arvioinnit', 'Projektinhallinta ja -koordinointi', 'Geoinformatiikka', 'Liikkeenjohdon konsultointi']
         },
         imgs: [sonja],
-        color: 'lilac violet'
+        color: 'dark cool grey'
     },
     {
         firstname: 'Ilpo',
@@ -132,11 +138,11 @@ const us = [
             en: `When Ilpo is not navigating the office around swells and shoals, he immerses himself in expeditions into data, analytics, visualizations and planning thematics with awarded devotion.`,
         },
         powers: {
-            en: ['Strategic land use planning', 'Digitalization of processes', 'Smart cities', 'Spatial analytics', 'Data management', 'Full-stack web development: Node.js, React, OpenLayers..', 'PostgreSQL, Geoserver', 'Cartographic design'],
-            fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikak', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers...', 'PostgreSQL, GeoServer', 'Kartografia']
+            en: ['Strategic land use planning', 'Digitalization of processes', 'Smart cities', 'Spatial analytics', 'Data management', 'Full-stack web development: Node.js, React, OpenLayers..', 'PostgreSQL, Geoserver, OSGeo...', 'Cartographic design'],
+            fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikka', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers...', 'PostgreSQL, GeoServer, OSGeo...', 'Kartografia']
         },
         imgs: [ilpo],
-        color: 'lilac violet'
+        color: 'pink'
     },
     {
         firstname: 'Jouko',
@@ -155,11 +161,11 @@ const us = [
             en: `Jouko is a passionate climber and orienteer. Whether he's facing a wall of granite, a misty mire, an abyss of analyses or a rocky road of data management and business intelligence, Jouko will find a way.`,
         },
         powers: {
-            en: ['Strategic planning', 'Regional development', 'Digitalization of processes', 'Smart cities & Urban studies', 'Spatial analytics', 'Master data management', 'ETL (FME)', 'PostgreSQL', 'Data visualization'],
-            fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikak', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers...', 'PostgreSQL, GeoServer', 'Kartografia']
+            en: ['Strategic planning, BI and data visualization', 'Land use planning', 'Smart cities & regional development', 'Digitalization of processes', 'Data & spatial analytics', 'Master data management, ETL (FME)', 'PostgreSQL, Oracle...'],
+            fi: ['Strateginen suunnittelu, tietojohtaminen ja datavisualisointi', 'Maankäytön suunnittelu', 'Älykaupungit ja aluekehitys', 'Prosessien digitalisaatio', 'Data- ja paikkatietoanalytiikka', 'Tiedonhallinta, ETL (FME)', 'PostgreSQL, Oracle...']
         },
         imgs: [jouko],
-        color: 'pine green'
+        color: 'dark blue'
     },
     {
         firstname: 'Marko',
@@ -178,11 +184,11 @@ const us = [
             en: `Marko is characteristically a constructor, who can't resist a look under the hood. After a dozen of years developing spatial data infrastructures, even the systems seem to know him by now.`,
         },
         powers: {
-            en: ['Enterprise architecture', 'Reference architectures', 'Spatial data infrastructures', 'ETL processes', 'Digitalization of land use and planning', 'Data management', 'Full-stack ICT', 'PostgreSQL, GeoServer'],
-            fi: ['Kokonaisarkkitehtuurit', 'Viitearkkitehtuurit', 'Paikkatietoinfrastruktuuri', 'ETL-prosessit', 'Maankäytön digitalisaatio', 'Tiedonhallinta', 'Full-stack IT', 'PostgreSQL, GeoServer']
+            en: ['Enterprise & reference architectures', 'Digitalization of land use', 'Spatial data infrastructures', 'ETL processes (FME etc.)', 'Data management & databases', 'Full-stack ICT', 'OGC standards and OSGeo tools', 'Software development & Agile'],
+            fi: ['Kokonais- ja viitearkkitehtuurit', 'Maankäytön digitalisaatio', 'Paikkatietoinfrastruktuurit', 'ETL-prosessit (FME yms.)', 'Tiedonhallinta ja tietokannat', 'Full-stack IT, järjestelmähallinta', 'Ketterä ohjelmistokehitys']
         },
         imgs: [marko],
-        color: 'berry red'
+        color: 'aqua blue'
     },
     {
         firstname: 'Ossi',
@@ -201,11 +207,11 @@ const us = [
             en: `Ossi is a polyglot - talks fluently with machines regardless of the language. A man passionate about chopping wood - he even knows how to (com)pile code into beautiful Full Stacks.`,
         },
         powers: {
-            en: ['Full-stack web development: Node.js, React, geospatial...', 'API development', 'Database management', 'Agile development', 'Scrum mastering', 'ICT project management'],
-            fi: ['Full-stack kehitys: Node.js, React, geospatialiset kirjastot...', 'Rajapintakehitys', 'Tietokantahallinta', 'Ketterä kehitys', 'Scrum masterointi', 'IT-projektinveto']
+            en: ['Full-stack web development: Node.js, React, and many more', 'Geospatial technologies', 'API development', 'Database management', 'Agile development', 'Scrum-mastering', 'ICT project management'],
+            fi: ['Full-stack kehitys: Node.js, React, ja paljon muuta', 'Paikkatietoteknologiat', 'Rajapintakehitys', 'Tietokantahallinta', 'Ketterä kehitys', 'Scrum-masterointi', 'IT-projektinveto']
         },
         imgs: [ossi],
-        color: 'grey blue'
+        color: 'blue grey'
     },
 ]
 
@@ -226,7 +232,7 @@ const incognito = {
         en: `We are always interested in expanding our team with nice, talented people, who are not afraid of getting one's hands dirty. Perhaps you are one of them?`,
     },
     imgs: [incog],
-    color: 'pink'
+    color: 'light cool grey'
 };
 
 const People = () => {
@@ -240,10 +246,6 @@ const People = () => {
     const handleExpandClick = name => {
         setExpanded(prev => name && prev !== name ? name : null);
     };
-
-    const theme = useTheme();  //eslint-disable-line
-    // const matchesXS = useMediaQuery(theme.breakpoints.only('xs'));
-    //  const matchesSM = useMediaQuery(theme.breakpoints.only('sm'));
 
     const persons = [...us.sort(
         (a, b) => a.surname > b.surname ? 1 : b.surname > a.surname ? -1 : a.firstname > b.firstname ? 1 : b.firstname > a.firstname ? -1 : 0
@@ -266,7 +268,7 @@ const People = () => {
                             </Grid>
 
                             {persons.map(person => {
-
+                                console.log(currentLocale)
                                 const name = person.firstname !== '' ? person.firstname + ' ' + person.surname : '';
                                 const hovering = [person.tel, person.email].includes(hover);
 
@@ -288,24 +290,20 @@ const People = () => {
                                                 />
 
                                                 <CardActionArea style={{ top: 0 }}>
-                                                    {expanded !== name &&
-                                                        <CardMedia
-                                                            className={classes.media}
-                                                            image={person.imgs[0]}
-                                                            title={person.firstname}
-                                                        />}
+                                                    <CardMedia
+                                                        className={classes.media}
+                                                        image={person.imgs[0]}
+                                                        title={person.firstname}
+                                                    />
                                                     <CardContent>
-                                                        {expanded !== name &&
-                                                            <Typography gutterBottom variant="subtitle1" component="h2" align='center'>
-                                                                {hovering ? hover : person.title[currentLocale]}
-                                                            </Typography>}
+                                                        <Typography gutterBottom variant="subtitle1" component="h2" align='center'>
+                                                            {hovering ? hover : expanded !== name ? person.title[currentLocale] : `${person.firstname}${currentLocale === 'fi' ? 'n' : "'s"} ${intl.formatMessage({ id: 'powers' })}`}
+                                                        </Typography>
                                                         <Typography variant="body2" color="textSecondary" component="p" align='left'>
                                                             {expanded !== name ? person.description[currentLocale] :
-                                                                <span>{intl.formatMessage({ id: 'powers' })}:<br /><br />
-                                                                    <ul style={{ listStyle: 'circle', marginLeft: 18 }}>
-                                                                        {person.powers[currentLocale].map(power => <li>{power}</li>)}
-                                                                    </ul>
-                                                                </span>
+                                                                <ul style={{ listStyle: 'circle', marginLeft: 18 }}>
+                                                                    {person.powers[currentLocale].map(power => <li>{power}</li>)}
+                                                                </ul>
                                                             }
                                                         </Typography>
                                                     </CardContent>
@@ -355,7 +353,7 @@ const People = () => {
                     </div>
                 }
             </IntlContextConsumer>
-        </div>
+        </div >
     )
 }
 

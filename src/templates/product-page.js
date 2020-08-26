@@ -1,247 +1,260 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React, { useState } from 'react'
+import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import bg from './../../static/img/teambg.jpg'
+import {
+  Grid, Typography, Button, Collapse, Card,
+  CardHeader,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+} from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
+import Products from './../components/Products';
+import support from "./../img/support.svg";
+import plan from "./../img/plan.svg";
+import design from "./../img/design.svg";
 
-export const ProductPageTemplate = ({
-  image,
-  title,
-  heading,
-  description,
-  intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
-}) => (
-    <div className="content">
-      <div
-        className="full-width-image-container margin-top-0"
-        style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-        }}
-      >
-        <h2
-          className="has-text-weight-bold is-size-1"
-          style={{
-            boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-            backgroundColor: '#f40',
-            color: 'white',
-            padding: '1rem',
-          }}
-        >
-          {title}
-        </h2>
-      </div>
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-7 is-offset-1">
-                <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-                <p>{description}</p>
-              </div>
-            </div>
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-7">
-                    <h3 className="has-text-weight-semibold is-size-3">
-                      {main.heading}
-                    </h3>
-                    <p>{main.description}</p>
-                  </div>
-                </div>
-                <div className="tile is-ancestor">
-                  <div className="tile is-vertical">
-                    <div className="tile">
-                      <div className="tile is-parent is-vertical">
-                        <article className="tile is-child">
-                          <PreviewCompatibleImage imageInfo={main.image1} />
-                        </article>
-                      </div>
-                      <div className="tile is-parent">
-                        <article className="tile is-child">
-                          <PreviewCompatibleImage imageInfo={main.image2} />
-                        </article>
-                      </div>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image3} />
-                      </article>
-                    </div>
-                  </div>
-                </div>
-                <Testimonials testimonials={testimonials} />
-                <div
-                  className="full-width-image-container"
-                  style={{
-                    backgroundImage: `url(${
-                      fullImage.childImageSharp
-                        ? fullImage.childImageSharp.fluid.src
-                        : fullImage
-                      })`,
-                  }}
-                />
-                <h2 className="has-text-weight-semibold is-size-2">
-                  {pricing.heading}
-                </h2>
-                <p className="is-size-5">{pricing.description}</p>
-                <Pricing data={pricing.plans} />
-              </div>
-            </div>
-          </div>
+const useStyles = makeStyles(theme => ({
+  jumbotron: {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'bottom',
+    objectFit: 'cover',
+    display: 'flex',
+    filter: 'hue-rotate(90deg)',
+    opacity: 0.9,
+    height: 300,
+    width: '100vw',
+    overflow: 'hidden',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    userSelect: 'none',
+    flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      height: 200
+    }
+  },
+  cardRoot: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    width: 250,
+    margin: theme.spacing(2),
+    minHeight: 150,
+    [theme.breakpoints.up('md')]: {
+      width: 300
+    },
+  },
+  typography: {
+    color: '#FFF',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 36
+    }
+  },
+  holder: {
+    overflow: 'hidden',
+    marginTop: theme.spacing(4),
+    backgroundColor: theme.palette.background.paper,
+    paddingBottom: theme.spacing(4)
+  },
+  flexGrid: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  titleHolder: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  titleimg: {
+    height: 200,
+    marginBottom: 16
+  },
+  media: {
+    borderRadius: 25,
+    height: 150,
+    maxWidth: 250,
+    [theme.breakpoints.up('md')]: {
+      maxWidth: 300
+    },
+  },
+  imgCropper: {
+    width: 150,
+    height: 175,
+    position: 'relative',
+    overflow: 'hidden',
+    borderRadius: 10
+  },
+  cardHeader: {
+    height: 72,
+    minWidth: 250,
+    userSelect: 'none'
+  },
+  cardTitle: {
+    fontSize: 18,
+  },
+  typo: {
+    margin: theme.spacing(4),
+    width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '75%',
+      fontSize: 14
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '95%',
+      fontSize: 14
+    },
+    userSelect: 'none'
+  }
+}));
+
+const ProductPage = () => {
+
+  const intl = useIntl();
+  const classes = useStyles();
+  const [expanded, setExpanded] = useState('planning');
+
+  const createProduct = (item, locale) => {
+
+    const { label, description, img } = item;
+
+    return (
+      <Card className={classes.cardRoot} elevation={0}>
+        <div style={{ height: '100%' }}>
+          <CardHeader
+            classes={{ root: classes.cardHeader, title: classes.cardTitle }}
+            title={label[locale]}
+            titleTypographyProps={{
+              align: 'center',
+              variant: 'subtitle2',
+              style: {fontSize: 14}
+            }}
+          />
+
+          <CardActionArea style={{ top: 0 }}>
+            <CardMedia
+              className={classes.media}
+              image={img}
+              title={label[locale]}
+            />
+            <CardContent>
+              <Typography variant="body2" color="textSecondary" component="p" align='center'>
+                {description[locale]}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
         </div>
-      </section>
-    </div>
-  )
-
-ProductPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
-}
-
-const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+      </Card>
+    )
+  }
 
   return (
-    <Layout>
-      <ProductPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
-      />
-    </Layout>
-  )
-}
+    <IntlContextConsumer>
+      {({ language: currentLocale }) =>
+        <Layout>
+          <div className={classes.jumbotron}>
+            <Typography variant="h2" className={classes.typography}>
+              {intl.formatMessage({ id: "ourservices", defaultMessage: "Our services" })}
+            </Typography>
+          </div>
+          <div className={classes.holder}>
+            <Grid container spacing={2}
+              justify={'center'}>
 
-ProductPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+              <Grid item xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
+                <Typography variant='body1' align='center' className={classes.typo}>
+                  {intl.formatMessage({ id: 'product_title' })}
+                </Typography>
+              </Grid>
+
+
+              <Grid item xs={12} className={classes.flexGrid} >
+                <div className={classes.titleHolder}>
+                  {expanded === 'planning' &&
+                    <img src={plan} className={classes.titleimg} alt='planning' />
+                  }
+                  <Button onClick={() => setExpanded('planning')} color='primary' style={{ textTransform: 'none' }}>
+                    <Typography variant='h5' align='center' >
+                      {intl.formatMessage({ id: 'consulting' })}
+                    </Typography>
+                  </Button>
+                </div>
+              </Grid>
+
+              <Collapse in={expanded === 'planning'}>
+                <Grid container spacing={2}>
+                  {Products.filter(product => product.category === 'planning')
+                    .map(product => {
+                      return (
+                        <Grid item xs={12} sm={6} md={4} className={classes.flexGrid}>
+                          {createProduct(product, currentLocale)}
+                        </Grid>
+                      )
+                    })
+                  }
+                </Grid>
+              </Collapse>
+
+              <Grid item xs={12} className={classes.flexGrid} >
+                <div className={classes.titleHolder}>
+                  {expanded === 'developing' &&
+                    <img src={design} className={classes.titleimg} alt='developing' />
+                  }
+                  <Button onClick={() => setExpanded('developing')} color='primary' style={{ textTransform: 'none' }}>
+                    <Typography variant='h5' align='center' >
+                      {intl.formatMessage({ id: 'developing' })}
+                    </Typography>
+                  </Button>
+                </div>
+              </Grid>
+
+              <Collapse in={expanded === 'developing'}>
+                <Grid container spacing={2}>
+                  {Products.filter(product => product.category === 'developing')
+                    .map(product => {
+                      return (
+                        <Grid item xs={12} sm={6} md={4} className={classes.flexGrid}>
+                          {createProduct(product, currentLocale)}
+                        </Grid>
+                      )
+                    })
+                  }
+                </Grid>
+              </Collapse>
+
+              <Grid item xs={12} className={classes.flexGrid} >
+                <div className={classes.titleHolder}>
+                  {expanded === 'supporting' &&
+                    <img src={support} className={classes.titleimg} alt='supporting' />
+                  }
+                  <Button onClick={() => setExpanded('supporting')} color='primary' style={{ textTransform: 'none' }}>
+                    <Typography variant='h5' align='center' >
+                      {intl.formatMessage({ id: 'supporting' })}
+                    </Typography>
+                  </Button>
+                </div>
+              </Grid>
+
+              <Collapse in={expanded === 'supporting'}>
+                <Grid container spacing={2}>
+                  {Products.filter(product => product.category === 'supporting')
+                    .map(product => {
+                      return (
+                        <Grid item xs={12} sm={6} md={4} className={classes.flexGrid}>
+                          {createProduct(product, currentLocale)}
+                        </Grid>
+                      )
+                    })
+                  }
+                </Grid>
+              </Collapse>
+
+            </Grid>
+          </div>
+        </Layout>
+      }
+    </IntlContextConsumer >
+  )
 }
 
 export default ProductPage
-
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
-        }
-      }
-    }
-  }
-`
