@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Yhteentoimivuudella luovitaan ohi Ryhti-hankkeen karikkopaikkojen
+title: Yhteentoimivuudella luovitaan ohi Ryhdin karikkopaikkojen
 date: 2020-08-26T10:28:01.833Z
 description: Parhaillaan käynnissä oleva, Maankäyttö- ja rakennuslain
   kokonaisuudistukseen sekä uuteen tiedonhallintalakiin liittyvä,
