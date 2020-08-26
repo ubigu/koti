@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 import './../styles/all.sass'
+import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 
 import smoothscroll from 'smoothscroll-polyfill';
 import { withPrefix } from 'gatsby'
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './../styles/theme';
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 const TemplateWrapper = ({ children }) => {
 
