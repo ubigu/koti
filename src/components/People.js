@@ -28,21 +28,27 @@ import incog from './../img/us/incognito.jpg';
 
 const useStyles = makeStyles(theme => ({
     holder: {
-        width: '90%',
+        width: '70%',
         overflow: 'hidden',
         marginTop: theme.spacing(2),
         backgroundColor: theme.palette.background.paper,
+        [theme.breakpoints.only('md')]: {
+            width: '80%'
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '90%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '95%'
+        },
     },
     cardRoot: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
-        width: 250,
+        width: 300,
         margin: theme.spacing(2),
         minHeight: 150,
-        [theme.breakpoints.up('md')]: {
-            width: 300
-        },
     },
     img: {
         display: 'inline',
@@ -52,10 +58,7 @@ const useStyles = makeStyles(theme => ({
     },
     media: {
         height: 300,
-        maxWidth: 250,
-        [theme.breakpoints.up('md')]: {
-            maxWidth: 300
-        },
+        maxWidth: 300,
     },
     imgCropper: {
         width: 150,
@@ -273,7 +276,7 @@ const People = () => {
                                 const hovering = [person.tel, person.email].includes(hover);
 
                                 return (
-                                    <Grid key={name} item xs={12} sm={6} md={4} lg={3} xl={3} style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Grid key={name} item xs={12} sm={6} md={4} lg={4} xl={4} style={{ display: 'flex', justifyContent: 'center' }}>
                                         <Card className={classes.cardRoot} style={{ maxHeight: expanded === name ? 750 : 'auto' }}>
                                             <div style={{ height: '100%' }}>
                                                 <CardHeader
