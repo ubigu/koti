@@ -99,7 +99,7 @@ const Some = props => {
 
     useEffect(() => {
         setShowJuicer(juicer)
-    }, [])
+    }, [juicer])
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
