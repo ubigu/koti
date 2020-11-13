@@ -126,8 +126,8 @@ const ProductPage = () => {
             title={label[locale]}
             titleTypographyProps={{
               align: 'center',
-              variant: 'subtitle2',
-              style: {fontSize: 14}
+              variant: 'body1',
+              style: {fontSize: 16}
             }}
           />
 
