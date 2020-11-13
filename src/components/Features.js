@@ -70,7 +70,7 @@ const FeatureGrid = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.imgContainer}>
-              <img src={plan} style={{ height: 150 }} alt='planning'/>
+              <img src={plan} style={{ height: 150 }} alt='planning' />
             </div>
             <Typography variant='h5' align='center'>
               {intl.formatMessage({ id: 'consulting' })}
@@ -87,7 +87,7 @@ const FeatureGrid = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.imgContainer}>
-              <img src={support} style={{ height: 150 }} alt='supporting'/>
+              <img src={support} style={{ height: 150 }} alt='supporting' />
             </div>
             <Typography variant='h5' align='center'>
               {intl.formatMessage({ id: 'supporting' })}
@@ -104,7 +104,7 @@ const FeatureGrid = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.imgContainer}>
-              <img src={design} style={{ height: 150 }} alt='developing'/>
+              <img src={design} style={{ height: 150 }} alt='developing' />
             </div>
             <Typography variant='h5' align='center'>
               {intl.formatMessage({ id: 'developing' })}
