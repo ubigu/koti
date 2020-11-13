@@ -23,6 +23,7 @@ import ilpo from './../img/us/ilpo.jpg';
 import sonja from './../img/us/sonja.jpg';
 import jouko from './../img/us/jouko.jpg';
 import marko from './../img/us/marko.jpg';
+import joona from './../img/us/joona.jpg';
 import ossi from './../img/us/ossi.jpg';
 import incog from './../img/us/incognito.jpg';
 
@@ -192,6 +193,29 @@ const us = [
         },
         imgs: [marko],
         color: 'aqua blue'
+    },
+    {
+        firstname: 'Joona',
+        surname: 'Laamanen',
+        title: {
+            fi: "Ratkaisuarkkitehti",
+            en: "Solutions architect",
+            sv: "Solutions architect",
+            de: "Solutions architect"
+        },
+        email: 'joona.laamanen@ubigu.fi',
+        tel: '+358 40 8338298',
+        linkedin: 'https://www.linkedin.com/in/joona-laamanen-391549128/',
+        description: {
+            fi: `Joona on kanssaihmisilleen harvinaisen leppoisa toveri - mutta koneille ankara käskyttäjä, jonka vahtivuorolla nämä taatusti eivät nouse kapinaan. Päinvastoin, Joonan kapellimestaroimana ohjelmistot soivat suloisesti ja koneet pyörivät kuin tanssi.`,
+            en: `Joona is an exceptionally relaxed fellow to his fellow human beings - though to machines a ruthless commander, under whose watch those definitely won't rise into a rebellion! On the contrary, his compositions make software play beautifully and machines dance.`,
+        },
+        powers: {
+            en: ['Full-stack web development', 'API development', 'Geospatial technologies', 'Software testing, CI & CD', 'Docker & Kubernetes', 'Embedded systems', 'Agile development'],
+            fi: ['Full-stack kehitys', 'Rajapintakehitys', 'Paikkatietoteknologiat', 'Testaus, CI ja CD', 'Docker & Kubernetes', 'Sulautetut järjestelmät', 'Ketterä kehitys']
+        },
+        imgs: [joona],
+        color: 'misty blue'
     },
     {
         firstname: 'Ossi',
