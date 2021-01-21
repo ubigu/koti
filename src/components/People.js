@@ -25,6 +25,7 @@ import jouko from './../img/us/jouko.jpg';
 import marko from './../img/us/marko.jpg';
 import joona from './../img/us/joona.jpg';
 import ossi from './../img/us/ossi.jpg';
+import miia from './../img/us/miia.jpg';
 import incog from './../img/us/incognito.jpg';
 
 const useStyles = makeStyles(theme => ({
@@ -239,6 +240,28 @@ const us = [
         },
         imgs: [ossi],
         color: 'blue grey'
+    },
+    {
+        firstname: 'Miia',
+        surname: 'Turunen',
+        title: {
+            fi: "Nuorempi palvelumuotoilija",
+            en: "Junior service designer",
+            sv: "Junior service designer",
+            de: "Junior service designer"
+        },
+        email: 'miia.turunen@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/turunenmiia/',
+        description: {
+            fi: `Miiaa ohjaa halu kehittää digitaalista maailmaa, jossa palvelut eivät vain muokkaa aiempia rutiineja, mutta inspiroivat rakentamaan uudella tavalla kestävää yhteiskuntaa. Miialle käyttäjä on kehitystyön keskiössä, ja teknologia palvelee ihmistä - ei toisinpäin.`,
+            en: `Miia is driven by a desire to develop a digital world, in which services do not only reshape old routines, but rather inspire to build a sustainable society in a new way. For her, the user is at the heart of development, and technology serves us, not vice versa.`,
+        },
+        powers: {
+            en: ['Service design', 'Co-development', 'Communications', 'Facilitation', 'Organization culture', 'Developing internal operations'],
+            fi: ['Palvelumuotoilu', 'Yhteiskehittäminen', 'Viestintä', 'Fasilitointi', 'Organisaatiokulttuuri', 'Sisäisten toimintatapojen kehittäminen']
+        },
+        imgs: [miia],
+        color: 'lilac violet'
     },
 ]
 
