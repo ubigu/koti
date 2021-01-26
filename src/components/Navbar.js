@@ -82,9 +82,11 @@ const Navbar = props => {
                   {intl.formatMessage({ id: "products" })}
 
                 </Link>
+                {/*
                 <Link className="navbar-item" id="bloglink" to={`/${currentLocale}/blog`}>
                   {intl.formatMessage({ id: "blog" })}
                 </Link>
+                */}
                 <a className="navbar-item" id="contactlink" href="#contact">
                   {intl.formatMessage({ id: "contact" })}
                 </a>

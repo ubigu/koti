@@ -221,11 +221,13 @@ const Footer = () => {
                         {intl.formatMessage({ id: "products", defaultMessage: "What we do" })}
                       </Link>
                     </li>
+                    {/*
                     <li>
                       <Link className={classes.navItem} to={`/${currentLocale}/blog`}>
                         {intl.formatMessage({ id: "blog" })}
                       </Link>
                     </li>
+                    */}
                   </ul>
 
                 </section>
