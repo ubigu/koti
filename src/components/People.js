@@ -19,6 +19,7 @@ import colors from '../styles/colors';
 import linkedin from '../img/social/linkedin.inline.svg'
 import { ExpandMore, Email, Phone } from '@material-ui/icons/';
 
+import esa from './../img/us/esa.jpg';
 import ilpo from './../img/us/ilpo.jpg';
 import sonja from './../img/us/sonja.jpg';
 import jouko from './../img/us/jouko.jpg';
@@ -263,6 +264,28 @@ const us = [
         imgs: [miia],
         color: 'lilac violet'
     },
+    {
+        firstname: 'Esa',
+        surname: 'Östring',
+        title: {
+            fi: "Vanhempi data-arkkitehti",
+            en: "Senior Data Architect",
+            sv: "Senior Data Architect",
+            de: "Senior Data Architect"
+        },
+        email: 'esa.ostring@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/esa-%C3%B6string-1997136/',
+        description: {
+            fi: `Paikkatietovelhoista ja datamagiasta kun puhutaan, niin Esan loitsuille kalpenevat niin Merlinin mahti kuin Akvavitixin keitokset. Eikä siinä kaikki – myös koneet, koodit ja kehitysputket pysyvät hänen hallinnassaan liki taianomaisesti ilman, että menee noitumisen puolelle.`,
+            en: `When talking of geospatial wizardry and data magic, even Merlin’s might and Getafix’s potions are second to Esa’s spells. That is not all – machines, code and development pipelines alike stay under his control in an enchanted manner, without having to resort to cursing.`,
+        },
+        powers: {
+            en: ['Data analytics, processing and visualization', 'GIS', 'Software development', 'System architecture & DB design', 'Big data & IoT', 'DevOps & PaaS', 'Microservices', 'Artificial intelligence'],
+            fi: ['Data-analytiikka, -prosessointi ja -visualisointi', 'Paikkatieto', 'Ohjelmistokehitys', 'Järjestelmä- ja tietokanta-arkkitehtuurit', 'Big Data & IoT', 'DevOps & PaaS', 'Mikropalvelut', 'Tekoäly']
+        },
+        imgs: [esa],
+        color: 'pine green'
+    }
 ]
 
 const incognito = {
