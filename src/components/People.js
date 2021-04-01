@@ -207,7 +207,6 @@ const us = [
             de: "Geospatial expert"
         },
         email: 'ville.koivisto@ubigu.fi',
-        tel: '+358 407638933',
         linkedin: 'https://www.linkedin.com/in/ville-koivisto-marjetas/',
         description: {
             fi: `Ville pitää strategisesta pähkäilystä ja ongelmanratkaisusta, oltiinpa sitten lautapelien taikka tiedonhallinnan, ketterän ohjelmistokehityksen ja analytiikan ratkaisujen äärellä. Maantieteilijälle ominaisesti hän näkee metsän puilta, ja vapaa-ajallaan sinne usein myös juoksee – ja yleensä myös palaa.`,
