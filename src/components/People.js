@@ -27,6 +27,7 @@ import marko from './../img/us/marko.jpg';
 import joona from './../img/us/joona.jpg';
 import ossi from './../img/us/ossi.jpg';
 import miia from './../img/us/miia.jpg';
+import ville from './../img/us/ville.jpg';
 import incog from './../img/us/incognito.jpg';
 
 const useStyles = makeStyles(theme => ({
@@ -195,6 +196,29 @@ const us = [
         },
         imgs: [marko],
         color: 'aqua blue'
+    },
+    {
+        firstname: 'Ville',
+        surname: 'Koivisto',
+        title: {
+            fi: "Paikkatietoasiantuntija",
+            en: "Geospatial expert",
+            sv: "Geospatial expert",
+            de: "Geospatial expert"
+        },
+        email: 'ville.koivisto@ubigu.fi',
+        tel: '+358 407638933',
+        linkedin: 'https://www.linkedin.com/in/ville-koivisto-marjetas/',
+        description: {
+            fi: `Ville pitää strategisesta pähkäilystä ja ongelmanratkaisusta, oltiinpa sitten lautapelien taikka tiedonhallinnan, ketterän ohjelmistokehityksen ja analytiikan ratkaisujen äärellä. Maantieteilijälle ominaisesti hän näkee metsän puilta, ja vapaa-ajallaan sinne usein myös juoksee – ja yleensä myös palaa.`,
+            en: `Ville is keen on strategic thinking and problem solving, whether he is playing board games or working on data management, agile software development or analytical solutions. Typical to a geographer, he sees the forest for the trees – and in his free time often runs there and back again.`,
+        },
+        powers: {
+            en: ['QGIS, PostGIS, Geoserver, QField...', 'Python & pyqgis', 'Agile / SCRUM', 'SDIs & PaaS', 'Data and asset management', 'Spatial analytics', 'Data visualization', 'Infrastructure', 'Geopolitics and regional studies'],
+            fi: ['QGIS, PostGIS, Geoserver, QField...', 'Python & pyqgis', 'Agile / SCRUM', 'Paikkatietoinfrastruktuurit & PaaS', 'Tiedon- ja omaisuudenhallinta', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Infra-alan erityiskysymykset', 'Geopolitiikka ja aluetutkimus']
+        },
+        imgs: [ville],
+        color: 'misty blue'
     },
     {
         firstname: 'Joona',
