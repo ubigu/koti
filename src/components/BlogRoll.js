@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: 'min-content',
     backgroundColor: "#e1ebec"
   },
-  title: {
+  blogtitle: {
     color: '#32ad98 !important',
     textAlign: 'center',
     marginTop: theme.spacing(2)
@@ -124,6 +124,7 @@ export default () => (
               frontmatter {
                 language
                 title
+                author
                 templateKey
                 date(formatString: "DD.MM.YYYY")
                 featuredpost
