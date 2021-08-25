@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: 'min-content',
     backgroundColor: "#e1ebec"
   },
-  blogtitle: {
+  title: {
     color: '#32ad98 !important',
     textAlign: 'center',
     marginTop: theme.spacing(2)
