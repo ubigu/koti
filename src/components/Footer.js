@@ -257,7 +257,7 @@ const Footer = () => {
                       </a>
                     </ListItem>
                     <ListItem disableGutters={matches}>
-                      <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/aMirZy9PWFQmfeyWA">
+                      <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/maQZmMu1ajtVwvbC9">
                         <ListItemIcon classes={{ root: classes.listitemicon }}>
                           <Place className={classes.footerIcon} /></ListItemIcon>
                         <ListItemText>
