@@ -12,6 +12,7 @@ description: Parhaillaan käynnissä oleva, Maankäyttö- ja rakennuslain
   tietojärjestelmäpalveluita.
 language: fi
 featuredpost: true
+author: Marko Kauppi
 featuredimage: /img/image.png
 tags:
   - kokonaisarkkitehtuuri
