@@ -60,7 +60,7 @@ export const BlogPostTemplate = ({
             <p style={{fontWeight: 600, margin: 16}}>{author}</p>
             <p>{date}</p>
             </span>
-            <p style={{marginTop: 16}}>{description}</p>
+            {/*<p style={{marginTop: 16}}>{description}</p>*/}
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `2rem` }}>
