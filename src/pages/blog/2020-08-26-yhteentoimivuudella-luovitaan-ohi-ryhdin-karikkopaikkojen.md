@@ -11,8 +11,8 @@ description: Parhaillaan käynnissä oleva, Maankäyttö- ja rakennuslain
   valtakunnan tietovarantojen välillä sekä hyödyntää valtakunnallisia
   tietojärjestelmäpalveluita.
 language: fi
-featuredpost: true
 author: Marko Kauppi
+featuredpost: true
 featuredimage: /img/image.png
 tags:
   - kokonaisarkkitehtuuri
@@ -20,7 +20,7 @@ tags:
 ---
 <br>
 
-Parhaillaan käynnissä oleva, Maankäyttö- ja rakennuslain kokonaisuudistukseen sekä uuteen tiedonhallintalakiin liittyvä, ympäristöministeriön rakennetun ympäristön tietojärjestelmähanke ([Ryhti](https://www.ym.fi/fi-FI/Maankaytto_ja_rakentaminen/Ohjelmat_ja_strategiat/Rakennetun_ympariston_tietojarjestelma)) tuo kunnille uusia digitalisaatioon perustuvia velvoitteita. Muutoksia tarvitaan niin tietojärjestelmiin kuin toimintatapoihinkin. Lainsäädäntö tulee edellyttämään kuntien tietojärjestelmiltä kyvykkyyttä siirtää tietoja valtakunnan tietovarantojen välillä sekä hyödyntää valtakunnallisia tietojärjestelmäpalveluita. Tämä on edellytys sille, että saadaan luotua yhtenäinen, laadukas ja koko valtakunnan kattava kaava- sekä rakennustieto.
+Parhaillaan käynnissä oleva, Maankäyttö- ja rakennuslain kokonaisuudistukseen sekä uuteen tiedonhallintalakiin liittyvä, ympäristöministeriön rakennetun ympäristön tietojärjestelmähanke ([Ryhti](https://ym.fi/rytj)) tuo kunnille uusia digitalisaatioon perustuvia velvoitteita. Muutoksia tarvitaan niin tietojärjestelmiin kuin toimintatapoihinkin. Lainsäädäntö tulee edellyttämään kuntien tietojärjestelmiltä kyvykkyyttä siirtää tietoja valtakunnan tietovarantojen välillä sekä hyödyntää valtakunnallisia tietojärjestelmäpalveluita. Tämä on edellytys sille, että saadaan luotua yhtenäinen, laadukas ja koko valtakunnan kattava kaava- sekä rakennustieto.
 
 <br>
 
