@@ -5,6 +5,19 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import {
+  Avatar
+} from '@material-ui/core';
+
+import esa from './../img/us/esa.jpg';
+import ilpo from './../img/us/ilpo.jpg';
+import sonja from './../img/us/sonja.jpg';
+import jouko from './../img/us/jouko.jpg';
+import marko from './../img/us/marko.jpg';
+import joona from './../img/us/joona.jpg';
+import ossi from './../img/us/ossi.jpg';
+import miia from './../img/us/miia.jpg';
+import ville from './../img/us/ville.jpg';
 
 export const BlogPostTemplate = ({
   content,
@@ -18,6 +31,20 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
+  const resolveAuthorImage = (author) => {
+    switch (author) {
+      case 'Ilpo Tammi': return ilpo;
+      case 'Marko Kauppi': return marko;
+      case 'Esa Östring': return esa;
+      case 'Sonja Aarnio': return sonja;
+      case 'Miia Turunen': return miia;
+      case 'Jouko Järnefelt': return jouko;
+      case 'Joona Laamanen': return joona;
+      case 'Ossi Tammi': return ossi;
+      case 'Ville Koivisto': return ville;
+    }
+  }
+
   return (
     
     <section className="section">
@@ -28,11 +55,15 @@ export const BlogPostTemplate = ({
             <h1 className="blogtitle is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <span style={{marginTop: 16, marginBottom: 16, display: 'inline-flex', flexDirection: 'row', verticalAlign: 'center', alignItems: 'center'}}>
+            <Avatar style={{width: 56, height: 56}} alt={author} src={resolveAuthorImage(author)}/>
+            <p style={{fontWeight: 600, margin: 16}}>{author}</p>
+            <p>{date}</p>
+            </span>
             <p style={{marginTop: 16}}>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `2rem` }}>
-                  <p>{date}</p><br/>
                 <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
