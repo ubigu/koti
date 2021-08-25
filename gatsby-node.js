@@ -20,6 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               templateKey
               language
+              author
             }
           }
         }
