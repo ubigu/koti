@@ -68,7 +68,11 @@ const useStyles = makeStyles(theme => ({
   },
   titleimg: {
     height: 200,
-    marginBottom: 16
+    marginBottom: 16,
+    cursor: 'pointer',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
   },
   media: {
     borderRadius: 25,
@@ -168,14 +172,40 @@ const ProductPage = () => {
               </Grid>
 
 
-              <Grid item xs={12} className={classes.flexGrid} >
-                <div className={classes.titleHolder}>
-                  {expanded === 'planning' &&
-                    <img src={plan} className={classes.titleimg} alt='planning' />
-                  }
+              <Grid item xs={12} md={4} className={classes.flexGrid} >
+                <div className={classes.titleHolder} onClick={() => setExpanded('planning')} >
+                    <img style={{opacity: expanded === 'planning' ? 1 : 0.5}} src={plan} className={classes.titleimg} alt='planning' />
                   <Button onClick={() => setExpanded('planning')} color='primary' style={{ textTransform: 'none' }}>
-                    <Typography variant='h5' align='center' >
+                  <Typography variant='h5' align='center'
+                      style={{fontWeight: expanded === 'planning' ? 600 : 400, textDecoration: expanded === 'planning' ? 'underline' : 'none'}} 
+                    >
                       {intl.formatMessage({ id: 'consulting' })}
+                    </Typography>
+                  </Button>
+                </div>
+              </Grid>
+
+              <Grid item xs={12} md={4} className={classes.flexGrid} >
+                <div className={classes.titleHolder} onClick={() => setExpanded('developing')}>
+                    <img style={{opacity: expanded === 'developing' ? 1 : 0.5}} src={design} className={classes.titleimg} alt='developing' />
+                  <Button onClick={() => setExpanded('developing')} color='primary' style={{ textTransform: 'none' }}>
+                  <Typography variant='h5' align='center'
+                      style={{fontWeight: expanded === 'developing' ? 600 : 400, textDecoration: expanded === 'developing' ? 'underline' : 'none'}} 
+                    >
+                      {intl.formatMessage({ id: 'developing' })}
+                    </Typography>
+                  </Button>
+                </div>
+              </Grid>
+
+               <Grid item xs={12} md={4} className={classes.flexGrid} >
+                <div className={classes.titleHolder} onClick={() => setExpanded('supporting')}>
+                    <img style={{opacity: expanded === 'supporting' ? 1 : 0.5}} src={support} className={classes.titleimg} alt='supporting' />
+                  <Button onClick={() => setExpanded('supporting')} color='primary' style={{ textTransform: 'none' }}>
+                    <Typography variant='h5' align='center'
+                      style={{fontWeight: expanded === 'supporting' ? 600 : 400, textDecoration: expanded === 'supporting' ? 'underline' : 'none'}} 
+                    >
+                      {intl.formatMessage({ id: 'supporting' })}
                     </Typography>
                   </Button>
                 </div>
@@ -195,18 +225,7 @@ const ProductPage = () => {
                 </Grid>
               </Collapse>
 
-              <Grid item xs={12} className={classes.flexGrid} >
-                <div className={classes.titleHolder}>
-                  {expanded === 'developing' &&
-                    <img src={design} className={classes.titleimg} alt='developing' />
-                  }
-                  <Button onClick={() => setExpanded('developing')} color='primary' style={{ textTransform: 'none' }}>
-                    <Typography variant='h5' align='center' >
-                      {intl.formatMessage({ id: 'developing' })}
-                    </Typography>
-                  </Button>
-                </div>
-              </Grid>
+ 
 
               <Collapse in={expanded === 'developing'}>
                 <Grid container spacing={2}>
@@ -221,19 +240,6 @@ const ProductPage = () => {
                   }
                 </Grid>
               </Collapse>
-
-              <Grid item xs={12} className={classes.flexGrid} >
-                <div className={classes.titleHolder}>
-                  {expanded === 'supporting' &&
-                    <img src={support} className={classes.titleimg} alt='supporting' />
-                  }
-                  <Button onClick={() => setExpanded('supporting')} color='primary' style={{ textTransform: 'none' }}>
-                    <Typography variant='h5' align='center' >
-                      {intl.formatMessage({ id: 'supporting' })}
-                    </Typography>
-                  </Button>
-                </div>
-              </Grid>
 
               <Collapse in={expanded === 'supporting'}>
                 <Grid container spacing={2}>
