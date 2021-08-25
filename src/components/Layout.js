@@ -61,7 +61,7 @@ const TemplateWrapper = ({ children }) => {
               <meta name="theme-color" content="#00b4a2" />
 
               <meta property="og:type" content="website" />
-              <meta property="og:title" content="Ubigu Ltd" />
+              <meta property="og:title" content="Ubigu" />
               <meta property="og:url" content="https://www.ubigu.fi/" />
               <meta
                 property="og:image"
