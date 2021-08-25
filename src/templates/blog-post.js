@@ -10,7 +10,9 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
+  date,
   tags,
+  author,
   title,
   helmet,
 }) => {
@@ -23,13 +25,14 @@ export const BlogPostTemplate = ({
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className="blogtitle is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+            <p style={{marginTop: 16}}>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div style={{ marginTop: `2rem` }}>
+                  <p>{date}</p><br/>
                 <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
@@ -51,6 +54,8 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  date: PropTypes.string,
+  author: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -67,13 +72,17 @@ const BlogPost = ({ data }) => {
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
+            <meta property="og:title" content="Ubigu - Blog" />
+            <meta name="date" content={`${post.frontmatter.date}`} />
             <meta
               name="description"
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
         }
+        date={post.frontmatter.date}
         tags={post.frontmatter.tags}
+        author={post.frontmatter.author}
         title={post.frontmatter.title}
       />
     </Layout>
@@ -94,10 +103,11 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD.MM.YYYY")
         title
         description
         language
+        author
         tags
       }
     }
