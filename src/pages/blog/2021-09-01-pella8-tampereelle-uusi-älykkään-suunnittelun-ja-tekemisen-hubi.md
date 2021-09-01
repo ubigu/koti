@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Pella8 - Tampereelle uusi älykkään suunnittelun ja tekemisen hubi
+title: Pella8 - Tampereelle uusi fiksun suunnittelun ja tekemisen hubi
 date: 2021-09-01T09:53:43.180Z
 description: Korona-aikana monet ovat pohdiskelleet toimistojen tulevaisuutta ja
   tehneet tämän teeman suhteen liikkuja suuntaan tahi toiseen. Niin tuli
