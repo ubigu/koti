@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Maankäytön dynaaminen ohjelmointi ja tukiäly
 date: 2021-10-18T08:38:57.734Z
 description: Tie kaupunkien suunnittelusta niiden toteuttamiseen on usein pitkä
-  ja monipolvinen. Useissa tehdään maankäytön toteuttamisohjelmia tai
+  ja monipolvinen. Usein tehdään maankäytön toteuttamisohjelmia tai
   -suunnitelmia, joilla pyritään määrittämään erityisesti sitä, minne, milloin
   ja kuinka paljon rakennetaan. Maankäytön toteuttamissuunnitelman laatiminen
   edellyttää pohjakseen runsaasti tietoa, jota usein on koostettu tavalla tai
