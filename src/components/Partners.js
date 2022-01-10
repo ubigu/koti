@@ -13,6 +13,7 @@ import mdi from './../img/friends/mdi.svg'
 import cloudpermit from './../img/friends/cloudpermit.svg'
 import jamsa from './../img/friends/jamsa.svg'
 import joensuu from './../img/friends/joensuu.svg'
+import helsinki from './../img/friends/helsinki.svg'
 import mml_fi from './../img/friends/mml_fi.svg'
 import nordregio from './../img/friends/nordregio.svg'
 import ramboll from './../img/friends/ramboll.svg'
@@ -88,19 +89,18 @@ const friends = [
     },
     {
         name: {
-            fi: "Joensuun kaupunki",
-            en: "City of Joensuu",
+            fi: "Helsingin kaupunki",
+            en: "City of Helsinki",
         },
         url: {
-            fi: "https://www.joensuu.fi/",
-            en: "https://www.joensuu.fi/en/web/english"
+            fi: "https://www.hel.fi/",
+            en: "https://www.hel.fi/en"
         },
         img: {
-            fi: joensuu
+            fi: helsinki
         },
         cols: 2
     },
-
     {
         name: {
             fi: "Tampereen kaupunki",
@@ -179,6 +179,20 @@ const friends = [
             fi: jamsa
         },
         cols: 1.5
+    },
+    {
+        name: {
+            fi: "Joensuun kaupunki",
+            en: "City of Joensuu",
+        },
+        url: {
+            fi: "https://www.joensuu.fi/",
+            en: "https://www.joensuu.fi/en/web/english"
+        },
+        img: {
+            fi: joensuu
+        },
+        cols: 2
     },
     {
         name: {
