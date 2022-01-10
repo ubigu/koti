@@ -29,6 +29,7 @@ import ossi from './../img/us/ossi.jpg';
 import miia from './../img/us/miia.jpg';
 import ville from './../img/us/ville.jpg';
 import incog from './../img/us/incognito.jpg';
+import incoming from './../img/us/incoming.jpg';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -127,6 +128,72 @@ const us = [
         },
         imgs: [sonja],
         color: 'dark cool grey'
+    },
+    {
+        firstname: 'Aleksi',
+        surname: 'Nivala',
+        title: {
+            fi: "Paikkatietosuunnittelija",
+            en: "Geospatial Expert",
+            sv: "Geospatial Expert",
+            de: "Geospatial Expert"
+        },
+        email: 'aleksi.nivala@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/aleksi-nivala-ba3034148/',
+        description: {
+            fi: `Ympäröivistä pohjalaisista lakeuksistaan huolimatta ei Aleksia pelota niin korkealentoinen paikkatietoanalytiikka kuin syvän päädyn paikkatietotekniset ratkaisutkaan, ja rannikolta tuntee aina tiedonhallinnan uudet tuulet.`,
+            en: `Despite the surrounding Ostrobothnian plains, Aleksi is not afraid of high-flown spatial analytics nor diving into the deep end of geospatial technology, and on the shores he always senses the new winds of data management.`,
+        },
+        powers: {
+            en: ['Geoinformatics', 'Urban and regional development', 'Spatial analytics', 'Data management', 'Service networks', 'Automated processing', 'Training', 'Traffic modelling'],
+            fi: ['Paikkatietojärjestelmät', 'Kaupunki- ja aluekehitys', 'Paikkatietoanalytiikka', 'Tiedonhallinta', 'Palveluverkot', 'Prosessien automatisointi', 'Koulutukset', 'Liikennemallinnus']
+        },
+        imgs: [incoming],
+        color: 'light warm red'
+    },
+    {
+        firstname: 'Otso',
+        surname: 'Helenius',
+        title: {
+            fi: "Vanhempi asiantuntija",
+            en: "Senior Expert",
+            sv: "Senior Expert",
+            de: "Senior Expert"
+        },
+        email: 'otso.helenius@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/otso-helenius/',
+        description: {
+            fi: `Otso on hämmästyttävä yhdistelmä arkkitehtiä, matemaatikkoa, tietojenkäsittelijää ja rakennetun ympäristön digitalisoijaa. Etenkin tietomallinnuksen, semantiikan ja standardien kudelmassa hän liikkuu kuin hämähäkki verkollaan.`,
+            en: `Otso is an astonishing combination of an architect, mathematician, IT specialist and built environment digitalization expert. In the mesh of data modelling, semantics and standards he moves like a spider on its web.`,
+        },
+        powers: {
+            en: ['Information modelling', 'Ontologies', 'Semantic web / linked data', 'Urban development', 'Maankäytön digitalisaatio', 'Standards', 'Data management', 'Databases', 'Software development'],
+            fi: ['Tietomallinnus', 'Ontologiat', 'Semanttinen web / linkitetty tieto', 'Kaupunkikehitys', 'Digitalization of land use', 'Standardit', 'Tiedonhallinta', 'Tietokannat', 'Ohjelmistokehitys']
+        },
+        imgs: [incoming],
+        color: 'amarillo yellow'
+    },
+    {
+        firstname: 'Janne',
+        surname: 'Heikkilä',
+        title: {
+            fi: "Vanhempi sovellusarkkitehti",
+            en: "Senior Software Architect",
+            sv: "Senior Software Architect",
+            de: "Senior Software Architect"
+        },
+        email: 'janne.heikkila@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/janne-heikkil%C3%A4-36a6a3159/',
+        description: {
+            fi: `Kuin yhdistelmä digirakennusmestaria ja -timpuria, paikkatietoratkaisuissa Janne ei pelkää ottaa sekä suunnittelijan että toteuttajan roolia. Koodirakennelmissaan hän suosii etenkin pitkäikäisiä, jämäköitä, käsin veistettyjä Java-runkoja.`,
+            en: `Like a combined digital master builder and carpenter, Janne is not afraid to take the roles of both planner and builder when it comes to geospatial solutions. Especially he prefers using long-lasting, hand-carved Java frames.`,
+        },
+        powers: {
+            en: ['Java', 'Back-end development', 'OGC standards', 'Databases', 'Spatial data infrastructures', 'Data management', 'Oskari.org'],
+            fi: ['Java', 'Back-end-kehitys', 'OGC standardit', 'Tietokannat', 'Paikkatietoinfra', 'Tiedonhallinta', 'Oskari.org']
+        },
+        imgs: [incoming],
+        color: 'light petrol'
     },
     {
         firstname: 'Ilpo',
