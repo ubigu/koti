@@ -20,7 +20,7 @@ Runsaanlaisesti on viime aikoina kirjoitettu sote-uudistuksen vaikutuksesta kunt
 
 <br/>
 
-Perinteinen lääke edellä mainitun ongelman ratkaisemiseen ovat olleet kuntien tekemät, tai useimmiten teettämät, kiinteistöveroselvitykset. Usein näiden selvitysten seurauksena kunnissa löydetään paljon sellaista aiemmin tietopohjaltaan epäkuranttia kiinteistökantaa, josta kiinteistöveroa pitäisi kantaa, mutta tähän tarvittavat ovat olleet virheelliset - suuntaan tai toiseen, jolloin kunta lopulta saa tilannetta korjattua edukseen, monesti jopa hyvin merkittävien kiinteistöveron vuosittaisten lisätuottojen muodossa.
+Perinteinen lääke edellä mainitun ongelman ratkaisemiseen ovat olleet kuntien tekemät, tai useimmiten teettämät, kiinteistöveroselvitykset. Usein näiden selvitysten seurauksena kunnissa löydetään paljon sellaista aiemmin tietopohjaltaan epäkuranttia kiinteistökantaa, josta kiinteistöveroa pitäisi kantaa, mutta tähän tarvittavat tiedot ovat olleet virheelliset - suuntaan tai toiseen, jolloin kunta lopulta saa tilannetta korjattua edukseen, monesti jopa hyvin merkittävien kiinteistöveron vuosittaisten lisätuottojen muodossa.
 
 <br/>
 
