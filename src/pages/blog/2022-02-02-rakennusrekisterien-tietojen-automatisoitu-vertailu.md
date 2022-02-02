@@ -62,4 +62,4 @@ Koska rakennustietojen muodostumisen taustalla oleva prosessi on nykyisellään 
 
 <br/>
 
-Mikäli rakennusrekisterien perusparantamisen tehokas tukeminen ja kunnan kiinteistöverotuoton saattaminen ajan tasalle, nykäiseppä hihasta!
+Mikäli rakennusrekisterien perusparantamisen tehokas tukeminen ja kunnan kiinteistöverotuoton saattaminen ajan tasalle kiinnostaa, nykäiseppä hihasta!
