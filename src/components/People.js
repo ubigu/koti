@@ -17,16 +17,19 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import colors from '../styles/colors';
 import linkedin from '../img/social/linkedin.inline.svg'
-import { ExpandMore, Email, Phone } from '@material-ui/icons/';
+import { ExpandMore, Email, Phone, EmojiFlagsOutlined } from '@material-ui/icons/';
 
 import esa from './../img/us/esa.jpg';
 import ilpo from './../img/us/ilpo.jpg';
+import emilia from './../img/us/emilia.jpg';
 import sonja from './../img/us/sonja.jpg';
 import jouko from './../img/us/jouko.jpg';
 import marko from './../img/us/marko.jpg';
+import janne from './../img/us/janne.jpg';
 import joona from './../img/us/joona.jpg';
 import ossi from './../img/us/ossi.jpg';
 import miia from './../img/us/miia.jpg';
+import aleksi from './../img/us/aleksi.jpg';
 import ville from './../img/us/ville.jpg';
 import incog from './../img/us/incognito.jpg';
 import incoming from './../img/us/incoming.jpg';
@@ -148,7 +151,7 @@ const us = [
             en: ['Geoinformatics', 'Urban and regional development', 'Spatial analytics', 'Data management', 'Service networks', 'Automated processing', 'Training', 'Traffic modelling'],
             fi: ['Paikkatietojärjestelmät', 'Kaupunki- ja aluekehitys', 'Paikkatietoanalytiikka', 'Tiedonhallinta', 'Palveluverkot', 'Prosessien automatisointi', 'Koulutukset', 'Liikennemallinnus']
         },
-        imgs: [incoming],
+        imgs: [aleksi],
         color: 'light warm red'
     },
     {
@@ -192,7 +195,7 @@ const us = [
             en: ['Java', 'Back-end development', 'OGC standards', 'Databases', 'Spatial data infrastructures', 'Data management', 'Oskari.org'],
             fi: ['Java', 'Back-end-kehitys', 'OGC standardit', 'Tietokannat', 'Paikkatietoinfra', 'Tiedonhallinta', 'Oskari.org']
         },
-        imgs: [incoming],
+        imgs: [janne],
         color: 'light petrol'
     },
     {
@@ -332,6 +335,28 @@ const us = [
         },
         imgs: [ossi],
         color: 'blue grey'
+    },
+    {
+        firstname: 'Emilia',
+        surname: 'Timlin',
+        title: {
+            fi: "Nuorempi suunnittelija",
+            en: "Urban planner",
+            sv: "Urban planner",
+            de: "Urban planner"
+        },
+        email: 'emilia.timlin@ubigu.fi',
+        linkedin: 'https://fi.linkedin.com/in/emilia-timlin-718553203',
+        description: {
+            fi: ``,
+            en: ``,
+        },
+        powers: {
+            en: ['Urban planning', 'Environmental planning', 'Urban and regional development', 'Geoinformatics', 'Spatial analytics', 'Graphic design and visualization'],
+            fi: ['Kaupunkisuunnittelu', 'Ympäristösuunnittelu', 'Kaupunki- ja aluekehitys', 'Paikkatietojärjestelmät', 'Graafinen suunnittelu ja visualitointi']
+        },
+        imgs: [emilia],
+        color: 'light yellow'
     },
     {
         firstname: 'Miia',
