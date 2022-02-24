@@ -348,8 +348,8 @@ const us = [
         email: 'emilia.timlin@ubigu.fi',
         linkedin: 'https://fi.linkedin.com/in/emilia-timlin-718553203',
         description: {
-            fi: ``,
-            en: ``,
+            fi: `Emiliaa kiehtovat suunnittelun salat. Hänen käsissään raportit, selvitykset ja paikkatieto muuntuvat toimiviksi suunnitteluratkaisuiksi!`,
+            en: `Emilia is intrigued by the depths of urban planning. In her hands, reports, analyses and geospatial information turn into functional planning solutions!`,
         },
         powers: {
             en: ['Urban planning', 'Environmental planning', 'Urban and regional development', 'Geoinformatics', 'Spatial analytics', 'Graphic design and visualization'],
