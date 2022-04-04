@@ -111,14 +111,14 @@ const useStyles = makeStyles(theme => ({
 const us = [
     {
         firstname: 'Sonja',
-        surname: 'Aarnio',
+        surname: 'Lang',
         title: {
             fi: "Liiketoimintajohtaja",
             en: "COO",
             sv: "COO",
             de: "COO"
         },
-        email: 'sonja.aarnio@ubigu.fi',
+        email: 'sonja.lang@ubigu.fi',
         tel: '+358 40 1899 330',
         linkedin: 'https://www.linkedin.com/in/sonja-aarnio-1355541b4/',
         description: {
