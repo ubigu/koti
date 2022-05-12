@@ -33,6 +33,7 @@ import aleksi from './../img/us/aleksi.jpg';
 import ville from './../img/us/ville.jpg';
 import incog from './../img/us/incognito.jpg';
 import incoming from './../img/us/incoming.jpg';
+import otso from './../img/us/otso.jpg';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -173,7 +174,7 @@ const us = [
             en: ['Information modelling', 'Ontologies', 'Semantic web / linked data', 'Urban development', 'Maankäytön digitalisaatio', 'Standards', 'Data management', 'Databases', 'Software development'],
             fi: ['Tietomallinnus', 'Ontologiat', 'Semanttinen web / linkitetty tieto', 'Kaupunkikehitys', 'Digitalization of land use', 'Standardit', 'Tiedonhallinta', 'Tietokannat', 'Ohjelmistokehitys']
         },
-        imgs: [incoming],
+        imgs: [otso],
         color: 'amarillo yellow'
     },
     {
