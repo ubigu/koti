@@ -341,7 +341,7 @@ const us = [
         firstname: 'Emilia',
         surname: 'Timlin',
         title: {
-            fi: "Nuorempi suunnittelija",
+            fi: "Suunnittelija",
             en: "Urban planner",
             sv: "Urban planner",
             de: "Urban planner"
@@ -363,7 +363,7 @@ const us = [
         firstname: 'Miia',
         surname: 'Turunen',
         title: {
-            fi: "Nuorempi palvelumuotoilija",
+            fi: "Palvelumuotoilija",
             en: "Junior service designer",
             sv: "Junior service designer",
             de: "Junior service designer"
