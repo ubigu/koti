@@ -16,19 +16,25 @@ tags:
   - Nordic
   - GIS
 ---
-# Introduction
+# **Introduction**
 
 Traditionally most classifications aiming to distinguish the urban from rural have been based on administrative boundaries. Such classifications are not without shortcomings, since there likely are both rural and urban land uses within a single administrative unit, the delineation practices of which also vary from country to country. To overcome this limitation, more detailed data can be used to distinguish urban and rural areas. This approach was taken by the Finnish Environment Institute (SYKE) in 2013, when it first published a Finnish urban-rural typology based on geospatial data. Their sophisticated[ method](https://www.ymparisto.fi/en-US/Living_environment_and_planning/Community_structure/Information_about_the_community_structure/Urbanrural_classification) created seven typology classes:
 
 <br/>
 
-* Inner urban areas
-* Outer urban areas
-* Peri-urban areas
-* Local centers in urban areas
-* Rural areas close to urban
-* Rural heartland areas
-* Sparsely populated rural areas
+\- Inner urban areas
+
+\- Outer urban areas
+
+\- Peri-urban areas
+
+\- Local centers in urban areas
+
+\- Rural areas close to urban
+
+\- Rural heartland areas
+
+\- Sparsely populated rural areas
 
 <br/>
 
@@ -62,10 +68,13 @@ Initially we thought that the urban typology classes would be easier to predict 
 
 By visual inspection, the results from an all-classes Random Forest classification experiment were rather well performing. Misclassifications were present, but the general big picture was satisfactory, very similar to the SYKE original. It was also quite clear that small isolated errors in classification are tolerable and those errors can be mitigated in the later phases of the work. Data we used at this stage were:<br/><br/>
 
-* Total population in 1km grid cell
-* Amount of “low” buildings in 1km grid cell
-* Amount of “tall” buildings in 1km grid cell
-* Amount of unknown buildings in 1km grid cell
+\- Total population in 1km grid cell
+
+\- Amount of “low” buildings in 1km grid cell
+
+\- Amount of “tall” buildings in 1km grid cell
+
+\- Amount of unknown buildings in 1km grid cell
 
 <br/>
 
@@ -83,16 +92,25 @@ Systematic classification errors happened inside larger lakes. Misclassified are
 
 Since the model was fitted using Finnish data, it was still unknown how the model would perform in other countries. Before finding this out, it was necessary to gather source data and compute aggregates for other countries. Gathering data from all countries was an interesting mission: We faced multiple problems or at least open questions, with some being:<br/><br/>
 
-* Documentation of the data was not always up to date
-* Reality and documentation did not meet in many cases for data access
-* API limitations (and errors) when fetching data for a whole country
-* Countries have very different policies about data pricing
-* Differing data classifications (especially for buildings)
-* Availability (or lack) of data.
-* Metadata documentation not up to date or missing
-* Challenging to specify a temporal dimension for data (e.g. a specific year) consistently
-* Challenging to find the best way to obtain data
-* Sometimes manual human effort is required to download the data (vs. API access).
+\- Documentation of the data was not always up to date
+
+\- Reality and documentation did not meet in many cases for data access
+
+\- API limitations (and errors) when fetching data for a whole country
+
+\- Countries have very different policies about data pricing
+
+\- Differing data classifications (especially for buildings)
+
+\- Availability (or lack) of data.
+
+\- Metadata documentation not up to date or missing
+
+\- Challenging to specify a temporal dimension for data (e.g. a specific year) consistently
+
+\- Challenging to find the best way to obtain data
+
+\- Sometimes manual human effort is required to download the data (vs. API access).
 
 <br/>
 
@@ -114,7 +132,7 @@ While an all-classes classification with Random Forest proved its strength, we w
 
 ![A two-class typology with everything some sort of rural!](https://lh4.googleusercontent.com/TqX8LM09zcUKvtd0-FmOlmqILeaLmfRDkv9M03gXZfQFXgR1odlBMzR3MD4fP1id8Eeb69jjb9zRazX4JVw8xQ66jIl_HP9XS6mbeQHOnL51KrrXjMpNvzGYQeLEehtCrEwyVDhG8qIa4nXi-w "A two-class typology with everything some sort of rural!")
 
-*Image 2. A two-class typology with everything some sort of rural!*
+*Image 2. A two-class typology with everything some sort of rural (either core rural areas in yellow, or sparsely populated in green)!*
 
 <br/>
 
@@ -126,7 +144,7 @@ Urban center detection was done with a separate classifier, which was fit in Fin
 
 ![Urban center classifier results in Norway](https://lh4.googleusercontent.com/4v9CIWYIvFVmcVCHoFe0oT5w_POAyP1MDZ5dGll8YEL6xV9pA4SkKr-aZxdXzSXGRQLm8si0NMDmnEc9P0ESKkYlcQTfxpLfodmqfCkw3fU0GIG3mhPoAMD99zQ156hO8xAOuJwxr5p5QdSLEg "Urban center classifier results in Norway")
 
-*Image 3. Urban center classifier results in Norway.*
+*Image 3. Urban center classifier results in Norway (brown area representing classifier results, orange ones small localities or potential outliers. Dark red represents the official Norwegian "urban center" or Tätort delineations.*
 
 <br/>
 
@@ -136,17 +154,23 @@ The original SYKE typology models labor movement from commuting data and economi
 
 <br/>
 
+![Some testing for a Huff analysis in Denmark ](/img/denmark.jpg "Doing some testing for a Huff analysis in Denmark ")
+
+*Image 4. Doing some testing for a Huff gravitational analysis in Denmark...*
+
+<br/>
+
 We then ended up proxying missing travel-time data with isochrone computations. Each urban center was extended by specific travel time intervals. Outer urban border and road network intersections were found, travel times computed from each point, and isochrone geometries dissolved by travel-time.<br/><br/>
 
 ![Travel-time isochrones laid on top of rural classifications](https://lh5.googleusercontent.com/gM9ty3GKlGFmciitHVjwzgCXOqzkFqdtL7lh6YGu73yhTX-4O0JXDPAPeNMDuMyFH0drQ2zLJLHKbJbhqhpdCsUvVJgioyGWjwoB_s0-zEKCY6gaQ29ItG62GlRCCM_ANGJoBNC8x1WN_4SCTg "Travel-time isochrones laid on top of rural classifications")
 
-*Image 4. Travel-time isochrones laid on top of rural classifications.*
+*Image 5. Travel-time isochrones laid on top of rural classifications.*
 
 ***<br/>***
 
 ![Nordic urban travel-time isochrones](https://lh6.googleusercontent.com/YdIyVLDA0Yl9e8240UN9m5Wo9n7wJzaOtAvK3R5BlEQI1h2BVSy-OHof1R9cZKlnzUCo4Mwu4wJIVml2wex9MHcx4h6kWUyU3HiGldP1zuKJX_mcHqV0eVO_fVp0qEA17kAXXPxovYbmJ6H9iA "Nordic urban travel-time isochrones")
 
-*Image 5. Nordic urban travel-time isochrones.*
+*Image 6. Nordic urban travel-time isochrones.*
 
 <br/>
 
@@ -154,11 +178,15 @@ We then ended up proxying missing travel-time data with isochrone computations. 
 
 Instead of obtaining only a one-off classification for all Nordic countries, we still had an additional requirement of repeatability. The classification should ideally be easily repeatable whenever data changes. So far we have been documenting the process. Some considerations still exist. Next steps in streamlining the computation process could be:<br/><br/>
 
-* Combining different SQL computations
-* Reducing resulting database tables
-* Refactor some code as native Python code (from Jupyter Notebooks)
-* Unify country specific computations: utilize country specific configurations and refactor code to be more generic and accept configurations as input.
-* Consider unifying the used tool base, or at least try to minimize number of tooling interfaces during computation
+\- Combining different SQL computations
+
+\- Reducing resulting database tables
+
+\- Refactor some code as native Python code
+
+\- Unify country specific computations: utilize country specific configurations and refactor code to be more generic and accept configurations as input.
+
+\- Consider unifying the used tool base, or at least try to minimize number of tooling interfaces during computation
 
 <br/>
 
@@ -172,7 +200,7 @@ When there was a need to process the data even further (beyond SQL comfort zone)
 
 <br/>
 
-Finally, we used FME for some end processing and data clean-up, for now, at least.
+Finally, we used FME for some end processing, data clean-up and publishing pipelines, for now, at least.
 
 <br/>
 
@@ -182,4 +210,4 @@ Now, the Nordic urban-rural typology is open for comments and shakeholder scruti
 
 ![](https://lh5.googleusercontent.com/Huce9gD-dttrmZC4KxwGU9FV9Fibztop9rzcfPrkDx2Fp0uC_nHJT6sL9kD50Q8ZSCmPImAXe2M2-CTLjWlivy-A3O4tA1x2kG_z6z_fj_7rw33-EYKA9f5INieozc3nfeMkdpi2mZEGtWrliQ)
 
-*Image 6. A first look on the draft Nordic urban-rural typology.*
+*Image 7. A first look on the draft Nordic urban-rural typology.*
