@@ -181,15 +181,15 @@ const us = [
         firstname: 'Tuukka',
         surname: 'Kataja',
         title: {
-            fi: "Vanhempi ICT-konsultti",
-            en: "Senior ICT consultant",
-            sv: "Senior ICT consultant",
-            de: "Senior ICT consultant"
+            fi: "Vanhempi IT-konsultti",
+            en: "Senior IT consultant",
+            sv: "Senior IT consultant",
+            de: "Senior IT consultant"
         },
         email: 'tuukka.kataja@ubigu.fi',
         description: {
             fi: `Tuukka nauttii, kun hommat rullaavat kuin uskollinen gravel-pyöränsä seesteisillä saloilla ja koodi luistaa kuin suksi tuoreella ladulla. Kovien yksilösuoritusten lisäksi Tuukalla on pelinrakentajan luonnetta - tärkeintä ei ole tehdä itse maalia, vaan luoda koko joukkueelle tilaisuus loistaa.`,
-            en: `Tuukka enjoys when things advance as smoothly as his loyal gravel bike, and code flows like skates on new ice. In addition to solid individual performances, he's a playmaker by nature. It's not most important to score a goal yourself, but rather create opportunities for all.`,
+            en: `Tuukka enjoys when things advance as smoothly as his loyal gravel bike and code runs as joyfully as he on morning jogs. In addition to solid individual performances, he's a playmaker by nature. It's not most important to score a goal yourself, but rather create opportunities for all.`,
         },
         powers: {
             en: ['Software architecture', 'Managing complexity', 'Pragmatism', 'Full-stack development', 'Polyglot programming', 'Geospatial'],
@@ -530,7 +530,7 @@ const People = () => {
                                                     />
                                                     <CardContent>
                                                         <Typography gutterBottom variant="subtitle1" component="h2" align='center'>
-                                                            {hovering ? hover : expanded !== name ? person.title[currentLocale] : `${person.firstname}${currentLocale === 'fi' ? 'n' : "'s"} ${intl.formatMessage({ id: 'powers' })}`}
+                                                            {hovering ? hover : expanded !== name ? person.title[currentLocale] : `${currentLocale === 'fi' ? person.firstname.replace('kka','ka') : person.firstname}${currentLocale === 'fi' ? 'n' : "'s"} ${intl.formatMessage({ id: 'powers' })}`}
                                                         </Typography>
                                                         <Typography variant="body2" color="textSecondary" component="p" align='left'>
                                                             {expanded !== name ? person.description[currentLocale] :
