@@ -31,6 +31,7 @@ import ossi from './../img/us/ossi.jpg';
 import miia from './../img/us/miia.jpg';
 import aleksi from './../img/us/aleksi.jpg';
 import ville from './../img/us/ville.jpg';
+import tuukka from './../img/us/tuukka.jpg';
 import incog from './../img/us/incognito.jpg';
 import incoming from './../img/us/incoming.jpg';
 import otso from './../img/us/otso.jpg';
@@ -113,6 +114,7 @@ const us = [
     {
         firstname: 'Sonja',
         surname: 'Lang',
+        boss: true,
         title: {
             fi: "Liiketoimintajohtaja",
             en: "COO",
@@ -136,6 +138,7 @@ const us = [
     {
         firstname: 'Aleksi',
         surname: 'Nivala',
+        boss: false,
         title: {
             fi: "Paikkatietosuunnittelija",
             en: "Geospatial Expert",
@@ -158,6 +161,7 @@ const us = [
     {
         firstname: 'Samuli',
         surname: 'Massinen',
+        boss: false,
         title: {
             fi: "Paikkatietoarkkitehti",
             en: "Geospatial Engineer",
@@ -180,6 +184,7 @@ const us = [
     {
         firstname: 'Tuukka',
         surname: 'Kataja',
+        boss: false,
         title: {
             fi: "Vanhempi IT-konsultti",
             en: "Senior IT consultant",
@@ -195,12 +200,13 @@ const us = [
             en: ['Software architecture', 'Managing complexity', 'Pragmatism', 'Full-stack development', 'Polyglot programming', 'Geospatial'],
             fi: ['Softa-arkkitehtuurit', 'Monimutkaisuuden hallinta', 'Pragmaattisuus', 'Full-stack -kehitys', 'Koodikielten kirjo', 'Paikkatieto']
         },
-        imgs: [incoming],
+        imgs: [tuukka],
         color: 'misty blue'
     },
     {
         firstname: 'Otso',
         surname: 'Helenius',
+        boss: false,
         title: {
             fi: "Vanhempi asiantuntija",
             en: "Senior Expert",
@@ -223,6 +229,7 @@ const us = [
     {
         firstname: 'Janne',
         surname: 'Heikkilä',
+        boss: false,
         title: {
             fi: "Vanhempi sovellusarkkitehti",
             en: "Senior Software Architect",
@@ -245,6 +252,7 @@ const us = [
     {
         firstname: 'Ilpo',
         surname: 'Tammi',
+        boss: true,
         title: {
             fi: "Toimitusjohtaja",
             en: "CEO",
@@ -268,6 +276,7 @@ const us = [
     {
         firstname: 'Jouko',
         surname: 'Järnefelt',
+        boss: false,
         title: {
             fi: "Vanhempi analyytikko",
             en: "Senior Analyst",
@@ -291,6 +300,7 @@ const us = [
     {
         firstname: 'Marko',
         surname: 'Kauppi',
+        boss: true,
         title: {
             fi: "Teknologiajohtaja",
             en: "CTO",
@@ -314,6 +324,7 @@ const us = [
     {
         firstname: 'Ville',
         surname: 'Koivisto',
+        boss: false,
         title: {
             fi: "Paikkatietoasiantuntija",
             en: "Geospatial expert",
@@ -337,6 +348,7 @@ const us = [
     {
         firstname: 'Joona',
         surname: 'Laamanen',
+        boss: false,
         title: {
             fi: "Ratkaisuarkkitehti",
             en: "Solutions architect",
@@ -360,6 +372,7 @@ const us = [
     {
         firstname: 'Ossi',
         surname: 'Tammi',
+        boss: false,
         title: {
             fi: "Vanhempi IT-konsultti",
             en: "Senior IT consultant",
@@ -383,6 +396,7 @@ const us = [
     {
         firstname: 'Emilia',
         surname: 'Timlin',
+        boss: false,
         title: {
             fi: "Suunnittelija",
             en: "Urban planner",
@@ -405,6 +419,7 @@ const us = [
     {
         firstname: 'Miia',
         surname: 'Turunen',
+        boss: false,
         title: {
             fi: "Palvelumuotoilija",
             en: "Junior service designer",
@@ -427,6 +442,7 @@ const us = [
     {
         firstname: 'Esa',
         surname: 'Östring',
+        boss: false,
         title: {
             fi: "Vanhempi data-arkkitehti",
             en: "Senior Data Architect",
@@ -480,9 +496,13 @@ const People = () => {
         setExpanded(prev => name && prev !== name ? name : null);
     };
 
-    const persons = [...us.sort(
-        (a, b) => a.surname > b.surname ? 1 : b.surname > a.surname ? -1 : a.firstname > b.firstname ? 1 : b.firstname > a.firstname ? -1 : 0
-    ), incognito]
+    const persons = [
+        ...us.filter(u => u.boss).sort(
+            (a, b) => a.surname > b.surname ? 1 : b.surname > a.surname ? -1 : a.firstname > b.firstname ? 1 : b.firstname > a.firstname ? -1 : 0),    
+        ...us.filter(u => !u.boss).sort(
+        (a, b) => a.surname > b.surname ? 1 : b.surname > a.surname ? -1 : a.firstname > b.firstname ? 1 : b.firstname > a.firstname ? -1 : 0),
+        incognito
+    ];
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -548,17 +568,23 @@ const People = () => {
                                                         <Email style={{ opacity: 0.66 }} />
                                                     </IconButton>
                                                 </a>
-                                                <a href={`tel:${person.tel}`} rel="noreferrer noopener" target='_blank'>
-                                                    <IconButton aria-label="phone" onMouseEnter={() => setHover(person.tel)} onMouseLeave={() => setHover(null)}>
-                                                        <Phone style={{ opacity: 0.66 }} />
-                                                    </IconButton>
-                                                </a>
-                                                <a href={person.linkedin} rel="noreferrer noopener" target='_blank'>
-                                                    <IconButton aria-label="linkedin">
-                                                        <SvgIcon component={linkedin}
-                                                            style={{ height: 18, width: 18, opacity: 0.66 }} />
-                                                    </IconButton>
-                                                </a>
+                                                {
+                                                    'tel' in person &&
+                                                    <a href={`tel:${person.tel}`} rel="noreferrer noopener" target='_blank'>
+                                                        <IconButton aria-label="phone" onMouseEnter={() => setHover(person.tel)} onMouseLeave={() => setHover(null)}>
+                                                            <Phone style={{ opacity: 0.66 }} />
+                                                        </IconButton>
+                                                    </a>
+                                                }
+                                                {
+                                                    'linkedin' in person &&
+                                                    <a href={person.linkedin} rel="noreferrer noopener" target='_blank'>
+                                                        <IconButton aria-label="linkedin">
+                                                            <SvgIcon component={linkedin}
+                                                                style={{ height: 18, width: 18, opacity: 0.66 }} />
+                                                        </IconButton>
+                                                    </a>
+                                                }
                                                 {person.powers &&
                                                     <IconButton
                                                         className={clsx(classes.expand, {
