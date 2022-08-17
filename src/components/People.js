@@ -156,6 +156,49 @@ const us = [
         color: 'light warm red'
     },
     {
+        firstname: 'Samuli',
+        surname: 'Massinen',
+        title: {
+            fi: "Paikkatietoarkkitehti",
+            en: "Geospatial Engineer",
+            sv: "Geospatial Engineer",
+            de: "Geospatial Engineer"
+        },
+        email: 'samuli.massinen@ubigu.fi',
+        linkedin: 'https://fi.linkedin.com/in/smassine',
+        description: {
+            fi: `Rock-solisti Samuli taitaa niin soolot kuin harmonisoinnin isossakin bändissä. Hänen harjaantunut data-sävelkorvansa tunnistaa pienetkin tiedonhallinnan riitasoinnut, ja korjaa ne modulaatio kerrallaan kohti kirkkainta paikkatiedon power balladia.`,
+            en: `A rock singer, Samuli knows both solos and harmonizing in a larger band. To him, data and sheet music are akin. His trained eye catches even the smallest dissonances, which are fixed a modulation at a time towards the clearest geospatial power ballad.`,
+        },
+        powers: {
+            en: ['Geospatial tech: Python, PostgreSQL, etc.', 'System and data architecture', 'Big Data analytics', 'Process automation', 'Data management', 'Asset management', 'Digitalization of built infrastructure'],
+            fi: ['Paikkatieto: Python, PostgreSQL, yms.', 'Järjestelmä- ja data-arkkitehtuurit', 'Big Data -analytiikka', 'Prosessien automatisointi', 'Tiedon- ja omaisuudenhallinta', 'Infra-alan digitalisaatio']
+        },
+        imgs: [incoming],
+        color: 'dark blue'
+    },
+    {
+        firstname: 'Tuukka',
+        surname: 'Kataja',
+        title: {
+            fi: "Vanhempi ICT-konsultti",
+            en: "Senior ICT consultant",
+            sv: "Senior ICT consultant",
+            de: "Senior ICT consultant"
+        },
+        email: 'tuukka.kataja@ubigu.fi',
+        description: {
+            fi: `Tuukka nauttii, kun hommat rullaavat kuin uskollinen gravel-pyöränsä seesteisillä saloilla ja koodi luistaa kuin suksi tuoreella ladulla. Kovien yksilösuoritusten lisäksi Tuukalla on pelinrakentajan luonnetta - tärkeintä ei ole tehdä itse maalia, vaan luoda koko joukkueelle tilaisuus loistaa.`,
+            en: `Tuukka enjoys when things advance as smoothly as his loyal gravel bike, and code flows like skates on new ice. In addition to solid individual performances, he's a playmaker by nature. It's not most important to score a goal yourself, but rather create opportunities for all.`,
+        },
+        powers: {
+            en: ['Software architecture', 'Managing complexity', 'Pragmatism', 'Full-stack development', 'Polyglot programming', 'Geospatial'],
+            fi: ['Softa-arkkitehtuurit', 'Monimutkaisuuden hallinta', 'Pragmaattisuus', 'Full-stack -kehitys', 'Koodikielten kirjo', 'Paikkatieto']
+        },
+        imgs: [incoming],
+        color: 'misty blue'
+    },
+    {
         firstname: 'Otso',
         surname: 'Helenius',
         title: {
