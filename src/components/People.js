@@ -31,6 +31,7 @@ import ossi from './../img/us/ossi.jpg';
 import miia from './../img/us/miia.jpg';
 import aleksi from './../img/us/aleksi.jpg';
 import ville from './../img/us/ville.jpg';
+import samuli from './../img/us/samuli.jpg';
 import tuukka from './../img/us/tuukka.jpg';
 import incog from './../img/us/incognito.jpg';
 import incoming from './../img/us/incoming.jpg';
@@ -178,7 +179,7 @@ const us = [
             en: ['Geospatial tech: Python, PostgreSQL, etc.', 'System and data architecture', 'Big Data analytics', 'Process automation', 'Data management', 'Asset management', 'Digitalization of built infrastructure'],
             fi: ['Paikkatieto: Python, PostgreSQL, yms.', 'Järjestelmä- ja data-arkkitehtuurit', 'Big Data -analytiikka', 'Prosessien automatisointi', 'Tiedon- ja omaisuudenhallinta', 'Infra-alan digitalisaatio']
         },
-        imgs: [incoming],
+        imgs: [samuli],
         color: 'dark blue'
     },
     {
