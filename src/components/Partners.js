@@ -16,7 +16,7 @@ import joensuu from './../img/friends/joensuu.svg'
 import helsinki from './../img/friends/helsinki.svg'
 import mml_fi from './../img/friends/mml_fi.svg'
 import nordregio from './../img/friends/nordregio.svg'
-import ramboll from './../img/friends/ramboll.svg'
+// import ramboll from './../img/friends/ramboll.svg'
 import stat_fi from './../img/friends/stat_fi.svg'
 import stat_en from './../img/friends/stat_en.svg'
 import stat_se from './../img/friends/stat_se.svg'
@@ -26,6 +26,8 @@ import tuni_fi from './../img/friends/tuni_fi.svg'
 import ym_fi from './../img/friends/ym_fi.svg'
 import ym_en from './../img/friends/ym_en.svg'
 import ym_se from './../img/friends/ym_se.svg'
+import vayla from './../img/friends/vayla.svg'
+import mh from './../img/friends/mh.svg'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -42,7 +44,8 @@ const useStyles = makeStyles(theme => ({
     },
     image: {
         margin: theme.spacing(2),
-        maxHeight: 125,
+        maxHeight: 150,
+        minWidth: 150,
         minHeight: 75,
         display: 'flex',
         justifyContent: 'center',
@@ -62,47 +65,6 @@ const useStyles = makeStyles(theme => ({
 const friends = [
     {
         name: {
-            fi: "Cloudpermit Oy",
-            en: "Cloudpermit Ltd",
-        },
-        url: {
-            en: "https://cloudpermit.com/",
-        },
-        img: {
-            en: cloudpermit
-        },
-        cols: 2
-    },
-    {
-        name: {
-            fi: "MDI Public Oy",
-            en: "MDI Public Ltd",
-        },
-        url: {
-            fi: "https://www.mdi.fi/",
-            en: "https://www.mdi.fi/en/",
-        },
-        img: {
-            fi: mdi,
-        },
-        cols: 0.75
-    },
-    {
-        name: {
-            fi: "Helsingin kaupunki",
-            en: "City of Helsinki",
-        },
-        url: {
-            fi: "https://www.hel.fi/",
-            en: "https://www.hel.fi/en"
-        },
-        img: {
-            fi: helsinki
-        },
-        cols: 2
-    },
-    {
-        name: {
             fi: "Tampereen kaupunki",
             en: "City of Tampere",
         },
@@ -117,36 +79,17 @@ const friends = [
     },
     {
         name: {
-            fi: "Maanmittauslaitos",
-            en: "National Land Survey Finland",
-            se: "Lantmäteriverket",
+            fi: "Helsingin kaupunki",
+            en: "City of Helsinki",
         },
         url: {
-            fi: "https://www.maanmittauslaitos.fi/",
-            en: "https://www.maanmittauslaitos.fi/en",
-            se: "https://www.maanmittauslaitos.fi/sv"
+            fi: "https://www.hel.fi/",
+            en: "https://www.hel.fi/en"
         },
         img: {
-            fi: mml_fi
+            fi: helsinki
         },
-        rows: 1.25
-    },
-    {
-        name: {
-            fi: "Suomen ympäristökeskus",
-            en: "The Finnish Environment Institute",
-            se: "Finlands miljöcentral"
-
-        },
-        url: {
-            fi: "https://www.syke.fi/fi-FI",
-            en: "https://www.syke.fi/en-US",
-            se: "https://www.syke.fi/sv-FI",
-        },
-        img: {
-            fi: syke,
-        },
-        rows: 1.25
+        cols: 2
     },
     {
         name: {
@@ -168,58 +111,68 @@ const friends = [
     },
     {
         name: {
-            fi: "Jämsän kaupunki",
-            en: "City of Jämsä",
+            fi: "Cloudpermit Oy",
+            en: "Cloudpermit Ltd",
         },
         url: {
-            fi: "https://www.jamsa.fi/",
-            en: "https://www.jamsa.fi/en/"
+            en: "https://cloudpermit.com/",
         },
         img: {
-            fi: jamsa
-        },
-        cols: 1.5
-    },
-    {
-        name: {
-            fi: "Joensuun kaupunki",
-            en: "City of Joensuu",
-        },
-        url: {
-            fi: "https://www.joensuu.fi/",
-            en: "https://www.joensuu.fi/en/web/english"
-        },
-        img: {
-            fi: joensuu
+            en: cloudpermit
         },
         cols: 2
     },
     {
         name: {
-            en: "Nordregio",
+            fi: "Maanmittauslaitos",
+            en: "National Land Survey Finland",
+            se: "Lantmäteriverket",
         },
         url: {
-            en: "https://nordregio.org/",
+            fi: "https://www.maanmittauslaitos.fi/",
+            en: "https://www.maanmittauslaitos.fi/en",
+            se: "https://www.maanmittauslaitos.fi/sv"
         },
         img: {
-            fi: nordregio
+            fi: mml_fi
         },
-        cols: 2
+        rows: 1
     },
     {
         name: {
-            en: "Ramboll",
+            fi: "Suomen ympäristökeskus",
+            en: "The Finnish Environment Institute",
+            se: "Finlands miljöcentral"
+
         },
         url: {
-            fi: "https://fi.ramboll.com/",
-            en: "http://ramboll.com/",
-            se: "https://se.ramboll.com/",
-            de: "https://de.ramboll.com/"
+            fi: "https://www.syke.fi/fi-FI",
+            en: "https://www.syke.fi/en-US",
+            se: "https://www.syke.fi/sv-FI",
         },
         img: {
-            en: ramboll
+            fi: syke,
         },
-        cols: 2
+        rows: 1
+    },
+    {
+        name: {
+            fi: "Väylävirasto",
+            en: "Finnish Transport Infrastructure Agency",
+            se: "Trafikledsverket"
+        },
+        url: {
+            fi: "https://vayla.fi/etusivu",
+            se: "https://vayla.fi/sv/framsida",
+            en: "https://vayla.fi/en/frontpage"
+        },
+        img: {
+            fi: vayla,
+            en: vayla,
+            se: vayla
+        },
+        rows: 1.5,
+        cols: 0.8
     },
     {
         name: {
@@ -239,6 +192,80 @@ const friends = [
             se: stat_se
         },
         cols: 1.5
+    },
+    {
+        name: {
+            en: "Nordregio",
+        },
+        url: {
+            en: "https://nordregio.org/",
+        },
+        img: {
+            fi: nordregio
+        },
+        cols: 2
+    },
+    {
+        name: {
+            fi: "Metsähallitus",
+            en: "Metsähallitus",
+            se: "Forststyrelsen"
+        },
+        url: {
+            fi: "https://www.metsa.fi/",
+            se: "https://www.metsa.fi/sv/",
+            en: "https://www.metsa.fi/en/"
+        },
+        img: {
+            fi: mh,
+            en: mh,
+            se: mh
+        },
+        rows: 1,
+        cols: 3
+    },
+    {
+        name: {
+            fi: "Jämsän kaupunki",
+            en: "City of Jämsä",
+        },
+        url: {
+            fi: "https://www.jamsa.fi/",
+            en: "https://www.jamsa.fi/en/"
+        },
+        img: {
+            fi: jamsa
+        },
+        cols: 1.5
+    },
+    {
+        name: {
+            fi: "MDI Public Oy",
+            en: "MDI Public Ltd",
+        },
+        url: {
+            fi: "https://www.mdi.fi/",
+            en: "https://www.mdi.fi/en/",
+        },
+        img: {
+            fi: mdi,
+        },
+        rows: 0.3,
+        cols: 0.3
+    },
+    {
+        name: {
+            fi: "Joensuun kaupunki",
+            en: "City of Joensuu",
+        },
+        url: {
+            fi: "https://www.joensuu.fi/",
+            en: "https://www.joensuu.fi/en/web/english"
+        },
+        img: {
+            fi: joensuu
+        },
+        cols: 2
     },
     {
         name: {
@@ -293,8 +320,8 @@ const Partners = () => {
                         href={href}>
                         <img
                             style={{
-                                height: friend && friend.rows && friend.rows.length > 0 ? friend.rows * 50 : 50,
-                                width: friend && friend.cols && friend.cols.length > 0 ? friend.cols * friend.cols * 100 : 100
+                                height: friend && friend.rows && friend.rows.length > 0 ? friend.rows * 75 : 75,
+                                width: friend && friend.cols && friend.cols.length > 0 ? friend.cols * friend.cols * 150 : 150
                             }}
                             alt={alt}
                             src={src}
@@ -316,7 +343,7 @@ const Partners = () => {
                     <div className={classes.holder}>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                             <Typography variant='subtitle1' className={classes.title}>
-                                {intl.formatMessage({ id: "friends", defaultMessage: "Social media" })}:
+                                {intl.formatMessage({ id: "friends", defaultMessage: "Some of our friends" })}:
                             </Typography>
                         </div>
                         <AutoPlaySwipeableViews>

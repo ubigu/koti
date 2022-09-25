@@ -3,7 +3,7 @@ import { IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl'
 import fi from '../img/locale/fi.svg'
 import en from '../img/locale/en.svg'
 import de from '../img/locale/de.svg'
-import se from '../img/locale/se.svg'
+import sv from '../img/locale/se.svg'
 import { ClickAwayListener, Button, useMediaQuery, Hidden, Fade } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
@@ -84,7 +84,7 @@ const Language = () => {
                     aria-haspopup="true"
                     onClick={() => handleClick(lang)}
                   >
-                    <img alt='toggle language change' src={lang === 'fi' ? fi : lang === 'en' ? en : lang === 'de' ? de : lang === 'se' ? se : ''}
+                    <img alt='toggle language change' src={lang === 'fi' ? fi : lang === 'en' ? en : lang === 'de' ? de : lang === 'sv' ? sv : ''}
                       style={{ width: 16, marginRight: 8 }} />{lang}
                   </Button>
                 )}

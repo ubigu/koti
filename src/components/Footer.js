@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Facebook from '../img/social/facebook.inline.svg'
+// import Facebook from '../img/social/facebook.inline.svg'
 import Twitter from '../img/social/twitter.inline.svg'
 import Linkedin from '../img/social/linkedin.inline.svg'
 import Github from '../img/social/github.inline.svg';
-import { Email, Place, Phone, BusinessCenter, Copyright } from '@material-ui/icons'
+import { Email, Place, Phone, BusinessCenter } from '@material-ui/icons'
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 import { useMediaQuery, Hidden, List, ListItem, ListItemText, ListItemIcon, Avatar } from '@material-ui/core';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
@@ -171,11 +171,6 @@ const Footer = () => {
         <Linkedin className={classes.social} />
       </Avatar>
     </a>
-    <a title="facebook" href="https://facebook.com/ubiguoy">
-      <Avatar className={classes.small}>
-        <Facebook className={classes.social} />
-      </Avatar>
-    </a>
     <a title="twitter" href="https://twitter.com/ubigusto">
       <Avatar className={classes.small}>
         <Twitter className={classes.social} />
@@ -221,6 +216,11 @@ const Footer = () => {
                         {intl.formatMessage({ id: "products", defaultMessage: "What we do" })}
                       </Link>
                     </li>
+                    <li>
+                      <p style={{ userSelect: 'none', opacity: 0.6, width: 150, paddingLeft: 12, marginTop: matches ? 8 : 24 }}>
+                      © {intl.formatMessage({ id: "ubigu" })} {new Date().getFullYear()}
+                      </p>
+                    </li>
                     {/*
                     <li>
                       <Link className={classes.navItem} to={`/${currentLocale}/blog`}>
@@ -262,7 +262,16 @@ const Footer = () => {
                           <Place className={classes.footerIcon} /></ListItemIcon>
                         <ListItemText>
                           Pellavatehtaankatu 8 E 59<br></br>FI-33100 Tampere
-                      </ListItemText>
+                        </ListItemText>
+                      </a>
+                    </ListItem>
+                    <ListItem disableGutters={matches}>
+                      <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/9c26WWiDayMKh3939">
+                        <ListItemIcon classes={{ root: classes.listitemicon }}>
+                          <Place className={classes.footerIcon} /></ListItemIcon>
+                        <ListItemText>
+                          Torikatu 23, FI-90100 Oulu
+                        </ListItemText>
                       </a>
                     </ListItem>
                     <ListItem disableGutters={matches}>
@@ -270,13 +279,6 @@ const Footer = () => {
                         <BusinessCenter className={classes.footerIcon} /></ListItemIcon>
                       <ListItemText >
                         {intl.formatMessage({ id: "vat", defaultMessage: 'Y-tunnus: 2762483-3' })}
-                      </ListItemText>
-                    </ListItem>
-                    <ListItem disableGutters={matches} style={{userSelect: 'none'}}>
-                      <ListItemIcon classes={{ root: classes.listitemicon }}>
-                        <Copyright className={classes.footerIcon} /></ListItemIcon>
-                      <ListItemText >
-                        {intl.formatMessage({ id: "ubigu" })} {new Date().getFullYear()}
                       </ListItemText>
                     </ListItem>
                   </List>
