@@ -126,12 +126,12 @@ const us = [
         tel: '+358 40 1899 330',
         linkedin: 'https://www.linkedin.com/in/sonja-aarnio-1355541b4/',
         description: {
-            fi: `Sonja rakastaa yhteistyötä asiantuntevien ihmisten kanssa ja monitahoisten projektien luotsaamista. Vastausten löytäminen kaupunkikehityksen, maankäytön ja liikenteen ja näiden digitalisaation kysymyksiin saavat hänen suuren sydämensä sykkimään.`,
-            en: `Sonja loves working together with insightful people and steering multifaceted projects. Finding answers to questions on urban development, land use and transport planning and their digitalization make her heart beat like no other.`,
+            fi: `Sonja rakastaa yhteistyötä asiantuntevien ihmisten kanssa ja monitahoisten projektien luotsaamista. Vastausten löytäminen kaupunkikehityksen, maankäytön ja liikenteen sekä näiden digitalisaation kysymyksiin saavat hänen suuren sydämensä sykkimään.`,
+            en: `Sonja loves collaborating with talented people and leading complex projects successfully. Discovering solutions to the challenges of urban development, land-use and transport planning as well as their digitalization make her heart race.`,
         },
         powers: {
-            en: ['Traffic and land use', 'Urban and regional development', 'Personal transport', 'Service networks', 'Impact assessments', 'Project management & coordination', 'Geoinformatics', 'Business intelligence'],
-            fi: ['Liikenne ja maankäyttö', 'Kaupunki- ja aluekehitys', 'Henkilökuljetukset', 'Palveluverkot', 'Vaikutusten arvioinnit', 'Projektinhallinta ja -koordinointi', 'Geoinformatiikka', 'Liikkeenjohdon konsultointi']
+            en: ['Traffic and land-use', 'Urban and regional development', 'Personal transport', 'Service networks', 'Impact assessment', 'Project management & coordination', 'Geoinformatics', 'Business intelligence'],
+            fi: ['Liikenne ja maankäyttö', 'Kaupunki- ja aluekehitys', 'Henkilökuljetukset', 'Palveluverkot', 'Vaikutustenarviointi', 'Projektinhallinta ja -koordinointi', 'Geoinformatiikka', 'Liikkeenjohdon konsultointi']
         },
         imgs: [sonja],
         color: 'dark cool grey'
@@ -149,8 +149,8 @@ const us = [
         email: 'aleksi.nivala@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/aleksi-nivala-ba3034148/',
         description: {
-            fi: `Ympäröivistä pohjalaisista lakeuksistaan huolimatta ei Aleksia pelota niin korkealentoinen paikkatietoanalytiikka kuin syvän päädyn paikkatietotekniset ratkaisutkaan, ja rannikolta tuntee aina tiedonhallinnan uudet tuulet.`,
-            en: `Despite the surrounding Ostrobothnian plains, Aleksi is not afraid of high-flown spatial analytics nor diving into the deep end of geospatial technology, and on the shores he always senses the new winds of data management.`,
+            fi: `Ympäröivistä pohjalaisista lakeuksistaan huolimatta ei Aleksia pelota niin korkealentoinen paikkatietoanalytiikka kuin syvän päädyn paikkatietotekniset ratkaisutkaan. Rannikolta käsin hän tuntee aina tiedonhallinnan uudet tuulet.`,
+            en: `Despite of being rooted in the flat Ostrobothnian plains, Aleksi is hardly afraid of high-flying spatial analytics nor diving into the deep end of geospatial technology. From the Ostrobothnian shores he keenly senses the new winds of data management.`,
         },
         powers: {
             en: ['Geoinformatics', 'Urban and regional development', 'Spatial analytics', 'Data management', 'Service networks', 'Automated processing', 'Training', 'Traffic modelling'],
@@ -217,12 +217,12 @@ const us = [
         email: 'otso.helenius@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/otso-helenius/',
         description: {
-            fi: `Otso on hämmästyttävä yhdistelmä arkkitehtiä, matemaatikkoa, tietojenkäsittelijää ja rakennetun ympäristön digitalisoijaa. Etenkin tietomallinnuksen, semantiikan ja standardien kudelmassa hän liikkuu kuin hämähäkki verkollaan.`,
-            en: `Otso is an astonishing combination of an architect, mathematician, IT specialist and built environment digitalization expert. In the mesh of data modelling, semantics and standards he moves like a spider on its web.`,
+            fi: `Otso on hämmästyttävä yhdistelmä arkkitehtia, matemaatikkoa, tietojenkäsittelijää ja rakennetun ympäristön digitalisoijaa. Etenkin tietomallinnuksen, semantiikan ja standardien kudelmassa hän liikkuu kuin hämähäkki verkossaan.`,
+            en: `Otso is an astonishing amalgamate of an architect, mathematician, IT specialist and built environment digitalization expert. In the domain of data modelling, semantics and standards he moves effortlessly like a spider in its web.`,
         },
         powers: {
-            en: ['Information modelling', 'Ontologies', 'Semantic web / linked data', 'Urban development', 'Maankäytön digitalisaatio', 'Standards', 'Data management', 'Databases', 'Software development'],
-            fi: ['Tietomallinnus', 'Ontologiat', 'Semanttinen web / linkitetty tieto', 'Kaupunkikehitys', 'Digitalization of land use', 'Standardit', 'Tiedonhallinta', 'Tietokannat', 'Ohjelmistokehitys']
+            en: ['Information modelling', 'Ontology development', 'RDF, OWL, SHACL, SPARQL', 'Urban development', 'Land-use digitalization', 'Standards', 'Data management', 'Graph databases / SQL', 'Software development']
+            fi: ['Tietomallinnus', 'Ontologiakehitys', 'RDF, OWL, SHACL, SPARQL', 'Kaupunkikehitys', 'Maankäytön digitalisaatio', 'Standardit', 'Tiedonhallinta', 'Graafitietokannat / SQL', 'Ohjelmistokehitys']
         },
         imgs: [otso],
         color: 'amarillo yellow'
@@ -241,11 +241,11 @@ const us = [
         linkedin: 'https://www.linkedin.com/in/janne-heikkil%C3%A4-36a6a3159/',
         description: {
             fi: `Kuin yhdistelmä digirakennusmestaria ja -timpuria, paikkatietoratkaisuissa Janne ei pelkää ottaa sekä suunnittelijan että toteuttajan roolia. Koodirakennelmissaan hän suosii etenkin pitkäikäisiä, jämäköitä, käsin veistettyjä Java-runkoja.`,
-            en: `Like a combined digital master builder and carpenter, Janne is not afraid to take the roles of both planner and builder when it comes to geospatial solutions. Especially he prefers using long-lasting, hand-carved Java frames.`,
+            en: `Like a combined digital master builder and carpenter, Janne is not afraid to act both as a planner as well as a builder of geospatial solutions. He has a particular preference for long-lasting, hand-carved Java frames.`,
         },
         powers: {
             en: ['Java', 'Back-end development', 'OGC standards', 'Databases', 'Spatial data infrastructures', 'Data management', 'Oskari.org'],
-            fi: ['Java', 'Back-end-kehitys', 'OGC standardit', 'Tietokannat', 'Paikkatietoinfra', 'Tiedonhallinta', 'Oskari.org']
+            fi: ['Java', 'Back-end-kehitys', 'OGC-standardit', 'Tietokannat', 'Paikkatietoinfra', 'Tiedonhallinta', 'Oskari.org']
         },
         imgs: [janne],
         color: 'light petrol'
@@ -268,8 +268,8 @@ const us = [
             en: `When Ilpo is not navigating the office around swells and shoals, he immerses himself in expeditions into data, analytics, visualizations and planning thematics with awarded devotion.`,
         },
         powers: {
-            en: ['Strategic land use planning', 'Digitalization of processes', 'Smart cities', 'Spatial analytics', 'Data management', 'Full-stack web development: Node.js, React, OpenLayers..', 'PostgreSQL, Geoserver, OSGeo...', 'Cartographic design'],
-            fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikka', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers...', 'PostgreSQL, GeoServer, OSGeo...', 'Kartografia']
+            en: ['Strategic land-use planning', 'Digitalization of processes', 'Smart cities', 'Spatial analytics', 'Data management', 'Full-stack web development: Node.js, React, OpenLayers, etc.', 'PostgreSQL, Geoserver, OSGeo, etc.', 'Cartographic design'],
+            fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikka', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers, etc.', 'PostgreSQL, GeoServer, OSGeo, jne.', 'Kartografia']
         },
         imgs: [ilpo],
         color: 'pink'
@@ -292,8 +292,8 @@ const us = [
             en: `Jouko is a passionate climber and orienteer. Whether he's facing a wall of granite, a misty mire, an abyss of analyses or a rocky road of data management and business intelligence, Jouko will find a way.`,
         },
         powers: {
-            en: ['Strategic planning, BI and data visualization', 'Land use planning', 'Smart cities & regional development', 'Digitalization of processes', 'Data & spatial analytics', 'Master data management, ETL (FME)', 'PostgreSQL, Oracle...'],
-            fi: ['Strateginen suunnittelu, tietojohtaminen ja datavisualisointi', 'Maankäytön suunnittelu', 'Älykaupungit ja aluekehitys', 'Prosessien digitalisaatio', 'Data- ja paikkatietoanalytiikka', 'Tiedonhallinta, ETL (FME)', 'PostgreSQL, Oracle...']
+            en: ['Strategic planning, BI and data visualization', 'Land use planning', 'Smart cities & regional development', 'Digitalization of processes', 'Data & spatial analytics', 'Master data management, ETL (FME)', 'PostgreSQL, Oracle, etc.'],
+            fi: ['Strateginen suunnittelu, tietojohtaminen ja datavisualisointi', 'Maankäytön suunnittelu', 'Älykaupungit ja aluekehitys', 'Prosessien digitalisaatio', 'Data- ja paikkatietoanalytiikka', 'Tiedonhallinta, ETL (FME)', 'PostgreSQL, Oracle, jne.']
         },
         imgs: [jouko],
         color: 'dark blue'
@@ -317,7 +317,7 @@ const us = [
         },
         powers: {
             en: ['Enterprise & reference architectures', 'Digitalization of land use', 'Spatial data infrastructures', 'ETL processes (FME etc.)', 'Data management & databases', 'Full-stack ICT', 'OGC standards and OSGeo tools', 'Software development & Agile'],
-            fi: ['Kokonais- ja viitearkkitehtuurit', 'Maankäytön digitalisaatio', 'Paikkatietoinfrastruktuurit', 'ETL-prosessit (FME yms.)', 'Tiedonhallinta ja tietokannat', 'Full-stack IT, järjestelmähallinta', 'Ketterä ohjelmistokehitys']
+            fi: ['Kokonais- ja viitearkkitehtuurit', 'Maankäytön digitalisaatio', 'Paikkatietoinfrastruktuurit', 'ETL-prosessit (FME jne.)', 'Tiedonhallinta ja tietokannat', 'Full-stack IT, järjestelmähallinta', 'Ketterä ohjelmistokehitys']
         },
         imgs: [marko],
         color: 'aqua blue'
@@ -340,8 +340,8 @@ const us = [
             en: `Ville is keen on strategic thinking and problem solving, whether he is playing board games or working on data management, agile software development or analytical solutions. Typical to a geographer, he sees the forest for the trees – and in his free time often runs there and back again.`,
         },
         powers: {
-            en: ['QGIS, PostGIS, Geoserver, QField...', 'Python & pyqgis', 'Agile / SCRUM', 'SDIs & PaaS', 'Data and asset management', 'Spatial analytics', 'Data visualization', 'Infrastructure', 'Geopolitics and regional studies'],
-            fi: ['QGIS, PostGIS, Geoserver, QField...', 'Python & pyqgis', 'Agile / SCRUM', 'Paikkatietoinfrastruktuurit & PaaS', 'Tiedon- ja omaisuudenhallinta', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Infra-alan erityiskysymykset', 'Geopolitiikka ja aluetutkimus']
+            en: ['QGIS, PostGIS, Geoserver, QField, etc.', 'Python & pyqgis', 'Agile / SCRUM', 'SDIs & PaaS', 'Data and asset management', 'Spatial analytics', 'Data visualization', 'Infrastructure', 'Geopolitics and regional studies'],
+            fi: ['QGIS, PostGIS, Geoserver, QField, jne.', 'Python & pyqgis', 'Agile / SCRUM', 'Paikkatietoinfrastruktuurit & PaaS', 'Tiedon- ja omaisuudenhallinta', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Infra-alan erityiskysymykset', 'Geopolitiikka ja aluetutkimus']
         },
         imgs: [ville],
         color: 'misty blue'
@@ -388,8 +388,8 @@ const us = [
             en: `Ossi is a polyglot - talks fluently with machines regardless of the language. A man passionate about chopping wood - he even knows how to (com)pile code into beautiful Full Stacks.`,
         },
         powers: {
-            en: ['Full-stack web development: Node.js, React, and many more', 'Geospatial technologies', 'API development', 'Database management', 'Agile development', 'Scrum-mastering', 'ICT project management'],
-            fi: ['Full-stack kehitys: Node.js, React, ja paljon muuta', 'Paikkatietoteknologiat', 'Rajapintakehitys', 'Tietokantahallinta', 'Ketterä kehitys', 'Scrum-masterointi', 'IT-projektinveto']
+            en: ['Full-stack web development: Node.js, React, etc.', 'Geospatial technologies', 'API development', 'Database management', 'Agile development', 'Scrum-mastering', 'ICT project management'],
+            fi: ['Full-stack kehitys: Node.js, React, jne.', 'Paikkatietoteknologiat', 'Rajapintakehitys', 'Tietokantahallinta', 'Ketterä kehitys', 'Scrum-masterointi', 'IT-projektinveto']
         },
         imgs: [ossi],
         color: 'blue grey'
@@ -408,7 +408,7 @@ const us = [
         linkedin: 'https://fi.linkedin.com/in/emilia-timlin-718553203',
         description: {
             fi: `Emiliaa kiehtovat suunnittelun salat. Hänen käsissään raportit, selvitykset ja paikkatieto muuntuvat toimiviksi suunnitteluratkaisuiksi!`,
-            en: `Emilia is intrigued by the depths of urban planning. In her hands, reports, analyses and geospatial information turn into functional planning solutions!`,
+            en: `Emilia is intrigued by the depths of urban planning. In her hands, reports, analyses and geospatial information turn into successful planning solutions!`,
         },
         powers: {
             en: ['Urban planning', 'Environmental planning', 'Urban and regional development', 'Geoinformatics', 'Spatial analytics', 'Graphic design and visualization'],
@@ -430,7 +430,7 @@ const us = [
         email: 'miia.turunen@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/turunenmiia/',
         description: {
-            fi: `Miiaa ohjaa halu kehittää digitaalista maailmaa, jossa palvelut eivät vain muokkaa aiempia rutiineja, mutta inspiroivat rakentamaan uudella tavalla kestävää yhteiskuntaa. Miialle käyttäjä on kehitystyön keskiössä, ja teknologia palvelee ihmistä - ei toisinpäin.`,
+            fi: `Miiaa ohjaa halu kehittää digitaalista maailmaa, jossa palvelut eivät vain muokkaa aiempia rutiineja, vaan inspiroivat rakentamaan uudella tavalla kestävää yhteiskuntaa. Miialle käyttäjä on kehitystyön keskiössä, ja teknologia palvelee ihmistä - ei toisinpäin.`,
             en: `Miia is driven by a desire to develop a digital world, in which services do not only reshape old routines, but rather inspire to build a sustainable society in a new way. For her, the user is at the heart of development, and technology serves us, not vice versa.`,
         },
         powers: {
@@ -478,8 +478,8 @@ const incognito = {
     tel: '+358 50 4347939',
     linkedin: 'https://www.linkedin.com/company/ubigu-oy',
     description: {
-        fi: `Olemme aina kiinnostuneet laajentamaan joukkoamme mukavilla ja osaavilla tyypeillä, jotka eivät pelkää savea käsissään. Kenties sinä olet yksi heistä?`,
-        en: `We are always interested in expanding our team with nice, talented people, who are not afraid of getting one's hands dirty. Perhaps you are one of them?`,
+        fi: `Olemme aina kiinnostuneita laajentamaan joukkoamme mukavilla ja osaavilla tyypeillä, jotka eivät pelkää savea käsissään. Kenties sinä olet yksi heistä?`,
+        en: `We are always interested in growing our team with nice, talented people, who are not afraid of getting their hands dirty. Perhaps you are one of them?`,
     },
     imgs: [incog],
     color: 'light cool grey'
