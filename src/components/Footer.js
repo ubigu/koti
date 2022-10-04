@@ -153,6 +153,12 @@ const useStyles = makeStyles(theme => {
       height: '100%',
       display: 'flex',
       alignItems: 'center'
+    },
+    listItemText: {
+      [theme.breakpoints.down('sm')]: {
+        marginTop: 0,
+        marginBottom: 0
+      }
     }
   }
 })
@@ -246,21 +252,21 @@ const Footer = () => {
                       <a className={`${classes.footerLink} ${classes.footerSpan}`} rel="noopener noreferrer" href="mailto:info@ubigu.fi">
                         <ListItemIcon classes={{ root: classes.listitemicon }}>
                           <Email className={classes.footerIcon} /></ListItemIcon>
-                        <ListItemText>info@ubigu.fi</ListItemText>
+                        <ListItemText className={classes.listItemText}>info@ubigu.fi</ListItemText>
                       </a>
                     </ListItem>
                     <ListItem disableGutters={matches}>
                       <a className={`${classes.footerLink} ${classes.footerSpan}`} rel="noopener noreferrer" href="tel:+358504347939">
                         <ListItemIcon classes={{ root: classes.listitemicon }}>
                           <Phone className={classes.footerIcon} /></ListItemIcon>
-                        <ListItemText>+358 50 434 7939</ListItemText>
+                        <ListItemText className={classes.listItemText}>+358 50 434 7939</ListItemText>
                       </a>
                     </ListItem>
                     <ListItem disableGutters={matches}>
                       <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/maQZmMu1ajtVwvbC9">
                         <ListItemIcon classes={{ root: classes.listitemicon }}>
                           <Place className={classes.footerIcon} /></ListItemIcon>
-                        <ListItemText>
+                        <ListItemText className={classes.listItemText}>
                           Pellavatehtaankatu 8 E 59<br></br>FI-33100 Tampere
                         </ListItemText>
                       </a>
@@ -269,15 +275,24 @@ const Footer = () => {
                       <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/9c26WWiDayMKh3939">
                         <ListItemIcon classes={{ root: classes.listitemicon }}>
                           <Place className={classes.footerIcon} /></ListItemIcon>
-                        <ListItemText>
+                        <ListItemText className={classes.listItemText}>
                           Torikatu 23, FI-90100 Oulu
+                        </ListItemText>
+                      </a>
+                    </ListItem>
+                    <ListItem disableGutters={matches}>
+                      <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/yZLVBxxGCFPv1Qo87">
+                        <ListItemIcon classes={{ root: classes.listitemicon }}>
+                          <Place className={classes.footerIcon} /></ListItemIcon>
+                        <ListItemText className={classes.listItemText}>
+                          Pasilankatu 2, FI-00240 Helsinki
                         </ListItemText>
                       </a>
                     </ListItem>
                     <ListItem disableGutters={matches}>
                       <ListItemIcon classes={{ root: classes.listitemicon }}>
                         <BusinessCenter className={classes.footerIcon} /></ListItemIcon>
-                      <ListItemText >
+                      <ListItemText className={classes.listItemText}>
                         {intl.formatMessage({ id: "vat", defaultMessage: 'Y-tunnus: 2762483-3' })}
                       </ListItemText>
                     </ListItem>
