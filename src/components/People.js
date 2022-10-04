@@ -372,10 +372,10 @@ const us = [
         surname: 'Laamanen',
         boss: false,
         title: {
-            fi: "Ratkaisuarkkitehti",
-            en: "Solutions architect",
-            sv: "Solutions architect",
-            de: "Solutions architect"
+            fi: "Vanhempi ratkaisuarkkitehti",
+            en: "Senior solutions architect",
+            sv: "Senior solutions architect",
+            de: "Senior solutions architect"
         },
         email: 'joona.laamanen@ubigu.fi',
         tel: '+358 40 8338298',
