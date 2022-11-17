@@ -342,6 +342,32 @@ const us = [
         color: 'aqua blue'
     },
     {
+        firstname: 'Pekka',
+        surname: 'Veiste',
+        boss: false,
+        title: {
+            fi: "Paikkatietoasiantuntija",
+            en: "Geospatial expert",
+            sv: "Geospatial expert",
+            de: "Geospatial expert"
+        },
+        email: 'pekka.veiste@ubigu.fi',
+        // tel: '+358 407638933',
+        linkedin: 'https://www.linkedin.com/in/pekka-veiste/',
+        description: {
+            fi: `Maantieteilijälle ominaiseen tapaan Pekka nauttii sekä maanläheisyydestä että tieteistä. Työaika Pekalla täyttyykin yleensä datasta, sen käsittelystä, analysoinnista, esittämisestä ja johtopäätösten luomisesta osana tiedolla johtamista. Vaikka työvälineet ovatkin usein pilvessä, vapaa-aika kuluu Pekalla yleensä tukevasti maan pinnalla, olipa sitten jaloissa lenkkarit, monot tai kahluusaappaat.`,
+            en: `A typical geographer, Pekka enjoys both everything geo and graphs. His working hours are usually filled with processing, analysing and visualization data, and creating insights and intelligence therefrom. Even if his tools are often in the cloud, his free time is mostly spent on the ground, with his feet in e.g. sneakers, ski boots or waders.`,
+            sv: `A typical geographer, Pekka enjoys both everything geo and graphs. His working hours are usually filled with processing, analysing and visualization data, and creating insights and intelligence therefrom. Even if his tools are often in the cloud, his free time is mostly spent on the ground, with his feet in e.g. sneakers, ski boots or waders.`
+        },
+        powers: {
+            en: ['QGIS, PostGIS, FME, etc.', 'Power BI', 'Python', 'Azure', 'Data management & ETL', 'Spatial analytics', 'Data visualization', 'Urban development'],
+            sv: ['QGIS, PostGIS, FME, etc.', 'Power BI', 'Python', 'Azure', 'Datahantering & ETL', 'Spatial analytics', 'Datavisualisering' , 'Urban utveckling'],
+            fi: ['QGIS, PostGIS, FME, jne.', 'Power BI', 'Python', 'Azure', 'Tiedonhallinta & ETL', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Kaupunkikehitys']
+        },
+        imgs: [incoming],
+        color: 'misty blue'
+    },
+    {
         firstname: 'Ville',
         surname: 'Koivisto',
         boss: false,
