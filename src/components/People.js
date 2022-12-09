@@ -32,6 +32,7 @@ import miia from './../img/us/miia.jpg';
 import aleksi from './../img/us/aleksi.jpg';
 import ville from './../img/us/ville.jpg';
 import samuli from './../img/us/samuli.jpg';
+import pekka from './../img/us/pekka2.jpg';
 import tuukka from './../img/us/tuukka.jpg';
 import incog from './../img/us/incognito.jpg';
 import incoming from './../img/us/incoming.jpg';
@@ -364,7 +365,7 @@ const us = [
             sv: ['QGIS, PostGIS, FME, etc.', 'Power BI', 'Python', 'Azure', 'Datahantering & ETL', 'Spatial analytics', 'Datavisualisering' , 'Urban utveckling'],
             fi: ['QGIS, PostGIS, FME, jne.', 'Power BI', 'Python', 'Azure', 'Tiedonhallinta & ETL', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Kaupunkikehitys']
         },
-        imgs: [incoming],
+        imgs: [pekka],
         color: 'misty blue'
     },
     {
@@ -474,6 +475,7 @@ const us = [
         firstname: 'Miia',
         surname: 'Turunen',
         boss: false,
+        ex: true,
         title: {
             fi: "Palvelumuotoilija",
             en: "Junior service designer",
@@ -557,7 +559,7 @@ const People = () => {
     const persons = [
         ...us.filter(u => u.boss).sort(
             (a, b) => a.surname > b.surname ? 1 : b.surname > a.surname ? -1 : a.firstname > b.firstname ? 1 : b.firstname > a.firstname ? -1 : 0),    
-        ...us.filter(u => !u.boss).sort(
+        ...us.filter(u => !u.boss && !('ex' in u)).sort(
         (a, b) => a.surname > b.surname ? 1 : b.surname > a.surname ? -1 : a.firstname > b.firstname ? 1 : b.firstname > a.firstname ? -1 : 0),
         incognito
     ];
