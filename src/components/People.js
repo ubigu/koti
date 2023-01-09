@@ -191,6 +191,32 @@ const us = [
         color: 'dark blue'
     },
     {
+        firstname: 'Sofia',
+        surname: 'Koskela',
+        boss: false,
+        title: {
+            fi: "Paikkatietoasiantuntija",
+            en: "Geospatial expert",
+            sv: "Geospatial expert",
+            de: "Geospatial expert"
+        },
+        email: 'sofia.koskela@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/sofiakoskela/',
+        description: {
+            fi: `Luovuus, analyyttisyys ja ongelmanratkaisukyky tapaavat säännöllisesti Sofian synapseissa. Uusia menetelmiä, materiaaleja ja aiheita hän ei kaihda, kun hän täyttää kykyjen ja kokemustensa galleriaa uusilla luomuksillaan.`,
+            en: `Creativity, analyticity and problem solving skills meet regularly at Sofia's synapses. New methods, materials and topics she is not afraid of, as he fills her gallery of skills and experiences with ever new productions.`,
+            sv: `Kreativitet, analyticitet och problemlösningsförmåga möts regelbundet på Sofias synapser. Nya metoder, material och ämnen är hon inte rädd för, då han fyller hennes galleri av kunskaper och erfarenheter med ständigt nya produktioner.`
+        },
+        powers: {
+            en: ['Data analytics', 'Land use planning', 'Python', 'QGIS', 'Data management', 'Traffic systems', 'Problem solving', 'Data visualization'],
+            fi: ['Data-analytiikka', 'Maankäytön suunnittelu', 'Python', 'QGIS', 'Tiedonhallinta', 'Liikennejärjestelmät', 'Ongelmanratkaisu', 'Datavisualisointi'],
+            sv: ['Data-analys', 'Markanvändningsplanering', 'Python', 'QGIS', 'Datahantering', 'Trafiksystem', 'Problemlösning', 'Datavisualisering'] 
+
+        },
+        imgs: [incoming],
+        color: 'pink'
+    },
+    {
         firstname: 'Tuukka',
         surname: 'Kataja',
         boss: false,
