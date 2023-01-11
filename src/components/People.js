@@ -37,6 +37,7 @@ import tuukka from './../img/us/tuukka.jpg';
 import incog from './../img/us/incognito.jpg';
 import incoming from './../img/us/incoming.jpg';
 import otso from './../img/us/otso.jpg';
+import sofia from './../img/us/sofia.jpg';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -213,7 +214,7 @@ const us = [
             sv: ['Data-analys', 'Markanvändningsplanering', 'Python', 'QGIS', 'Datahantering', 'Trafiksystem', 'Problemlösning', 'Datavisualisering'] 
 
         },
-        imgs: [incoming],
+        imgs: [sofia],
         color: 'pink'
     },
     {
