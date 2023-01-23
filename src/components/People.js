@@ -348,10 +348,10 @@ const us = [
         surname: 'Kauppi',
         boss: true,
         title: {
-            fi: "Teknologiajohtaja",
-            en: "CTO",
-            sv: "CTO",
-            de: "CTO"
+            fi: "Digijohtaja",
+            en: "Chief Digital Officer",
+            sv: "CDO",
+            de: "CDO"
         },
         email: 'marko.kauppi@ubigu.fi',
         tel: '+358 405510498',
