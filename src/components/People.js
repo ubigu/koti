@@ -38,6 +38,7 @@ import incog from './../img/us/incognito.jpg';
 import incoming from './../img/us/incoming.jpg';
 import otso from './../img/us/otso.jpg';
 import sofia from './../img/us/sofia.jpg';
+import teijo from './../img/us/teijo.jpg';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -419,6 +420,32 @@ const us = [
             fi: ['QGIS, PostGIS, Geoserver, QField, jne.', 'Python & pyqgis', 'Agile / SCRUM', 'Paikkatietoinfrastruktuurit & PaaS', 'Tiedon- ja omaisuudenhallinta', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Infra-alan erityiskysymykset', 'Geopolitiikka ja aluetutkimus']
         },
         imgs: [ville],
+        color: 'misty blue'
+    },
+    {
+        firstname: 'Teijo',
+        surname: 'Huotari',
+        boss: false,
+        title: {
+            fi: "Vanhempi asiantuntija",
+            en: "Senior expert",
+            sv: "Senior expert",
+            de: "Senior expert"
+        },
+        email: 'teijo.huotari@ubigu.fi',
+        // tel: '+358 407638933',
+        linkedin: 'https://www.linkedin.com/in/teijo-h-0229999b/',
+        description: {  
+            fi: `Teijo, maantieden kuningas... vai miten se oli. Sen, onko moottoritie kuuma tahi tie hetken kevyt, saattaa tiestö- ja infratietoseppä Teijo hyvinkin olla joskus määritellyt. Teknisten detaljien ohella Teijo osaa nähdä myös ison kuvan - vähintäänkin yläilmoista dronelaivueensa silmien läpi. `,
+            en: `Teijo is King of the road(s), well, from a data management perspective at least. If the road seems long with many a winding turn, that problem could well end up on this datasmith's desk to scrutinize. In addition to his in-depth knowledge of technical details, he can see the big picture as well - at least via the eyes of his drone fleet.`,
+            sv: `Teijo är kung på vägarna, ja, åtminstone ur ett datahanteringsperspektiv. Om vägen verkar lång med många slingrande svängar kan det problemet mycket väl hamna på den här datasmedens skrivbord för att granska. Förutom sina djupa kunskaper om tekniska detaljer kan han se helheten också – åtminstone via ögonen på sin drönarflotta.`
+        },
+        powers: {
+            en: ['GIS', 'BIM', 'Data management', 'Information modelling', 'Traffic planning', 'Infrastructure data', 'Drone photography'],
+            sv: ['GIS', 'BIM', 'Datahantering', 'Datamodellering', 'Trafikplanering', 'Information om infrastruktur', 'Drönarfotografering'],
+            fi: ['GIS', 'BIM', 'Tiedonhallinta', 'Tietomallikoordinointi', 'Liikennesuunnittelu', 'Infratieto', 'Dronekuvaukset']
+        },
+        imgs: [teijo],
         color: 'misty blue'
     },
     {
