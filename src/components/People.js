@@ -22,7 +22,7 @@ import { ExpandMore, Email, Phone, EmojiFlagsOutlined } from '@material-ui/icons
 import esa from './../img/us/esa.jpg';
 import ilpo from './../img/us/ilpo.jpg';
 import emilia from './../img/us/emilia.jpg';
-import sonja from './../img/us/sonja.jpg';
+import sonja from './../img/us/sonja_old.jpg';
 import jouko from './../img/us/jouko.jpg';
 import marko from './../img/us/marko.jpg';
 import janne from './../img/us/janne.jpg';
