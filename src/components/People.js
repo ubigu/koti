@@ -17,7 +17,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import colors from '../styles/colors';
 import linkedin from '../img/social/linkedin.inline.svg'
-import { ExpandMore, Email, Phone, EmojiFlagsOutlined } from '@material-ui/icons/';
+import { ExpandMore, Email, Phone } from '@material-ui/icons/';
 
 import esa from './../img/us/esa.jpg';
 import ilpo from './../img/us/ilpo.jpg';
@@ -171,10 +171,10 @@ const us = [
         surname: 'Massinen',
         boss: false,
         title: {
-            fi: "Paikkatietoarkkitehti",
-            en: "Geospatial Engineer",
-            sv: "Geospatial ingenjör",
-            de: "Geospatial Engineer"
+            fi: "Vanhempi paikkatietoarkkitehti",
+            en: "Senior Geospatial Engineer",
+            sv: "Senior Geospatial ingenjör",
+            de: "Senior Geospatial Engineer"
         },
         email: 'samuli.massinen@ubigu.fi',
         linkedin: 'https://fi.linkedin.com/in/smassine',
