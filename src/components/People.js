@@ -19,26 +19,27 @@ import colors from '../styles/colors';
 import linkedin from '../img/social/linkedin.inline.svg'
 import { ExpandMore, Email, Phone } from '@material-ui/icons/';
 
-import esa from './../img/us/esa.jpg';
-import ilpo from './../img/us/ilpo.jpg';
-import emilia from './../img/us/emilia.jpg';
-import sonja from './../img/us/sonja_old.jpg';
-import jouko from './../img/us/jouko.jpg';
-import marko from './../img/us/marko.jpg';
-import janne from './../img/us/janne.jpg';
-import joona from './../img/us/joona.jpg';
-import ossi from './../img/us/ossi.jpg';
+import esa from './../img/us/esa.png';
+import ilpo from './../img/us/ilpo.png';
+import emilia from './../img/us/emilia.png';
+import sonja from './../img/us/sonja.png';
+import jouko from './../img/us/jouko.png';
+import marko from './../img/us/marko.png';
+import janne from './../img/us/janne.png';
+import joona from './../img/us/joona.png';
+import ossi from './../img/us/ossi.png';
 import miia from './../img/us/miia.jpg';
-import aleksi from './../img/us/aleksi.jpg';
-import ville from './../img/us/ville.jpg';
-import samuli from './../img/us/samuli.jpg';
-import pekka from './../img/us/pekka2.jpg';
-import tuukka from './../img/us/tuukka.jpg';
-import incog from './../img/us/incognito.jpg';
-import incoming from './../img/us/incoming.jpg';
-import otso from './../img/us/otso.jpg';
-import sofia from './../img/us/sofia.jpg';
-import teijo from './../img/us/teijo.jpg';
+import aleksi from './../img/us/aleksi.png';
+import ville from './../img/us/ville.png';
+import samuli from './../img/us/samuli.png';
+import pekka from './../img/us/pekka.png';
+import tuukka from './../img/us/tuukka.png';
+import incog from './../img/us/incognito.png';
+// import henrika from './../img/us/henrika.png';
+// import jannep from './../img/us/jannep.png';
+import otso from './../img/us/otso.png';
+import sofia from './../img/us/sofia.png';
+import teijo from './../img/us/teijo.png';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -69,10 +70,12 @@ const useStyles = makeStyles(theme => ({
         margin: '0 auto',
         height: '100%',
         width: 'auto',
+        blur: '2em'
     },
     media: {
         height: 300,
         maxWidth: 300,
+        backgroundColor: '#d5eaebc2'
     },
     imgCropper: {
         width: 150,
@@ -187,7 +190,6 @@ const us = [
             en: ['Geospatial tech: Python, PostgreSQL, etc.', 'System and data architecture', 'Big Data analytics', 'Process automation', 'Data management', 'Asset management', 'Digitalization of built infrastructure'],
             fi: ['Paikkatieto: Python, PostgreSQL, yms.', 'Järjestelmä- ja data-arkkitehtuurit', 'Big Data -analytiikka', 'Prosessien automatisointi', 'Tiedon- ja omaisuudenhallinta', 'Infra-alan digitalisaatio'],
             sv: ['Geospatial teknik: Python, PostgreSQL..', 'System- och dataarkitektur', 'Big Data analytics', 'Processautomation', 'Data management', 'Asset management', 'Digitalisering av byggd infrastruktur'] 
-
         },
         imgs: [samuli],
         color: 'dark blue'
@@ -241,7 +243,55 @@ const us = [
         },
         imgs: [tuukka],
         color: 'misty blue'
+    },/*
+    {
+        firstname: 'Janne',
+        surname: 'Peltonen',
+        boss: false,
+        title: {
+            fi: "Lead Designer",
+            en: "Lead Designer",
+            sv: "Lead Designer",
+            de: "Lead Designer"
+        },
+        email: 'janne.peltonen@ubigu.fi',
+        description: {
+            fi: `...`,
+            en: `...`,
+            sv: `...`
+        },
+        powers: {
+            en: ['Front-end development', 'User experience', 'Accessibility', 'Design', 'Service design'],
+            sv: [''],
+            fi: ['Käyttöliittymäkehitys', 'Käyttäjäkokemus (UX)', 'Saavutettavuus', 'Design', 'Palvelumuotoilu']
+        },
+        imgs: [jannep],
+        color: 'light petrol'
     },
+    {
+        firstname: 'Henrika',
+        surname: 'Ruokonen',
+        boss: false,
+        title: {
+            fi: "Vanhempi suunnittelija",
+            en: "Senior designer",
+            sv: "Senior designer",
+            de: "Senior designer"
+        },
+        email: 'henrika.ruokonen@ubigu.fi',
+        description: {
+            fi: `...`,
+            en: `...`,
+            sv: `...`
+        },
+        powers: {
+            en: ['Facilitation', 'Service design', 'Process development', 'Foresight', 'Knowledge-based management', 'Strategies', 'Evaluations'],
+            sv: ['Facilitation', 'Service design', 'Processutveckling', 'Framsyn', 'Kunskapsbaserad ledning', 'Strategier', 'Utvärderingar'],
+            fi: ['Fasilitointi', 'Palvelumuotoilu', 'Prosessien kehittäminen', 'Ennakointi', 'Tiedolla johtaminen', 'Strategiat', 'Arvioinnit']
+        },
+        imgs: [henrika],
+        color: 'light warm red'
+    },*/
     {
         firstname: 'Otso',
         surname: 'Helenius',
@@ -646,7 +696,7 @@ const People = () => {
                                                 <CardHeader
                                                     classes={{ root: classes.cardHeader, title: classes.cardTitle }}
                                                     avatar={
-                                                        <Avatar aria-label={person.firstname} style={{ backgroundColor: colors.find(c => c.name === person.color).color }}>
+                                                        <Avatar aria-label={person.firstname} style={{ backgroundColor: '#8cc1b3' }}>
                                                             {name ? person.firstname.slice(0, 1) + person.surname.slice(0, 1) : '?'}
                                                         </Avatar>
                                                     }
