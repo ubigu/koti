@@ -527,12 +527,12 @@ const us = [
     {
         firstname: 'Ossi',
         surname: 'Tammi',
-        boss: false,
+        boss: true,
         title: {
-            fi: "Vanhempi IT-konsultti",
-            en: "Senior IT consultant",
-            sv: "Senior IT-konsult",
-            de: "Senior IT-Experte"
+            fi: "Head of IT",
+            en: "Head of IT",
+            sv: "Head of IT",
+            de: "Head of IT"
         },
         email: 'ossi.tammi@ubigu.fi',
         tel: '+358 504368642',
