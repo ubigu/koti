@@ -15,7 +15,6 @@ import {
     SvgIcon,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import colors from '../styles/colors';
 import linkedin from '../img/social/linkedin.inline.svg'
 import { ExpandMore, Email, Phone } from '@material-ui/icons/';
 
@@ -35,8 +34,8 @@ import samuli from './../img/us/samuli.png';
 import pekka from './../img/us/pekka.png';
 import tuukka from './../img/us/tuukka.png';
 import incog from './../img/us/incognito.png';
-// import henrika from './../img/us/henrika.png';
-// import jannep from './../img/us/jannep.png';
+import henrika from './../img/us/henrika.png';
+import jannep from './../img/us/jannep.png';
 import otso from './../img/us/otso.png';
 import sofia from './../img/us/sofia.png';
 import teijo from './../img/us/teijo.png';
@@ -243,10 +242,11 @@ const us = [
         },
         imgs: [tuukka],
         color: 'misty blue'
-    },/*
+    },
     {
         firstname: 'Janne',
         surname: 'Peltonen',
+        tel: '+358 50 552 7645',
         boss: false,
         title: {
             fi: "Lead Designer",
@@ -256,13 +256,13 @@ const us = [
         },
         email: 'janne.peltonen@ubigu.fi',
         description: {
-            fi: `...`,
-            en: `...`,
-            sv: `...`
+            fi: `Peltsin ateljeessa muovautuu vektorigrafiikoista, UI-komponenteista ja muista moderneista raaka-aineista milloin milläkin tekniikalla ja formaatilla Ubigun designia. Kriitikoiden mukaan hänen teoksistaan huokuu usein voimakas käytettävyys ja saavutettavuus. Myös vapaa-ajalla audiovisuaaliset elämykset täyttävät Peltsin aistit, milloin pianon ja museokortin välityksellä, tai tarkastellessaan maailmaa peilittömän kameransa silmin.`,
+            en: `In Peltsi's Studio, Ubigu's designs are crafted from vector graphics, UI components and other modern raw materials in whichever format and medium is desired. According to critics, his work usually is usually seen to create a strong feeling of usability and accessibility. Even outside of his working hours, audiovisual experiences fill Peltsi's senses, sometimes via his piano or frequenting museums, or through the eyes of his mirrorless camera.`,
+            sv: `I Peltsis Studio är Ubigus design gjord av vektorgrafik, UI-komponenter och andra moderna råmaterial i vilket format och medium som helst. Enligt kritiker brukar hans arbete ses skapa en stark känsla av användbarhet och tillgänglighet. Även utanför hans arbetstid fyller audiovisuella upplevelser Peltsis sinnen, ibland via hans piano eller besöker museer, eller genom ögonen på hans spegellösa kamera.`
         },
         powers: {
             en: ['Front-end development', 'User experience', 'Accessibility', 'Design', 'Service design'],
-            sv: [''],
+            sv: ['Front-end utveckling', 'Användarupplevelse', 'Tillgänglighet', 'Design', 'Service design'],
             fi: ['Käyttöliittymäkehitys', 'Käyttäjäkokemus (UX)', 'Saavutettavuus', 'Design', 'Palvelumuotoilu']
         },
         imgs: [jannep],
@@ -271,6 +271,7 @@ const us = [
     {
         firstname: 'Henrika',
         surname: 'Ruokonen',
+        tel: '+358408485557',
         boss: false,
         title: {
             fi: "Vanhempi suunnittelija",
@@ -280,9 +281,9 @@ const us = [
         },
         email: 'henrika.ruokonen@ubigu.fi',
         description: {
-            fi: `...`,
-            en: `...`,
-            sv: `...`
+            fi: `Vapaa-ajallaan Henrika on tottunut vahtimaan, ettei pallo mene maaliin. Töissä hän kuitenkin vaihtaa roolia kameleonttimaisen sulavasti ja vahtii, että hommat nimenomaan menevät maaliin – vieläpä niin tyylikkäästi, että tekisi mieli katsoa projekti hidastettuna uusintana. Kun päivät täyttää arviointi, ennakointi, visiointi ja fasilitointi, illalla palauttaa mukavasti pianon sointi ja kissoista unelmointi.`,
+            en: `In her free time, Henrika is used to keeping the ball off the goal. In her work, however, she changes her role like a chameleon and makes sure that the goals are indeed met. And she likes to hit the targets in such style, that you'd like to rewatch her projects in slo-mo. When the days are filled by evaluations, foresight, visioning and facilitation, the keys of her piano provide a good evening meditation.`,
+            sv: `På fritiden är Henrika van vid att hålla bollen utanför mål. I sitt arbete byter hon dock roll som en kameleont och ser till att målen verkligen uppfylls. Och hon gillar att träffa målen i sådan stil att du skulle vilja se hennes projekt igen i slo-mo. När dagarna fylls av utvärderingar, framförhållning, visioner och underlättande ger tangenterna på hennes piano en bra kvällsmeditation.`
         },
         powers: {
             en: ['Facilitation', 'Service design', 'Process development', 'Foresight', 'Knowledge-based management', 'Strategies', 'Evaluations'],
@@ -291,7 +292,7 @@ const us = [
         },
         imgs: [henrika],
         color: 'light warm red'
-    },*/
+    },
     {
         firstname: 'Otso',
         surname: 'Helenius',
