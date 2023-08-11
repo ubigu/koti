@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import Layout from "../components/Layout";
-import Some from "../components/Some";
 import Partners from "../components/Partners";
 import Features from "../components/Features";
 import { useIntl } from "gatsby-plugin-intl";
@@ -241,8 +240,6 @@ const IndexPage = () => {
       <div ref={featureRef}>
         <Features />
       </div>
-      <Divider variant="middle" className={classes.divider} />
-      <Some />
       <Divider variant="middle" className={classes.divider} />
       <Partners />
     </Layout>
