@@ -452,10 +452,10 @@ const us = [
         surname: 'Koivisto',
         boss: false,
         title: {
-            fi: "Paikkatietoarkkitehti",
-            en: "Geospatial engineer",
-            sv: "Geospatial engineer"    ,
-            de: "Geospatial engineer"
+            fi: "Vanhempi paikkatietoarkkitehti",
+            en: "Senior geospatial engineer",
+            sv: "Senior geospatial engineer"    ,
+            de: "Senior geospatial engineer"
         },
         email: 'ville.koivisto@ubigu.fi',
         // tel: '+358 407638933',
