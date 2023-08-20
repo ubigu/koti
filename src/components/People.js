@@ -294,7 +294,7 @@ const us = [
         surname: 'Helenius',
         boss: false,
         title: {
-            fi: "Tiedonhallintapäällikkö",
+            fi: "Johtava asiantuntija",
             en: "Knowledge Manager",
             sv: "Knowledge Manager",
             de: "Knowledge Manager"
