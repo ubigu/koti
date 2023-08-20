@@ -28,6 +28,9 @@ import janne from './../img/us/janne.png';
 import joona from './../img/us/joona.png';
 import ossi from './../img/us/ossi.png';
 import miia from './../img/us/miia.jpg';
+import jenni from './../img/us/jenni.png';
+import mikael from './../img/us/mikael.png';
+import petri from './../img/us/petri.png';
 import aleksi from './../img/us/aleksi.png';
 import ville from './../img/us/ville.png';
 import samuli from './../img/us/samuli.png';
@@ -140,8 +143,7 @@ const us = [
             sv: ['Trafik och markanvändning', 'Stads- och regionalutveckling', 'Personliga transporter', 'Servicenätverk', 'Konsekvensbedömning', 'Projektledning och samordning', 'Geoinformatik', 'Business Intelligence'],
             fi: ['Liikenne ja maankäyttö', 'Kaupunki- ja aluekehitys', 'Henkilökuljetukset', 'Palveluverkot', 'Vaikutustenarviointi', 'Projektinhallinta ja -koordinointi', 'Geoinformatiikka', 'Liikkeenjohdon konsultointi']
         },
-        imgs: [sonja],
-        color: 'dark cool grey'
+        imgs: [sonja]
     },
     {
         firstname: 'Aleksi',
@@ -165,8 +167,7 @@ const us = [
             sv: ['Geoinformatik', 'Stads- och regionalutveckling', 'Spatial analys', 'Datahantering', 'Servicenätverk', 'Automatisk bearbetning', 'Utbildning', 'Trafikmodellering'],
             fi: ['Paikkatietojärjestelmät', 'Kaupunki- ja aluekehitys', 'Paikkatietoanalytiikka', 'Tiedonhallinta', 'Palveluverkot', 'Prosessien automatisointi', 'Koulutukset', 'Liikennemallinnus']
         },
-        imgs: [aleksi],
-        color: 'light warm red'
+        imgs: [aleksi]
     },
     {
         firstname: 'Samuli',
@@ -190,8 +191,7 @@ const us = [
             fi: ['Paikkatieto: Python, PostgreSQL, yms.', 'Järjestelmä- ja data-arkkitehtuurit', 'Big Data -analytiikka', 'Prosessien automatisointi', 'Tiedon- ja omaisuudenhallinta', 'Infra-alan digitalisaatio'],
             sv: ['Geospatial teknik: Python, PostgreSQL..', 'System- och dataarkitektur', 'Big Data analytics', 'Processautomation', 'Data management', 'Asset management', 'Digitalisering av byggd infrastruktur'] 
         },
-        imgs: [samuli],
-        color: 'dark blue'
+        imgs: [samuli]
     },
     {
         firstname: 'Sofia',
@@ -216,8 +216,7 @@ const us = [
             sv: ['Data-analys', 'Markanvändningsplanering', 'Python', 'QGIS', 'Datahantering', 'Trafiksystem', 'Problemlösning', 'Datavisualisering'] 
 
         },
-        imgs: [sofia],
-        color: 'pink'
+        imgs: [sofia]
     },
     {
         firstname: 'Tuukka',
@@ -240,8 +239,7 @@ const us = [
             sv: ['Programvara design', 'Hantera komplexitet', 'Pragmatism', 'Fullstackutveckling', 'Polyglotprogrammering', 'Geospatial'],
             fi: ['Softa-arkkitehtuurit', 'Monimutkaisuuden hallinta', 'Pragmaattisuus', 'Full-stack -kehitys', 'Koodikielten kirjo', 'Paikkatieto']
         },
-        imgs: [tuukka],
-        color: 'misty blue'
+        imgs: [tuukka]
     },
     {
         firstname: 'Janne',
@@ -265,8 +263,7 @@ const us = [
             sv: ['Front-end utveckling', 'Användarupplevelse', 'Tillgänglighet', 'Design', 'Service design'],
             fi: ['Käyttöliittymäkehitys', 'Käyttäjäkokemus (UX)', 'Saavutettavuus', 'Design', 'Palvelumuotoilu']
         },
-        imgs: [jannep],
-        color: 'light petrol'
+        imgs: [jannep]
     },
     {
         firstname: 'Henrika',
@@ -290,18 +287,17 @@ const us = [
             sv: ['Facilitation', 'Service design', 'Processutveckling', 'Framsyn', 'Kunskapsbaserad ledning', 'Strategier', 'Utvärderingar'],
             fi: ['Fasilitointi', 'Palvelumuotoilu', 'Prosessien kehittäminen', 'Ennakointi', 'Tiedolla johtaminen', 'Strategiat', 'Arvioinnit']
         },
-        imgs: [henrika],
-        color: 'light warm red'
+        imgs: [henrika]
     },
     {
         firstname: 'Otso',
         surname: 'Helenius',
         boss: false,
         title: {
-            fi: "Vanhempi asiantuntija",
-            en: "Senior Expert",
-            sv: "Senior Expert",
-            de: "Senior Expert"
+            fi: "Tiedonhallintapäällikkö",
+            en: "Knowledge Manager",
+            sv: "Knowledge Manager",
+            de: "Knowledge Manager"
         },
         email: 'otso.helenius@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/otso-helenius/',
@@ -315,8 +311,7 @@ const us = [
             sv: ['Informationsmodellering', 'Ontologiutveckling', 'RDF, OWL, SHACL, SPARQL', 'Stadsutveckling', 'Digitalisering av markanvändning', 'Standarder', 'Datahantering', 'Grafdatabaser / SQL' , 'Programvaruutveckling'],
             fi: ['Tietomallinnus', 'Ontologiakehitys', 'RDF, OWL, SHACL, SPARQL', 'Kaupunkikehitys', 'Maankäytön digitalisaatio', 'Standardit', 'Tiedonhallinta', 'Graafitietokannat / SQL', 'Ohjelmistokehitys']
         },
-        imgs: [otso],
-        color: 'amarillo yellow'
+        imgs: [otso]
     },
     {
         firstname: 'Janne',
@@ -340,8 +335,7 @@ const us = [
             fi: ['Java', 'Back-end-kehitys', 'OGC-standardit', 'Tietokannat', 'Paikkatietoinfra', 'Tiedonhallinta', 'Oskari.org'],
             sv: ['Java', 'Back-end utveckling', 'OGC-standarder', 'Databaser', 'Spatiala datainfrastrukturer', 'Datahantering', 'Oskari.org']
         },
-        imgs: [janne],
-        color: 'light petrol'
+        imgs: [janne]
     },
     {
         firstname: 'Ilpo',
@@ -366,8 +360,7 @@ const us = [
             sv: ['Strategisk markanvändningsplanering', 'Digitalisering av processer', 'Smarta städer', 'Spatial analytics', 'Datahantering', 'Fullstack programvaruutveckling: Node.js, React, OpenLayers, etc.' , 'PostgreSQL, Geoserver, OSGeo, etc.', 'Kartografisk design'],
             fi: ['Maankäytön suunnittelu', 'Prosessien digitalisaatio', 'Älykaupungit', 'Paikkatietoanalytiikka', 'Tiedonhallinta', 'Full-stack kehitys: Node.js, React, OpenLayers, etc.', 'PostgreSQL, GeoServer, OSGeo, jne.', 'Kartografia']
         },
-        imgs: [ilpo],
-        color: 'pink'
+        imgs: [ilpo]
     },
     {
         firstname: 'Jouko',
@@ -392,8 +385,7 @@ const us = [
             sv: ['Strategisk planering, BI och datavisualisering', 'Markanvändningsplanering', 'Smarta städer och regional utveckling', 'Digitalisering av processer', 'Data & rumslig analys', 'Master data management, ETL (FME)' , 'PostgreSQL, Oracle, etc.'],
             fi: ['Strateginen suunnittelu, tietojohtaminen ja datavisualisointi', 'Maankäytön suunnittelu', 'Älykaupungit ja aluekehitys', 'Prosessien digitalisaatio', 'Data- ja paikkatietoanalytiikka', 'Tiedonhallinta, ETL (FME)', 'PostgreSQL, Oracle, jne.']
         },
-        imgs: [jouko],
-        color: 'dark blue'
+        imgs: [jouko]
     },
     {
         firstname: 'Marko',
@@ -418,8 +410,7 @@ const us = [
             sv: ['Företags- och referensarkitekturer', 'Digitalisering av markanvändning', 'Spatial datainfrastruktur', 'ETL-processer (FME etc.)', 'Datahantering och databaser', 'Fullstack ICT', 'OGC-standarder och OSGeo-verktyg', 'Programvaruutveckling & Agile'],
             fi: ['Kokonais- ja viitearkkitehtuurit', 'Maankäytön digitalisaatio', 'Paikkatietoinfrastruktuurit', 'ETL-prosessit (FME jne.)', 'Tiedonhallinta ja tietokannat', 'Full-stack IT, järjestelmähallinta', 'Ketterä ohjelmistokehitys']
         },
-        imgs: [marko],
-        color: 'aqua blue'
+        imgs: [marko]
     },
     {
         firstname: 'Pekka',
@@ -444,8 +435,7 @@ const us = [
             sv: ['QGIS, PostGIS, FME, etc.', 'Power BI', 'Python', 'Azure', 'Datahantering & ETL', 'Spatial analytics', 'Datavisualisering' , 'Urban utveckling'],
             fi: ['QGIS, PostGIS, FME, jne.', 'Power BI', 'Python', 'Azure', 'Tiedonhallinta & ETL', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Kaupunkikehitys']
         },
-        imgs: [pekka],
-        color: 'misty blue'
+        imgs: [pekka]
     },
     {
         firstname: 'Ville',
@@ -470,8 +460,7 @@ const us = [
             sv: ['QGIS, PostGIS, Geoserver, QField, etc.', 'Python & pyqgis', 'Agile / SCRUM', 'SDIs & PaaS', 'Data- och tillgångshantering', 'Spatial analytics', 'Datavisualisering' , 'Infrastruktur', 'Geopolitik och regionala studier'],
             fi: ['QGIS, PostGIS, Geoserver, QField, jne.', 'Python & pyqgis', 'Agile / SCRUM', 'Paikkatietoinfrastruktuurit & PaaS', 'Tiedon- ja omaisuudenhallinta', 'Paikkatietoanalytiikka', 'Datavisualisointi', 'Infra-alan erityiskysymykset', 'Geopolitiikka ja aluetutkimus']
         },
-        imgs: [ville],
-        color: 'misty blue'
+        imgs: [ville]
     },
     {
         firstname: 'Teijo',
@@ -496,8 +485,7 @@ const us = [
             sv: ['GIS', 'BIM', 'Datahantering', 'Datamodellering', 'Trafikplanering', 'Information om infrastruktur', 'Drönarfotografering'],
             fi: ['GIS', 'BIM', 'Tiedonhallinta', 'Tietomallikoordinointi', 'Liikennesuunnittelu', 'Infratieto', 'Dronekuvaukset']
         },
-        imgs: [teijo],
-        color: 'misty blue'
+        imgs: [teijo]
     },
     {
         firstname: 'Joona',
@@ -522,8 +510,7 @@ const us = [
             sv: ['Fullstack webbutveckling', 'API-utveckling', 'Geospatial teknologi', 'Programvarutestning, CI & CD', 'Docker & Kubernetes', 'Inbäddade system', 'Agil utveckling'],
             fi: ['Full-stack kehitys', 'Rajapintakehitys', 'Paikkatietoteknologiat', 'Testaus, CI ja CD', 'Docker & Kubernetes', 'Sulautetut järjestelmät', 'Ketterä kehitys']
         },
-        imgs: [joona],
-        color: 'misty blue'
+        imgs: [joona]
     },
     {
         firstname: 'Ossi',
@@ -548,8 +535,7 @@ const us = [
             sv: ['Fullstack webbutveckling: Node.js, React..', 'Geospatial teknologier', 'API-utveckling', 'Databashantering', 'Agil utveckling', 'Scrum-mastering', 'IKT-projektledning '],
             fi: ['Full-stack kehitys: Node.js, React, jne.', 'Paikkatietoteknologiat', 'Rajapintakehitys', 'Tietokantahallinta', 'Ketterä kehitys', 'Scrum-masterointi', 'IT-projektinveto']
         },
-        imgs: [ossi],
-        color: 'blue grey'
+        imgs: [ossi]
     },
     {
         firstname: 'Emilia',
@@ -573,8 +559,7 @@ const us = [
             fi: ['Kaupunkisuunnittelu', 'Ympäristösuunnittelu', 'Kaupunki- ja aluekehitys', 'Paikkatietojärjestelmät', 'Graafinen suunnittelu ja visualitointi'],
             sv: ['Stadsplanering', 'Miljöplanering', 'Stads- och regionalutveckling', 'Geoinformatik', 'Spatial analytics', 'Grafisk design och visualisering']
         },
-        imgs: [emilia],
-        color: 'light yellow'
+        imgs: [emilia]
     },
     {
         firstname: 'Miia',
@@ -599,13 +584,13 @@ const us = [
             sv: ['Tjänstedesign', 'Samutveckling', 'Kommunikationer', 'Facilitation', 'Organisationskultur', 'Utveckla intern verksamhet'],
             fi: ['Palvelumuotoilu', 'Yhteiskehittäminen', 'Viestintä', 'Fasilitointi', 'Organisaatiokulttuuri', 'Sisäisten toimintatapojen kehittäminen']
         },
-        imgs: [miia],
-        color: 'lilac violet'
+        imgs: [miia]
     },
     {
         firstname: 'Esa',
         surname: 'Östring',
         boss: false,
+        ex: true,
         title: {
             fi: "Vanhempi data-arkkitehti",
             en: "Senior Data Architect",
@@ -624,9 +609,81 @@ const us = [
             sv: ['Dataanalys, bearbetning och visualisering', 'GIS', 'Programvaruutveckling', 'Systemarkitektur & DB-design', 'Big data & IoT', 'DevOps & PaaS', 'Microservices', 'Artificiell intelligens' ],
             fi: ['Data-analytiikka, -prosessointi ja -visualisointi', 'Paikkatieto', 'Ohjelmistokehitys', 'Järjestelmä- ja tietokanta-arkkitehtuurit', 'Big Data & IoT', 'DevOps & PaaS', 'Mikropalvelut', 'Tekoäly']
         },
-        imgs: [esa],
-        color: 'pine green'
-    }
+        imgs: [esa]
+    },
+    {
+        firstname: 'Mikael',
+        surname: 'Moilanen',
+        boss: false,
+        ex: true,
+        title: {
+            fi: "Ohjelmistokehittäjä",
+            en: "Software Developer",
+            sv: "Software Developer",
+            de: "Software Developer"
+        },
+        email: 'mikael.moilanen@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/mikael-moilanen-1670b5173/',
+        description: {
+            fi: `Läppärin ja IDE:n puikoissa viihtyvälle Mikaelille maailman hahmottaminen paikkatiedon ja karttojen kautta ei suinkaan ole vierasta. Hyvinkin konkreettista praktiikkaa - tai vähintään näppituntumaa - tematiikkaan tarjosi hänen aiempi työpisteensä lentokoneiden ohjaksissa. Vaikka nykyinen toimisto onkin vain hitusen merenpinnan yläpuolella, ei se estä Mikaelia ylläpitämästä korkeaa tasoa kaikessa tekemisessään.`,
+            en: `Nowadays firmly by his laptop and favourite IDE, viewing and understanding the world through maps and spatial data is by no means unfamiliar to Mikael. His earlier office, behind the 'wheel' at around 33 000 feet, provided some pretty good hands-on experience in that regard. Even though his current desk is barely above sea level, this doesn't stop him from maintaining the highest level in the quality of his work.`,
+            sv: `Nuförtiden, fast vid sin dator och favorit-IDE, är Mikael ingalunda främmande att se och förstå världen genom kartor och rumslig data. Hans tidigare kontor, bakom "ratten" på cirka 33 000 fot, gav ganska bra praktisk erfarenhet i det avseendet. Även om hans nuvarande skrivbord knappt är över havet, hindrar detta honom inte från att hålla den högsta nivån i kvaliteten på sitt arbete.`,
+        },
+        powers: {
+            en: ['Software development', 'System architecture & DB design', 'Typescript / JS stack', 'PaaS'],
+            sv: ['Programvaruutveckling', 'Systemarkitektur & DB-design', 'Typescript / JS stack', 'PaaS'],
+            fi: ['Ohjelmistokehitys', 'Järjestelmä- ja tietokanta-arkkitehtuurit', 'Typescript / JS stack', 'PaaS']
+        },
+        imgs: [mikael]
+    },
+    {
+        firstname: 'Jenni',
+        surname: 'Kujala',
+        boss: false,
+        title: {
+            fi: "Paikkatietoasiantuntija",
+            en: "Geospatial Expert",
+            sv: "Geospatial Expert",
+            de: "Geospatial Expert"
+        },
+        email: 'jenni.kujala@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/jennikujala/',
+        description: {
+            fi: `Kerran elämänsä risteyksessä Jennin piti valita, tutkisiko tulivuorten tuhoisaa lumoa, vai kestävää kaupunkisuunnittelua. Ajoiko kenties ihmisläheisyys hänet jälkimmäiseen? Kuka ties molemmissa viehätysvoima piilikin paikkatietojen analysoinnissa? Vaikka se onkin virallisesti parasta, öisin Jenni epäilemättä uneksii salaa kraatereilla kiipeilystä.`,
+            en: `Once in a crossroads of life, Jenni had to decide between studying destructive volcanoes and sustainable urban planning. Maybe her humane side took over as she chose the latter? Perhaps analyzing spatial data was what really interested in both? That might be the official explanation, but in the night she still secrectly dreams of climbing those craters.`,
+            sv: `En gång i ett vägskäl i livet fick Jenni välja mellan att studera destruktiva vulkaner och hållbar stadsplanering. Kanske tog hennes humana sida över när hon valde det senare? Kanske var att analysera rumslig data det som verkligen var intresserad av båda? Det kan vara den officiella förklaringen, men på natten drömmer hon fortfarande i hemlighet om att klättra i kratrarna.`,
+        },
+        powers: {
+            en: ['Spatial data analytics', 'Information architectures', 'Land use planning', 'Traffic planning', 'Traffic systems', 'Information management'],
+            sv: ['Spatial dataanalys', 'Informationsarkitekturer', 'Markanvändningsplanering', 'Trafikplanering', 'Trafiksystem', 'Informationshantering'],
+            fi: ['Paikkatietoanalytiikka', 'Tietoarkkitehtuurit', 'Maankäytön suunnittelu', 'Liikennesuunnittelu', 'Liikennejärjestelmät', 'Tiedonhallinta']
+        },
+        imgs: [jenni]
+    },
+    {
+        firstname: 'Petri',
+        surname: 'Timlin',
+        boss: false,
+        title: {
+            fi: "Vanhempi paikkatietoarkkitehti",
+            en: "Senior Geospatial Engineer",
+            sv: "Senior Geospatial Engineer",
+            de: "Senior Geospatial Engineer"
+        },
+        email: 'petri.timlin@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/petri-timlin-88241911/',
+        description: {
+            fi: `Puisen pirttinsä porstuasta on Petri nähnyt ajan kulun; kuinka tuuli työntää dyyneille hiekanjyviä kuin ohjelmisto dataa kantaan, miten pärskeet muovaavat meren rantaa kuin ETL paikkatietoa, tai kuinka hyvin hoidettu pelto luo perustan elolle siinä missä laadukas palvelininfra softille.`,
+            en: `From the doorsteps of his homestead, Petri has seen the passing of time; How the wind rolls sand onto the dunes like software pushes data into a database, how the swells of sea reshape the shoreline like ETL does to spatial data, or how a well-tilled land creates a foundation for our life, as a good server infrastructure does for software.`,
+            sv: `Från dörren till sitt hembygdsgård har Petri sett tidens gång; Hur vinden rullar sand på sanddynerna som mjukvara skjuter in data i en databas, hur havets dyningar omformar strandlinjen som ETL gör till rumslig data, eller hur ett välbetat land skapar en grund för vårt liv, som en bra serverinfrastruktur gör för mjukvara.`,
+        },
+        powers: {
+            en: ['Software Development', 'ETL (FME Flow / Form)', 'PostgreSQL / PostGIS', 'Oracle Spatial', 'Project Management', 'SQL', 'Server Infrastructures'],
+            sv: ['Programvaruutveckling', 'ETL (FME Flow / Form)', 'PostgreSQL / PostGIS', 'Oracle Spatial', 'Project Management', 'SQL', 'Server Infrastructures'],
+            fi: ['Ohjelmistokehitys', 'ETL (FME Flow / Form)', 'PostgreSQL / PostGIS', 'Oracle Spatial', 'Projektinhallinta', 'SQL', 'Palvelininfrastruktuurit']
+        },
+        imgs: [petri]
+    },
 ]
 
 const incognito = {
@@ -645,8 +702,7 @@ const incognito = {
         fi: `Olemme aina kiinnostuneita laajentamaan joukkoamme mukavilla ja osaavilla tyypeillä, jotka eivät pelkää savea käsissään. Kenties sinä olet yksi heistä?`,
         en: `We are always interested in growing our team with nice, talented people, who are not afraid of getting their hands dirty. Perhaps you are one of them?`,
     },
-    imgs: [incog],
-    color: 'light cool grey'
+    imgs: [incog]
 };
 
 const People = () => {
