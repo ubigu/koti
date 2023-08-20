@@ -615,7 +615,7 @@ const us = [
         firstname: 'Mikael',
         surname: 'Moilanen',
         boss: false,
-        ex: true,
+        ex: false,
         title: {
             fi: "Ohjelmistokehittäjä",
             en: "Software Developer",
