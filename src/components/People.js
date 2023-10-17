@@ -21,6 +21,7 @@ import { ExpandMore, Email, Phone } from '@material-ui/icons/';
 import esa from './../img/us/esa.png';
 import ilpo from './../img/us/ilpo.png';
 import emilia from './../img/us/emilia.png';
+import emmi from './../img/us/emmi.png';
 import sonja from './../img/us/sonja.png';
 import jouko from './../img/us/jouko.png';
 import marko from './../img/us/marko.png';
@@ -683,6 +684,54 @@ const us = [
         },
         imgs: [petri]
     },
+    {
+        firstname: 'Petteri',
+        surname: 'Ranta',
+        boss: false,
+        title: {
+            fi: "Vanhempi sovellusarkkitehti",
+            en: "Senior Solution Architect",
+            sv: "Senior Solution Architect",
+            de: "Senior Solution Architect"
+        },
+        email: 'petteri.ranta@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/petteriranta/',
+        description: {
+            fi: `Luonnon siimeksessä, perhovapa kädessään, katseli Petteri vuolasta koskea, ja yritti olla hetken miettimättä paikkatiedon virtausta ja informaation uuttamista datan kuohuvasta tulvasta. Kotona, jaettuaan saaliskalat ja murrettuaan leivän hän pysähtyi pohtimaan kalojen sielunelämää – onko niillä moista? Tai oliko hänen aiemmin päivällä opettamillaan koneilla älyä, saati tietoisuutta? Palaamme alati suurten kysymysten äärelle.`,
+            en: `Surrounded by nature, a fly rod in hand, Petteri watched the stream and tried for a moment not to think about flows of data and extraction of information from torrential floods of data. At home, having shared the fish and broken the bread, he thought about the spiritual life of a fish - do they have such? Or did the machines he taught earlier in the day have intelligence, let alone consciousness? We always return to the big questions.`,
+            sv: `Omgiven av naturen, med ett flugspö i handen, tittade Petteri på strömmen och försökte för ett ögonblick att inte tänka på dataflöden och utvinning av information från kraftiga översvämningar av data. Hemma, efter att ha delat fisken och brutit brödet, tänkte han på fiskens andliga liv - har de sådana? Eller hade maskinerna han lärde ut tidigare under dagen intelligens, än mindre medvetande? Vi återkommer alltid till de stora frågorna.`,
+        },
+        powers: {
+            en: ['ML & AI', 'Data analysis', 'APIs', 'Azure-infrastructure', 'Practicality', 'Team work', 'Taking responsibility'],
+            sv: ['ML & AI', 'Dataanalys', 'APIs', 'Azure-infrastruktur', 'Praktiskhet', 'Teamarbete', 'Ta ansvar'],
+            fi: ['Koneoppiminen ja tekoäly', 'Data-analyysi', 'Rajapintapalvelut', 'Azure-infra', 'Käytännöllisyys', 'Tiimityöskentely', 'Vastuunkanto']
+        },
+        imgs: [incog]
+    },
+    {
+        firstname: 'Emilia',
+        surname: 'Hakala',
+        boss: false,
+        title: {
+            fi: "Tech Talent and Culture Specialist",
+            en: "Tech Talent and Culture Specialist",
+            sv: "Tech Talent and Culture Specialist",
+            de: "Tech Talent and Culture Specialist"
+        },
+        email: 'emilia.hakala@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/emiliahakala/',
+        description: {
+            fi: `Oli kyse sitten vesien kannosta järvestä saunaan, kahvakuulien kanniskelusta, lasten kantamisesta pois toistensa kimpusta, tai vastuun kantamisesta työyhteisön kehittämisessä, juuri Emmiin voit helposti kantohommissa törmätä. Vaikka ote onkin vahva ja väkevä, kaiken ytimessä ovat pehmeät arvot ja rakkaus pienimpiäkin yksityiskohtia kohtaan.`,
+            en: `Be it hauling water from the lake to the sauna, swinging some kettlebells around, carrying toddlers from place A to B, or elevating the whole working community to another level, you can often spot Emmi doing the heavy lifting. Although her grasp is strong, at the heart of everything are soft values and love for even the smallest details.`,
+            sv: `Vare sig det är att dra vatten från sjön till bastun, svinga runt några kettlebells, bära småbarn från plats A till B, eller lyfta hela arbetsgemenskapen till en annan nivå, kan du ofta se Emmi göra de tunga lyften. Även om hennes grepp är starkt, ligger i hjärtat av allt mjuka värderingar och kärlek till även de minsta detaljerna.`,
+        },
+        powers: {
+            en: ['Attention to detail', 'Love for IT people', 'Creating team spirit', 'Software testing', 'Project Management', 'Taking everything into account'],
+            sv: ['Uppmärksamhet på detaljer', 'Kärlek till IT-folk', 'Skapa laganda', 'Programvarutestning', 'Projektledning', 'Ta hänsyn till allt'],
+            fi: ['Pikkutarkkuus', 'Rakkaus IT-ihmisiä kohtaan', 'Ryhmähengen luonti', 'Ohjelmistotestaus', 'Projektipäälliköinti', 'Eri näkökulmien huomiointi']
+        },
+        imgs: [emmi]
+    }
 ]
 
 const incognito = {
