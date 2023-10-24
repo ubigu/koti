@@ -708,6 +708,7 @@ const us = [
             fi: ['Koneoppiminen ja tekoäly', 'Data-analyysi', 'Rajapintapalvelut', 'Azure-infra', 'Käytännöllisyys', 'Tiimityöskentely', 'Vastuunkanto']
         },
         imgs: [petteri]
+    },
     {
         firstname: 'Emilia',
         surname: 'Hakala',
