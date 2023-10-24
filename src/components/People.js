@@ -42,6 +42,7 @@ import henrika from './../img/us/henrika.png';
 import jannep from './../img/us/jannep.png';
 import otso from './../img/us/otso.png';
 import sofia from './../img/us/sofia.png';
+import petteri from './../img/us/petteri.png';
 import teijo from './../img/us/teijo.png';
 
 const useStyles = makeStyles(theme => ({
@@ -706,8 +707,7 @@ const us = [
             sv: ['ML & AI', 'Dataanalys', 'APIs', 'Azure-infrastruktur', 'Praktiskhet', 'Teamarbete', 'Ta ansvar'],
             fi: ['Koneoppiminen ja tekoäly', 'Data-analyysi', 'Rajapintapalvelut', 'Azure-infra', 'Käytännöllisyys', 'Tiimityöskentely', 'Vastuunkanto']
         },
-        imgs: [incog]
-    },
+        imgs: [petteri]
     {
         firstname: 'Emilia',
         surname: 'Hakala',
