@@ -44,6 +44,7 @@ import otso from './../img/us/otso.png';
 import sofia from './../img/us/sofia.png';
 import petteri from './../img/us/petteri.png';
 import teijo from './../img/us/teijo.png';
+import josefiina from './../img/us/josefiina.png';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -320,10 +321,10 @@ const us = [
         surname: 'Heikkilä',
         boss: false,
         title: {
-            fi: "Vanhempi sovellusarkkitehti",
-            en: "Senior Software Architect",
-            sv: "Senior Software Architect",
-            de: "Senior Software Architect"
+            fi: "Johtava sovellusarkkitehti",
+            en: "Lead Architect",
+            sv: "Lead Architect",
+            de: "Lead Architect"
         },
         email: 'janne.heikkila@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/janne-heikkil%C3%A4-36a6a3159/',
@@ -709,6 +710,30 @@ const us = [
         },
         imgs: [petteri]
     },
+    {
+        firstname: 'Josefiina',
+        surname: 'Saarnikko',
+        boss: false,
+        title: {
+            fi: "Vanhempi asiantuntija",
+            en: "Senior Expert",
+            sv: "Senior Expert",
+            de: "Senior Expert"
+        },
+        email: 'josefiina.saarnikko@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/josefiinasaarnikko/',
+        description: {
+            fi: `Liikenne mielessä, liikkuminen sydämessä. Liike tuntuu yhdistävän Josefiinan työtä ja vapaa-aikaa. Oli kyseessä ajo- taikka pururata, itsensä tahi väylien kunnossapito, Jossu tuntee tien - tai vähintään tiedon tiestä. Alati jatkuvaa ei liikkeen kuitenkaan tarvitse olla, sillä Jossu omaa myös pysähtymisen taidon.`,
+            en: `While she thinks of traffic and mobility in her working hours, her heart yearns for movement as a pastime. Be it a carriageway or a jogging path, road- or self-maintenance, she knows the ways, or at least the information thereof. However, the movement doesn't need to be constant - she knows how to slow down as well.`,
+            sv: `Medan hon tänker på trafik och rörlighet på arbetstid, längtar hennes hjärta efter rörelse som ett tidsfördriv. Oavsett om det är en körbana eller en joggingbana, väg- eller egenunderhåll, hon känner till vägarna, eller åtminstone informationen om dem. Rörelsen behöver dock inte vara konstant – hon vet hur man saktar ner också.`,
+        },
+        powers: {
+            en: ['Infrastructure modeling', 'Infra data management', 'Standardization and classification', 'Infra nomenclature', 'Infra data life cycle management', 'Road planning'],
+            sv: ['Infrastrukturmodellering', 'Infradatahantering', 'Standardisering och klassificering', 'Infranomenklatur', 'Infradatalivscykelhantering', 'Vägplanering'],
+            fi: ['Inframallintaminen', 'Infran tiedonhallinta', 'Vakiointi ja luokittelu', 'Infra-nimikkeistöt', 'Infratietojen elinkaaren hallinta', 'Tiesuunnittelu']
+        },
+        imgs: [josefiina]
+    },  
     {
         firstname: 'Emilia',
         surname: 'Hakala',
