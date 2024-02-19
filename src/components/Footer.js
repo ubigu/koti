@@ -276,7 +276,7 @@ const Footer = () => {
                         <ListItemIcon classes={{ root: classes.listitemicon }}>
                           <Place className={classes.footerIcon} /></ListItemIcon>
                         <ListItemText className={classes.listItemText}>
-                          Torikatu 23, FI-90100 Oulu
+                          Pakkahuoneenkatu 15 A, FI-90100 Oulu
                         </ListItemText>
                       </a>
                     </ListItem>
