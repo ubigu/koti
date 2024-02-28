@@ -45,6 +45,7 @@ import sofia from './../img/us/sofia.png';
 import petteri from './../img/us/petteri.png';
 import teijo from './../img/us/teijo.png';
 import josefiina from './../img/us/josefiina.png';
+import simo from './../img/us/simo.png';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -147,6 +148,50 @@ const us = [
             fi: ['Liikenne ja maankäyttö', 'Kaupunki- ja aluekehitys', 'Henkilökuljetukset', 'Palveluverkot', 'Vaikutustenarviointi', 'Projektinhallinta ja -koordinointi', 'Geoinformatiikka', 'Liikkeenjohdon konsultointi']
         },
         imgs: [sonja]
+    },
+    {
+        firstname: 'Simo',
+        surname: 'Turunen',
+        boss: true,
+        title: {
+            fi: "Myyntijohtaja",
+            en: "Head of Sales",
+            sv: "Head of Sales",
+            de: "Head of Sales"
+        },
+        email: 'simo.turunen@ubigu.fi',
+        tel: '+358458719091',
+        linkedin: 'https://www.linkedin.com/in/simoturunen/',
+        description: {
+            fi: `Saapui Simo sisämaasta, Savon saloilta salaisilta.
+            Meni maailman mantuja, teki taiten tietotyötä. 
+            Sivelsi suunnitelmat, kartoin kuvasi kaupungit.
+            Iski into IT-alaan, myyntimieheks muovautui.
+            Peri purren piskuisen, priimaks pisti puunaten.
+            Maja Mansen moreenilla, navigoi nyt Nässyänsä.
+            Milloin mieles markkinat, kulloin kaupan käynti.
+            `,
+            en: `Simo arriveth from inland, from smoky Finnish heartlands.
+                Travelled and saw the world, honed his skill in information work.
+                With a stroke of a brush, planned new cities and painted maps.
+                In a flash of thought, moved deeper onto sales and tech.
+                Got an old boat from his gramps, made it gleam.
+                Now he's sailing on, on familiar waters of sales and biz.
+                `,
+            sv: `Simo kommer från inlandet, från rökiga finska hjärtan.
+            Reste och såg världen, finslipade sin skicklighet i informationsarbete.
+            Med ett penseldrag, planerade nya städer och målade kartor.
+            I en blixt av tanke, flyttade djupare in på försäljning och teknik.
+            Fick en gammal båt av sin farfar, fick den att glänsa.
+            Nu seglar han vidare, på välbekanta vatten av försäljning och biz.
+            `
+        },
+        powers: {
+            en: ['Sales', 'Key Account Management', 'Urban and regional development', 'Geoinformatics', 'Project management', 'Business Intelligence'],
+            sv: ['Försäljning', 'Key Account Management', 'Stads- och regionalutveckling', 'Geoinformatik', 'Projektledning', 'Business Intelligence'],
+            fi: ['Myynti', 'Avainasiakkuuksien hallinta', 'Kaupunki- ja aluekehitys', 'Paikkatieto', 'Projektinhallinta ja -koordinointi', 'Tiedolla johtaminen']
+        },
+        imgs: [simo]
     },
     {
         firstname: 'Aleksi',
