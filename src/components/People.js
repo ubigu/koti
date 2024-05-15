@@ -46,6 +46,7 @@ import petteri from './../img/us/petteri.png';
 import teijo from './../img/us/teijo.png';
 import josefiina from './../img/us/josefiina.png';
 import simo from './../img/us/simo.png';
+import juho from './../img/us/juho.png';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -802,6 +803,30 @@ const us = [
             fi: ['Pikkutarkkuus', 'Rakkaus IT-ihmisiä kohtaan', 'Ryhmähengen luonti', 'Ohjelmistotestaus', 'Projektipäälliköinti', 'Eri näkökulmien huomiointi']
         },
         imgs: [emmi]
+    },
+    {
+        firstname: 'Juho',
+        surname: 'Salmia',
+        boss: false,
+        title: {
+            fi: "Vanhempi paikkatietoarkkitehti",
+            en: "Senior Geospatial Architect",
+            sv: "Senior Geospatial Architect",
+            de: "Senior Geospatial Architect"
+        },
+        email: 'juho.salmia@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/juhosalmia/',
+        description: {
+            fi: `Ei liioin löydy moista paikkatiedon valtamerta tahi tiedonhallinnan tyrskyä, jossa Juho ei olisi ammatillista venhoaan kipparoinut. Data- ja softakarikot kaihtaa hän taiten kartoin, kompassein tai miksei vaikka tähdistä suunnistaen. Juho fokusoituu työhönsä aina syväluodaten – harvemmin niin syvää ja mutaista keitosta tulee vastaan, etteikö hän pääsisi asiasta pohjaa myöten kartalle.`,
+            en: `There aren’t many swells of geospatial data management around, through which Juho wouldn’t have steered his professional vessel. Treacherous shoals of data and software issues he circumnavigates with skill, aided by maps, compasses and why not even the stars above. Juho always dives deep into his work – seldom do you find issues so deep and muddy that he couldn’t get to the bottom of.`,
+            sv: `Det finns inte många dyningar av geospatial datahantering, genom vilka Juho inte skulle ha styrt sitt professionella fartyg. Förrädiska stim av data och mjukvaruproblem han kringgår med skicklighet, med hjälp av kartor, kompasser och varför inte ens stjärnorna ovan. Juho dyker alltid djupt in i sitt arbete – sällan hittar du problem så djupa och leriga att han inte kunde gå till botten med.`,
+        },
+        powers: {
+            en: ['Data management', 'Spatial data', 'ETL processes', 'PostgreSQL/PostGIS', 'Geoserver', 'QGIS', 'Python', 'Data modelling', 'Hydrography'],
+            sv: ['Datahantering', 'Spatial data', 'ETL-processer', 'PostgreSQL/PostGIS', 'Geoserver', 'QGIS', 'Python', 'Datamodellering', 'Sjömätning'],
+            fi: ['Tiedonhallinta', 'Paikkatieto', 'ETL-prosessit', 'PostgreSQL/PostGIS', 'Geoserver', 'QGIS', 'Python', 'tietomallinnus', 'Hydrografia']
+        },
+        imgs: [juho]
     }
 ]
 
