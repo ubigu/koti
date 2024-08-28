@@ -281,11 +281,11 @@ const Footer = () => {
                       </a>
                     </ListItem>
                     <ListItem disableGutters={matches}>
-                      <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/yZLVBxxGCFPv1Qo87">
+                      <a className={`${classes.footerLink} ${classes.footerSpan}`} target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/3JCmHQh3vgQHgTdE6">
                         <ListItemIcon classes={{ root: classes.listitemicon }}>
                           <Place className={classes.footerIcon} /></ListItemIcon>
                         <ListItemText className={classes.listItemText}>
-                          Pasilankatu 2, FI-00240 Helsinki
+                          Kellosilta 7, FI-00520 Helsinki
                         </ListItemText>
                       </a>
                     </ListItem>
