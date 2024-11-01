@@ -851,7 +851,7 @@ const us = [
             fi: ['Karttapalvelut', 'Full-stack -kehitys', 'Openlayers', 'React', 'Svelte', 'NodeJS', 'Typescript', 'PaaS']
         },
         imgs: [miika]
-    },
+    },*/
     {
         firstname: 'Toni',
         surname: 'Kuikka',
