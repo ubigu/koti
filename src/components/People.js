@@ -47,6 +47,7 @@ import teijo from './../img/us/teijo.png';
 import josefiina from './../img/us/josefiina.png';
 import simo from './../img/us/simo.png';
 import juho from './../img/us/juho.png';
+import toni from './../img/us/toni.png';
 
 const useStyles = makeStyles(theme => ({
     holder: {
