@@ -827,7 +827,103 @@ const us = [
             fi: ['Tiedonhallinta', 'Paikkatieto', 'ETL-prosessit', 'PostgreSQL/PostGIS', 'Geoserver', 'QGIS', 'Python', 'tietomallinnus', 'Hydrografia']
         },
         imgs: [juho]
-    }
+    },
+    /*{
+        firstname: 'Miika',
+        surname: 'Kauppinen',
+        boss: false,
+        title: {
+            fi: "Vanhempi ohjelmistokehittäjä",
+            en: "Senior Software Developer",
+            sv: "Senior Software Developer",
+            de: "Senior Software Developer"
+        },
+        email: 'miika.kauppinen@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/miika-kauppinen-72aa54140/',
+        description: {
+            fi: ``,
+            en: ``,
+            sv: ``,
+        },
+        powers: {
+            en: ['Web maps', 'Full-stack development', 'Openlayers', 'React', 'Svelte', 'NodeJS', 'Typescript', 'PaaS'],
+            sv: ['Karttjänster', 'Fullstackutveckling', 'Openlayers', 'React', 'Svelte', 'NodeJS', 'Typescript', 'PaaS'],
+            fi: ['Karttapalvelut', 'Full-stack -kehitys', 'Openlayers', 'React', 'Svelte', 'NodeJS', 'Typescript', 'PaaS']
+        },
+        imgs: [miika]
+    },
+    {
+        firstname: 'Toni',
+        surname: 'Kuikka',
+        boss: false,
+        title: {
+            fi: "Ohjelmistokehittäjä",
+            en: "Software developer",
+            sv: "Software developer",
+            de: "Software developer"
+        },
+        email: 'toni.kuikka@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/toni-kuikka-2875141aa/',
+        description: {
+            fi: `Tonin käsistä syntyvät datan virtaukset ja pysähtymään kutsuvat analyysit ovat kuin tunturipurosta kuksan kauhaisulla nautittu raikas kulaus elämän eliksiiriä. Vaikka erämaan kairassa Toni kulkeekin vaistonvaraisesti maan magneettikentän tai puun sammaloitumissuuntien perusteella - voi silti hyvin olla, että matkassa on mukana myös jokin hänen itsensä luoma digitaalinen karttaopus.`,
+            en: ``,
+            sv: ``,
+        },
+        powers: {
+            en: ['Full-stack development', 'Python', 'Data analytics', 'Machine learning', 'PowerBI', 'Map services', 'Statistics'],
+            sv: ['Fullstackutveckling', 'Python', 'Dataanalys', 'Maskininlärning', 'PowerBI', 'Karttjänster', 'Statistik'],
+            fi: ['Full-stack -kehitys', 'Python', 'Data-analytiikka', 'Koneoppiminen', 'PowerBI', 'Karttapalvelut', 'Tilastotieteet']
+        },
+        imgs: [toni]
+    },
+   /* {
+        firstname: 'Tuomas',
+        surname: 'Riihimäki',
+        boss: false,
+        title: {
+            fi: "Vanhempi ratkaisuarkkitehti",
+            en: "Senior Solutions Architect",
+            sv: "Senior Solutions Architect",
+            de: "Senior Solutions Architect"
+        },
+        email: 'tuomas.riihimaki@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/tuomas-riihim%C3%A4ki-6285103/',
+        description: {
+            fi: ``,
+            en: ``,
+            sv: ``,
+        },
+        powers: {
+            en: ['Java', 'Network solutions', 'IoT', 'Linux', 'PostgreSQL + PostGIS', 'Mapserver', 'Geoserver', 'Full-stack development'],
+            sv: ['Java', 'Nätverkslösningar', 'IoT', 'Linux', 'PostgreSQL + PostGIS', 'Mapserver', 'Geoserver', 'Fullstackutveckling'],
+            fi: ['Java', 'Verkkoratkaisut', 'IoT', 'Linux', 'PostgreSQL + PostGIS', 'Mapserver', 'Geoserver', 'Full-stack -kehitys']
+        },
+        imgs: [tuomas]
+    },
+    {
+        firstname: 'Atte',
+        surname: 'Perämäki',
+        boss: false,
+        title: {
+            fi: "Ohjelmistokehittäjä",
+            en: "Software developer",
+            sv: "Software developer",
+            de: "Software developer"
+        },
+        email: 'atte.peramaki@ubigu.fi',
+        linkedin: 'https://www.linkedin.com/in/atte-per%C3%A4m%C3%A4ki-3b6116205/',
+        description: {
+            fi: ``,
+            en: ``,
+            sv: ``,
+        },
+        powers: {
+            en: ['React', 'Svelte', 'Support and maintenance', 'Typescript',' Azure'],
+            sv: ['React', 'Svelte', 'Support och underhåll', 'Typescript',' Azure'],
+            fi: ['React', 'Svelte', 'Tuki ja ylläpito', 'Typescript',' Azure']
+        },
+        imgs: [atte]
+    }*/
 ]
 
 const incognito = {
