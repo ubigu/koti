@@ -48,6 +48,8 @@ import josefiina from './../img/us/josefiina.png';
 import simo from './../img/us/simo.png';
 import juho from './../img/us/juho.png';
 import toni from './../img/us/toni.png';
+import miika from './../img/us/miika.png';
+import atte from './../img/us/atte.png';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -829,7 +831,7 @@ const us = [
         },
         imgs: [juho]
     },
-    /*{
+    {
         firstname: 'Miika',
         surname: 'Kauppinen',
         boss: false,
@@ -842,9 +844,9 @@ const us = [
         email: 'miika.kauppinen@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/miika-kauppinen-72aa54140/',
         description: {
-            fi: ``,
-            en: ``,
-            sv: ``,
+            fi: `Miikan vapaa-aika tuntuu olevan kuin suoraan jonkin kansalaisopiston kuvitteellisen ubigulaisen perusteet -kurssin yhteenvedosta. On luontoa, kehon ylläpitoa, kulttuuria, karvaisten ja lievemmin karvaisten ystävien seuraa, maiden ja mantujen kokemista… Yksi asia on kuitenkin jo julkinen salaisuus. Miika on aavistuksen parempi kiipeilijä kuin Jouko. Kaiken lisäksi myös kova koodaamaan – ja taatusti parempi kuin edellä mainittu.`,
+            en: `Miika’s pastime seems be like the list of ingredients for some imaginary build-your-ubigusteins’-monster kit (soon in stores near to you). There’s nature, bodily maintenance, culture, company of hairy and less-hairy friends, and exploration aplenty… But one thing’s already a public secret. Miika is a slightly better climber than Jouko. And in addition to that, he can actually engineer some pretty solid software.`,
+            sv: `Miikas tidsfördriv verkar vara som ingredienslistan för något imaginärt bygg-din-ubigusteins-monster-kit (snart i butiker nära dig). Det finns natur, kroppsligt underhåll, kultur, sällskap med håriga och mindre håriga vänner och utforskning i överflöd... Men en sak är redan en offentlig hemlighet. Miika är en något bättre klättrare än Jouko. Och utöver det kan han faktiskt konstruera ganska solid mjukvara.`,
         },
         powers: {
             en: ['Web maps', 'Full-stack development', 'Openlayers', 'React', 'Svelte', 'NodeJS', 'Typescript', 'PaaS'],
@@ -852,7 +854,7 @@ const us = [
             fi: ['Karttapalvelut', 'Full-stack -kehitys', 'Openlayers', 'React', 'Svelte', 'NodeJS', 'Typescript', 'PaaS']
         },
         imgs: [miika]
-    },*/
+    },
     {
         firstname: 'Toni',
         surname: 'Kuikka',
@@ -867,8 +869,8 @@ const us = [
         linkedin: 'https://www.linkedin.com/in/toni-kuikka-2875141aa/',
         description: {
             fi: `Tonin käsistä syntyvät datan virtaukset ja pysähtymään kutsuvat analyysit ovat kuin tunturipurosta kuksan kauhaisulla nautittu raikas kulaus elämän eliksiiriä. Vaikka erämaan kairassa Toni kulkeekin vaistonvaraisesti maan magneettikentän tai puun sammaloitumissuuntien perusteella - voi silti hyvin olla, että matkassa on mukana myös jokin hänen itsensä luoma digitaalinen karttaopus.`,
-            en: ``,
-            sv: ``,
+            en: `Like a scoop of water to one’s lips from a rocky bourne among the northern fells, the things Toni creates from streams of data, are as clear and refreshing. When in the wilderness, Toni may instinctively be guided by the Earth’s magnetic field or simply by observing the directional patterns of moss growth. Nevertheless, as a man of many means, he may be equipped with some digital mapping tools as well – some that he very well might have created himself.`,
+            sv: `Som en skopa vatten till ens läppar från en klippig borrning bland de norra fjällen, är de saker som Toni skapar från strömmar av data lika klara och uppfriskande. När han är i vildmarken kan Toni instinktivt styras av jordens magnetfält eller helt enkelt genom att observera riktningsmönstren för mosstillväxt. Ändå, som en man med många medel, kan han vara utrustad med några digitala kartläggningsverktyg också – några som han mycket väl kan ha skapat själv.`,
         },
         powers: {
             en: ['Full-stack development', 'Python', 'Data analytics', 'Machine learning', 'PowerBI', 'Map services', 'Statistics'],
@@ -900,7 +902,7 @@ const us = [
             fi: ['Java', 'Verkkoratkaisut', 'IoT', 'Linux', 'PostgreSQL + PostGIS', 'Mapserver', 'Geoserver', 'Full-stack -kehitys']
         },
         imgs: [tuomas]
-    },
+    },*/
     {
         firstname: 'Atte',
         surname: 'Perämäki',
@@ -914,9 +916,9 @@ const us = [
         email: 'atte.peramaki@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/atte-per%C3%A4m%C3%A4ki-3b6116205/',
         description: {
-            fi: ``,
-            en: ``,
-            sv: ``,
+            fi: `Atte, rauhallisuuden mestari, lähes Zenji. Asuinpaikakseenkin voisi kuvitella Mare Tranquillitatiksen, ellei olisi niin ”down to Earth”. Lato liekeissä? Softa solmussa ja asiakkaalla tulipalotilanne (toim. huom. kuvitteellinen skenaario)? Atte saapuu jo ripeästi mutta tyynesti vesisankoja kantaen – läikyttämättä.`,
+            en: `Atte Zenji, a master of balance and calm. One might think his dwelling was located on the shores of Mare Tranquillitatis, were he not so down to Earth. A barn’s on fire? A piece of software crashed, and customers should have it up and running in a matter of minutes (editorial note: an imaginary scenario)? No worries, I can already see Atte approaching with his steady step and hand.`,
+            sv: `Atte Zenji, en mästare på balans och lugn. Man skulle kunna tro att hans bostad låg vid stranden av Mare Tranquillitatis, om han inte var så jordnära. En lada brinner? En mjukvara kraschade och kunderna borde ha den igång på några minuter (redaktionell anmärkning: ett tänkt scenario)? Ingen fara, jag kan redan se Atte närma sig med sitt stadiga steg och hand.`,
         },
         powers: {
             en: ['React', 'Svelte', 'Support and maintenance', 'Typescript',' Azure'],
@@ -924,7 +926,7 @@ const us = [
             fi: ['React', 'Svelte', 'Tuki ja ylläpito', 'Typescript',' Azure']
         },
         imgs: [atte]
-    }*/
+    }
 ]
 
 const incognito = {
