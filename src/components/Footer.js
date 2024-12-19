@@ -11,7 +11,7 @@ import { useMediaQuery, Hidden, List, ListItem, ListItemText, ListItemIcon, Avat
 import { useTheme, makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core'
 
-import logo from '../img/ubigu_logo_gray.svg'
+import logo from '../img/logo_green.png'
 import bg from '../../static/img/footer.jpg';
 
 const useStyles = makeStyles(theme => {
@@ -175,11 +175,6 @@ const Footer = () => {
     <a title="linkedin" href="https://www.linkedin.com/company/ubigu-oy">
       <Avatar className={classes.small}>
         <Linkedin className={classes.social} />
-      </Avatar>
-    </a>
-    <a title="twitter" href="https://twitter.com/ubigusto">
-      <Avatar className={classes.small}>
-        <Twitter className={classes.social} />
       </Avatar>
     </a>
     <a title="github" href="https://github.com/ubigu">
