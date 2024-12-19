@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/ubigu_logo_white.svg';
+import logo from '../img/logo_green.png';
 import { IntlContextConsumer, useIntl } from 'gatsby-plugin-intl'
 
 /** MUI */
