@@ -8,7 +8,7 @@ import "./../styles/ring1.scss";
 import Ring1b from "./../img/ring1b.inline.svg";
 import Ring1a from "./../img/ring1a.inline.png";
 
-import logo from "./../img/logo.svg";
+import logo from "./../img/logo_green.png";
 
 /** MUI */
 import {
