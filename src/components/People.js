@@ -50,6 +50,7 @@ import juho from './../img/us/juho.png';
 import toni from './../img/us/toni.png';
 import miika from './../img/us/miika.png';
 import atte from './../img/us/atte.png';
+import tuomas from './../img/us/tuomas.png';
 
 const useStyles = makeStyles(theme => ({
     holder: {
@@ -879,7 +880,7 @@ const us = [
         },
         imgs: [toni]
     },
-   /* {
+    {
         firstname: 'Tuomas',
         surname: 'Riihimäki',
         boss: false,
@@ -892,9 +893,9 @@ const us = [
         email: 'tuomas.riihimaki@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/tuomas-riihim%C3%A4ki-6285103/',
         description: {
-            fi: ``,
-            en: ``,
-            sv: ``,
+            fi: `Tietotekniikan ollessa kyseessä, Tuomas hallitsee suvereenisti niin tiedon kuin tekniikan. Vartuttuaan aikana, jolloin ATK-asiat tehtiin itse, Tuomaan DNA:ssa DIY on dominoiva alleeli. Olipa hän kotona taikka toimistolla, hetken hääräiltyään kaikki laitteet tottelevatkin Demolition Man -hengessä "Illuminate" ym. äänikomentoja ja raportoivat suoraan Rakentajalleen. Tätä taustaa vasten Tuomaksen humaaniuus voikin yllättää - ettei vaan olisi 'living tissue over metal endoskeleton'...`,
+            en: `When it comes to information technology, Tuomas masters both information and technology. Having grown up in the good old days, DIY is a dominant allele in Tuomas' DNA. Whether he's at home or at the office, after a while of tweaking around, suddenly all devices obey Demolition Man -style voice commands like 'Illuminate' and report back to their Creator. This considered, his humanity may surprise you. Hopefully not one of those living issue over metal endoskeleton -guys?`,
+            sv: `När det gäller informationsteknik behärskar Tuomas både information och teknik. Efter att ha växt upp på den gamla goda tiden är DIY en dominerande allel i Tuomas DNA. Oavsett om han är hemma eller på kontoret, efter en stunds tweaking, lyder plötsligt alla enheter Demolition Man-liknande röstkommandon som "Illuminate" och rapporterar tillbaka till sin Skapare. Med tanke på detta kan hans mänsklighet överraska dig. Förhoppningsvis inte en av de 'living tissue over metal endoskeleton' -killar?`,
         },
         powers: {
             en: ['Java', 'Network solutions', 'IoT', 'Linux', 'PostgreSQL + PostGIS', 'Mapserver', 'Geoserver', 'Full-stack development'],
@@ -902,7 +903,7 @@ const us = [
             fi: ['Java', 'Verkkoratkaisut', 'IoT', 'Linux', 'PostgreSQL + PostGIS', 'Mapserver', 'Geoserver', 'Full-stack -kehitys']
         },
         imgs: [tuomas]
-    },*/
+    },
     {
         firstname: 'Atte',
         surname: 'Perämäki',
