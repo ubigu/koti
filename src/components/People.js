@@ -693,10 +693,10 @@ const us = [
         surname: 'Kujala',
         boss: false,
         title: {
-            fi: "Paikkatietoasiantuntija",
-            en: "Geospatial Expert",
-            sv: "Geospatial Expert",
-            de: "Geospatial Expert"
+            fi: "Paikkatieto- ja suunnitteluasiantuntija",
+            en: "GIS & Planning Expert",
+            sv: "GIS & Planning Expert",
+            de: "GIS & Planning Expert"
         },
         email: 'jenni.kujala@ubigu.fi',
         linkedin: 'https://www.linkedin.com/in/jennikujala/',
